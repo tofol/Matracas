@@ -1,0 +1,9 @@
+$(function()
+    {
+        $(".contacordeon").hide();
+        $(".h4aside").click(function()
+        {
+            $(".contacordeon").slideUp();
+            $(this).next(".contacordeon").slideDown();
+        });
+});

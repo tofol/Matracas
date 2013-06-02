@@ -1,0 +1,939 @@
+@import url('fonts.css');
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {display: block;}audio,canvas,video { display: inline-block;*display: inline;*zoom: 1;}audio:not([controls]) {display: none;height: 0;}[hidden] {display: none;}
+abbr[title] {border-bottom: 1px dotted;}b,strong {font-weight: bold;}blockquote { margin: 1em 40px;}dfn { font-style: italic;}mark { background: #ff0;color: #000;}
+pre,code,kbd,samp { font-family: monospace, serif;_font-family: 'courier new', monospace; font-size: 1em;}pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word;}q { quotes: none;}q:before,q:after { content: ''; content: none;}small {font-size: 75%;}sub,sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}sup {top: -0.5em;}sub {bottom: -0.25em;}
+svg:not(:root) { overflow: hidden;}figure { margin: 0;} table {border-collapse: collapse;border-spacing: 0;}
+form { margin: 0;}
+fieldset {border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;}
+legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px;}
+button,input,select,textarea {font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
+button,input {line-height: normal; }
+button,input[type="button"],input[type="reset"],input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible;}
+button[disabled],input[disabled] { cursor: default;}
+input[type="checkbox"],input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px;}
+input[type="search"] {-webkit-appearance: textfield;-moz-box-sizing: content-box;-webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}
+button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
+textarea {overflow: auto;vertical-align: top;}
+
+/* ==========================================================================
+   MIS ESTILOS DE LA WEB.
+   ========================================================================== */
+a {
+	text-decoration: none;
+}
+ol>li {
+	line-height: 250%
+}
+html {
+	background: #444;
+}
+body{
+       margin: 0.063em;
+       text-align: center;
+       
+       font: 1.1em 'AftasansRegular', Arial, sans-serif;
+       
+   }
+
+.contenedor {
+	width: 95%;
+	text-align: left;
+	margin: 0 auto;
+
+}
+
+header {
+	height: 625.0%;
+	width: 99.99%;
+	position: relative;
+	display: -moz-box;
+   	display: -webkit-box;
+   	display: -o-box;
+   	display: -ms-box;
+   	display: box;
+
+    -moz-box-orient: block-axis;
+    -webkit-box-orient: block-axis;
+    -o-box-orient: block-axis;
+    -ms-box-orient: block-axis;
+    box-orient: block-axis;
+
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -o-box-align: center;
+    -ms-box-align: center;
+    box-align: center;
+
+
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -o-box-pack: center;
+    -ms-box-pack: center;
+    box-pack: center;
+
+	border-radius: 1.25em;
+
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0%, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfdde7', endColorstr='#5a6a72',GradientType=0 );
+
+	 behavior: url(PIE.htc);
+}
+.cabecera {
+    color: rgba(15,25,26,0.85);
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8f0f191a,endColorstr=#8f0f191a);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8f0f191a,endColorstr=#8f0f191a);
+    zoom:1;
+    text-align: center;
+    font-family: 'LemonChickenRegular';
+    font-size: 2.5em;
+    text-shadow: 0.125em 0.125em 0.125em #586B80;
+    filter: 
+    progid:DXImageTransform.Microsoft.Shadow(color=#586B80,direction=90,strength=2);
+    letter-spacing: 0.25em;
+
+    margin: 0.625em 0.625em 0.625em 0.313em;
+    padding-bottom: 0.3125em;
+   
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+
+}
+
+/*** MENÚ SUPERIOR-CABECERA ***/
+
+nav {
+   font-family: 'ComfortaaThin';
+   font-size: 0.85em;
+   margin: 0 auto;
+
+	}
+nav li a, nav li {
+ display: inline;
+ z-index: 1;
+}
+
+nav li {
+	list-style-type: none;
+	position: relative;
+	padding: 0.0625em 0.0625em;
+	}
+nav a {
+	 padding: 0.45em 1.5em;
+	 text-decoration: none;
+
+	 color: black;
+
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0%, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfdde7', endColorstr='#5a6a72',GradientType=0 );
+	
+  	border-radius: 0.5em;
+	behavior: url(PIE.htc);
+
+	}
+nav li a:hover {
+
+	background: #1e5799;
+	background-image: -moz-linear-gradient(top,  hsla(212,67%,36%,1) 0%, hsla(207,69%,51%,1) 23%, hsla(208,73%,46%,1) 55%, hsla(206,70%,70%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(212,67%,36%,1)), color-stop(23%,hsla(207,69%,51%,1)), color-stop(55%,hsla(208,73%,46%,1)), color-stop(100%,hsla(206,70%,70%,1)));
+	background-image: -webkit-linear-gradient(top,  hsla(212,67%,36%,1) 0%,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -o-linear-gradient(top,  hsla(212,67%,36%,1) 0%,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -ms-linear-gradient(top,  hsla(212,67%,36%,1) 0%,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: linear-gradient(to bottom,  hsla(212,67%,36%,1) 0%,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5899', endColorstr='#7dbae8',GradientType=0 );
+
+	
+    color: white;
+    }
+
+/* SUBMENU */
+
+nav li ul {
+ display: none;
+ position: absolute;
+ left: 0;
+ top: 100%;
+ padding: 0;
+ margin-top: 0.313em;
+}
+nav li:hover ul {
+ display: inline-block;
+}
+nav li ul li a {
+ width: 150px;
+ display: inline-block;
+}
+
+/* FIN DEL MENU SUPERIOR-CABECERA */
+
+
+.contenido-ppal {
+    display: -moz-box;
+   	display: -webkit-box;
+   	display: -o-box;
+   	display: -ms-box;
+   	display: box;
+
+   	-moz-box-orient: horizontal;
+   	-webkit-box-orient: horizontal;
+   	-o-box-orient: horizontal;
+   	-ms-box-orient: horizontal;
+   	box-orient: horizontal;
+
+   	-moz-box-direction: reverse;
+   	-webkit-box-direction: reverse;
+   	-o-box-direction: reverse;
+   	-ms-box-direction: reverse;
+   	box-direction: reverse;
+
+	width: 99.99%;
+	}
+/** CONTENIDO TEXTO **/
+.contenido-texto {
+
+   -moz-box-flex: 1;
+   -o-box-flex: 1;
+   -webkit-box-flex: 1;
+   -ms-box-flex: 1;
+   box-flex: 1;
+    
+   	margin: 0.938em;
+
+    letter-spacing: -0.015em;
+	
+	padding-left: 0.938em;
+	padding-right: 1.250em;
+	padding-top: 0.938em;
+	padding-bottom: 0.938em;
+    
+     border-radius: 0.625em;
+    border-style: solid;
+	border-width: 0 0 0 1.875em;
+
+    -webkit-border-image: url(../images/Imagfondo/gusanillo.png) 0 0 0 30 repeat;
+    -moz-border-image: url(../images/Imagfondo/gusanillo.png) 0 0 0 30  repeat;
+    -o-border-image: url(../images/Imagfondo/gusanillo.png) 0 0 0 30 repeat;
+    /*-ms-border-image: url(../images/Imagfondo/gusanillo.png) 0 0 0 30 repeat;*/
+    border-image: url(../images/Imagfondo/gusanillo.png) 0 0 0 30 repeat;
+    behavior: url(PIE.php);
+
+
+    /*-webkit-border-radius: 0.625em;
+    -moz-border-radius: 0.625em;
+	-ms-border-radius: 0.625em;*/
+   
+	
+    background: #fcf59b;
+	background:
+	-webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#81cbbc),
+			color-stop(2%, #fcf59b)
+		);
+
+     background:
+		-moz-repeating-linear-gradient(
+			top,
+			#fcf59b,
+			#fcf59b 2.375em,
+			#81cbbc 2.5em
+		);
+
+     background:
+		-o-linear-gradient(
+			top,
+			#fcf59b,
+			#fcf59b 2.375em,
+			#81cbbc 2.5em
+		);
+	 background:
+		-ms-linear-gradient(
+			top,
+			#fcf59b,
+			#fcf59b 2.375em,
+			#81cbbc 2.5em
+		);
+	 background:
+		-ms-repeating-linear-gradient(
+			top,
+			#fcf59b,
+			#fcf59b 2.375em,
+			#81cbbc 2.5em
+		);
+	background:
+		repeating-linear-gradient(
+			top,
+			#fcf59b,
+			#fcf59b 2.375em,
+			#81cbbc 2.5em
+		);
+
+     -webkit-background-size: 100% 2.5em;
+	-moz-background-size: 100% 2.5em;
+	-ms-background-size: 100% 2.5em;
+	background-size: 100% 2.5em;
+
+	-webkit-box-shadow: 0 0.125em 0.625em 0.0625em rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0.125em 0.625em 0.0625em rgba(0,0,0,.2);
+	-ms-box-shadow: 0 0.125em 0.625em 0.0625em rgba(0,0,0,.2);
+	box-shadow: 0 0.125em 0.625em 0.0625em rgba(0,0,0,.2);
+
+
+     -moz-background-clip: padding;
+     -webkit-background-clip: padding-box;
+     -o-background-clip: padding-box;
+	 -ms-background-clip: padding-box;
+     background-clip: padding-box;
+
+}
+
+/*** INICIO BARRA LATERAL - ASIDE ***/
+
+aside {
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0%, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
+
+   font-family: 'ComfortaaThin';
+   font-size: 0.8375em;
+
+   margin-left: 20px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+
+   padding-top: 3px;
+   padding-right: 3px;
+
+   border-radius: 0 0.625em 0.625em 0;
+
+}
+aside li {
+	list-style-type: none;
+	position: relative;
+	margin-top: 2px;
+	}
+aside ul {
+	margin-left: -30px;
+}
+aside a {
+	 text-decoration: none;
+	 color: rgb(54,54,54);
+	}
+aside li a:hover {
+    color: white;
+
+	background: #1e5799;
+	background-image: -moz-linear-gradient(top,  hsla(212,67%,36%,1) 0, hsla(207,69%,51%,1) 23%, hsla(208,73%,46%,1) 55%, hsla(206,70%,70%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(212,67%,36%,1)), color-stop(23%,hsla(207,69%,51%,1)), color-stop(55%,hsla(208,73%,46%,1)), color-stop(100%,hsla(206,70%,70%,1)));
+	background-image: -webkit-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -o-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -ms-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: linear-gradient(to bottom,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+
+	-webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.25em;
+	-ms-border-radius: 0.25em;
+	border-radius: 0.25em;
+	
+	padding: 0.1875em;
+    }
+
+.h4aside {
+	color: #fff;
+	background-color: #236DB4;
+	padding: 0.425em 1.75em;
+	margin-left: -20px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	position: relative;
+	
+	-moz-box-shadow: 0.0625em 0.0625em 0.3125em #000;
+	-o-box-shadow: 0.0625em 0.0625em 0.3125em #000;
+	-webkit-box-shadow: 0.0625em 0.0625em 0.3125em #000;
+	-ms-box-shadow: 0.0625em 0.0625em 0.3125em #000;
+	box-shadow: 0.0625em 0.0625em 0.3125em #000;
+
+	-moz-border-radius: 0 0.625em 0.625em 0;
+	-o-border-radius: 0 0.625em 0.625em 0;
+	-webkit-border-radius: 0 0.625em 0.625em 0;
+	-ms-border-radius: 0 0.625em 0.625em 0;
+	border-radius: 0 0.625em 0.625em 0;
+	
+	text-decoration: none;
+	font-family: 'ComfortaaThin';
+	font-size: 1em;
+    cursor: pointer;
+}
+.h4aside:before{ content: '\25B8'; margin-right: 5px; }
+.triangulito {
+	width: 0;
+	height: 0;
+	line-height:0;
+	border-left: 1.25em solid transparent;
+	border-top: 0.625em solid #1F5C9F;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+/*** FIN BARRA LATERAL-ASIDE ***/
+
+/*** EL PIE-FOOTER ***/
+
+.pieppal {
+	margin-bottom: 0.0625em;
+	width: 99.99%;
+	font-family: 'ComfortaaThin';
+	color: white;
+    margin-top: 2px;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+
+	box-shadow: 0 0 0.625em #000000;
+
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+    display: -moz-box;
+    display: -webkit-box;
+    display: -o-box;
+    display: box;
+
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+
+    -moz-box-align:center;
+    box-align:center;
+	}
+.pie1 {
+	margin: 0 0 2.5em 1.5em;
+	}
+.pie2 {
+	margin: 0 0 2.5em 1.5em;
+	}
+.pie3 {
+	margin: 0 2.5em 2.5em 1.5em;
+	}
+/*** FIN DEL PIE ***/
+
+/*** INICIO LISTA ORDENADA ***/
+.listaordenada ol {
+	counter-reset: item;
+}
+.listaordenada li {
+	display: block;
+	line-height: 250%
+}
+.listaordenada li:before {
+	counter-increment: item;
+	content: counters(item, ".") ".)  ";
+}
+
+/*** FIN LISTA ORDENADA ***/
+
+/*** INICIO RESALTADOS Y SUBRAYADOS ***/
+.subrayado {
+	color: white;
+	background: rgba(0,0,255,.8);
+    font: 1.1em 'AftasansRegular', Arial, sans-serif;
+	-o-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	-ms-border-radius: 0.25em;
+	border-radius: 0.25em;
+	padding: 0.15em;
+}
+
+.resaltado {
+	color: white;
+    font-weight: bold;
+	background: rgba(128,0,0,.6);
+    font: 1.1em 'AftasansRegular', Arial, sans-serif;
+	-o-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	-ms-border-radius: 0.25em;
+	border-radius: 0.25em;
+	padding: 0.15em;
+}
+.resaltado a {color: white;}
+.negrita { font-weight: bolder;}
+.subrayada {text-decoration: underline;}
+
+.titulos_ejemplos {
+	font-family: 'ComfortaaThin';
+	width: 90%;
+	font-size: 1.8em;
+	color: white;
+	padding: 0.25em;
+	background: rgba(0,128,0,0.6);
+	-o-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	-ms-border-radius: 0.25em;
+	border-radius: 0.25em;
+}
+/*** FIN RESALTADOS Y SUBRAYADOS ***/
+/*** ESTILOS DE ENCABEZADOS ***/
+h2, h3, h4, h5{
+    color: black;
+    text-decoration: underline;
+    font-family: 'ComfortaaRegular';
+    letter-spacing: 0.015em;
+}
+h2 {
+	font-size: 1.45em;
+	}
+h3 {
+	font-size: 1.4em;
+	}
+h4 {
+	font-size: 1.2em;
+	}
+h5 {
+	font-size: 1em;
+	}
+/*** FIN ESTILOS DE ENCABEZADOS ***/
+
+/*** MENUS ACORDEON ***/
+h4.acordeon {
+
+           font-size: 1.5em;
+           background: rgb(158, 156, 156);
+           width: 90%;
+           -webkit-border-radius: 0.625em;
+           -moz-border-radius: 0.625em;
+		   -ms-border-radius: 0.625em;
+           border-radius: 0.625em;
+           padding: 0.3125em;
+           text-decoration: none;
+}
+h4.acordeon:after{ content: '\25BE'; margin-left: 10px; cursor: pointer;}
+h4.acordeon a {
+           text-decoration: none;
+           color: black;
+
+}
+h4.acordeon a:hover {
+           color: white;
+}
+
+.contacordeon {
+           border: 0.0625em solid #666;
+           height: auto;
+}
+
+.contacordeon .block {
+    padding: 1.25em;
+}
+.contenido-texto p{
+	text-align: justify;
+	line-height: 40px;
+
+}
+/*** FIN MENUS ACORDEON ***/
+
+
+/*** ENUNCIADOS EJEMPLOS, EJERCICIOS, CUESTIONES ... ***/
+.enunciados {
+       color: black;
+       font-family: sans-serif;
+       font-size: 1em;
+       font-weight: bolder;
+       letter-spacing: 0.015em;
+       border: 0.125em dashed rgb(158, 156, 156);
+       padding: 0.3125em;
+}
+/*** FIN ENUNCIADOS EJEMPLOS, EJERCICIOS, CUESTIONES ... ***/
+
+
+/*** INICIO DE LA TABLA ***/
+
+table.tabla1{
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.4em;
+    font-style: normal;
+    border-collapse:separate;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabla1 thead th{
+    padding:0.625em;
+    color:#fff;
+
+    border: 0.3125em solid #93CE37;
+    border-bottom: 0.1875em solid #9ED929;
+    background-color:#9DD929;
+
+    -moz-border-radius: 0.3125em 0.3125em 0 0;
+	-ms-border-radius: 0.3125em 0.3125em 0 0;
+	-webkit-border-radius: 0.3125em 0.3125em 0 0;
+	border-radius: 0.3125em 0.3125em 0 0;
+}
+.tabla1 thead th:empty{
+    background:transparent;
+    border:none;
+}
+.tabla1 tbody td{
+    padding:0.625em;
+    text-align:center;
+    background-color:#DEF3CA;
+    border: 0.125em solid #E7EFE0;
+    -moz-border-radius: 0.125em;
+    -webkit-border-radius: 0.125em;
+	-ms-border-radius: 0.125em;
+    border-radius: 0.125em;
+    color:#666;
+}
+/*** FIN DE LA TABLA ***/
+
+ 
+
+/*** INICIO FORMULARIO DE CONTACTO ***/
+.contact_form fieldset {
+	border: 0.1em solid #f60;
+	border-top: none;
+	border-radius: 0.5em;
+	padding: 1em;
+
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	
+}
+.contact_form legend {
+	font-size: 1.25em;
+	font-weight: bolder;
+}
+/*--- estilos para los ul y li del formulario ---*/
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.contact_form li{
+    padding:0.75em;
+    position:relative;
+}
+.contact_form label {
+    color: #555555;
+    display: inline-block;
+    vertical-align: top;
+    font-family: sans-serif;
+    font-size: 0.8125em;
+    font-weight: bold;
+    margin-top: 0.1875em;
+    padding: 0.1875em;
+    width: 90px;
+
+}
+.contact_form input {
+    height: 20px;
+    width: 220px;
+    padding: 0.1375em 0.5em;
+}
+.contact_form textarea {
+    padding: 0.5em;
+    width: 300px;
+}
+.contact_form button {
+    margin-left:90px;
+}
+/*----- estilos visuales de los elementos --------*/
+.contact_form input, .contact_form textarea{
+    border: 0.0625em solid #aaa;
+    box-shadow: 0 0 0.1875em #ccc, 0 0.625em 0.9375em #eee inset;
+    border-radius: 0.125em;
+    color: #888;
+    font-size: 0.75em;
+    padding-right: 1.875em;
+}
+.contact_form input, .contact_form textarea, contact_form label {
+	/*-moz-transition: all .25s ease-in;
+    -webkit-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+	-ms-transition: all .25s ease-in;*/
+    transition: all .25s ease-in;
+}
+.contact_form textarea {
+	resize: none;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+    background: #fff;
+    border: 0.0625em solid #555;
+    box-shadow: 0 0 0.1875em #aaa;
+    padding-right: 5em;
+}
+/* === Estilos de Validacion === */
+
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+    box-shadow: 0 0 0.312em #5cd053;
+    border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+    box-shadow: 0 0 0.3125em #d45252;
+    border-color: #b03535
+}
+/* === Estilos del boton de Envio === */
+button.submit {
+   padding: 0.5625em 1.0625em;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: bold;
+   color: white;
+   border: none;
+
+    background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+
+	border-radius: 0.5em;
+}
+button.submit:hover {
+    cursor: pointer;
+    color: white;
+    background: #1e5799;
+	background-image: -moz-linear-gradient(top,  hsla(212,67%,36%,1) 0, hsla(207,69%,51%,1) 23%, hsla(208,73%,46%,1) 55%, hsla(206,70%,70%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(212,67%,36%,1)), color-stop(23%,hsla(207,69%,51%,1)), color-stop(55%,hsla(208,73%,46%,1)), color-stop(100%,hsla(206,70%,70%,1)));
+	background-image: -webkit-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -o-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -ms-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: linear-gradient(to bottom,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	
+}
+button.submit:active {
+    box-shadow: 0 0 0.625em 0.3125em #444 inset;
+}
+/*** FIN FORMULARIO DE CONTACTO ***/
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

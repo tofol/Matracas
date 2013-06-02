@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <?php
+      include('xua.php');
+    ?>
+    <title>Teoria Segundo Bachiller</title>
+    <meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+    <meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+    <meta name="author" content="Cristobal Lopez Silla" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+        
+    <link href="css/normalize.css" rel="stylesheet" media="all" />
+    <link href="css/style.css" rel="stylesheet" media = "all" />
+    <link href="css/contenidos.css" rel="stylesheet" media = "all" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+  		<!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+  		<!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+
+<body>
+
+<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  		<![endif]-->
+		<section class="contenedor">
+			<header>
+				<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+                     <?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>					
+			</header>
+
+	<!-- INICIO DEL SLIDER DE LA CABECERA -->
+		<?
+						include("sliderclass.php");
+						hacer_slider();
+		?>
+    <!-- FIN DEL SLIDER DE LA CABECERA -->
+
+	<section class="contenido-ppal">
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+
+		<section class="contenido-texto">
+                    <h1 class="indices">EJERCICIOS Y CUESTIONES RESUELTOS SEGUNDO BACHILLERATO.</h1>
+			<article>
+                                <p></p><p></p>
+                                <a class="enlaces" href="EjemplosSegundoBatTema1.html" target="_blank" title="Ejemplos Y Cuestiones Resueltos Tema 1">Ejemplos Y Cuestiones Resueltos Tema 1</a><br /><br />
+                                <a class="enlaces" href="EjemplosSegundoBatTema2.html" target="_blank" title="Ejemplos Y Cuestiones Resueltos Tema 2">Ejemplos Y Cuestiones Resueltos Tema 2</a><br /><br />
+                                <a class="enlaces" href="EjemplosSegundoBatTema3.html" target="_blank" title="Ejemplos Y Cuestiones Resueltos Tema 3">Ejemplos Y Cuestiones Resueltos Tema 3</a><br /><br />
+                                <a class="enlaces" href="EjemplosSegundoBatTema4.html" target="_blank" title="Ejemplos Y Cuestiones Resueltos Tema 4">Ejemplos Y Cuestiones Resueltos Tema 4</a><br /><br />
+			</article>
+		</section>
+	</section>
+
+			<footer>
+				<?
+						include("footerclass.php");
+						hacer_footer();
+				?>
+			</footer>
+	</section>
+    </body>
+</html>

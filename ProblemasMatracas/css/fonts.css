@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'LemonChickenRegular';
+    src: url('../fonts/LemonChicken/LEMONCHI-webfont.eot');
+    src: url('../fonts/LemonChicken/LEMONCHI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LemonChicken/LEMONCHI-webfont.woff') format('woff'),
+         url('../fonts/LemonChicken/LEMONCHI-webfont.ttf') format('truetype'),
+         url('../fonts/LemonChicken/LEMONCHI-webfont.svg#LemonChickenRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+	}
+
+@font-face {
+    font-family: 'ComfortaaThin';
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Thin-webfont.eot');
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Thin-webfont.woff') format('woff'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Thin-webfont.svg#ComfortaaThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Regular-webfont.eot');
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Regular-webfont.woff') format('woff'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Regular-webfont.svg#ComfortaaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ComfortaaBold';
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Bold-webfont.eot');
+    src: url('../fonts/Comfortaa-fontfacekit/Comfortaa_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Bold-webfont.woff') format('woff'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Comfortaa-fontfacekit/Comfortaa_Bold-webfont.svg#ComfortaaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'AftasansItalic';
+    src: url('../fonts/afta-sans-fontfacekit/AftaSansThin-Italic-webfont.eot');
+    src: url('../fonts/afta-sans-fontfacekit/AftaSansThin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Italic-webfont.woff') format('woff'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Italic-webfont.svg#AftasansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AftasansRegular';
+    src: url('../fonts/afta-sans-fontfacekit/AftaSansThin-Regular-webfont.eot');
+    src: url('../fonts/afta-sans-fontfacekit/AftaSansThin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Regular-webfont.woff') format('woff'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/afta-sans-fontfacekit/AftaSansThin-Regular-webfont.svg#AftasansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

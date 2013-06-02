@@ -1,0 +1,32 @@
+    h1.indices {
+        color: white;
+        font-size: 1.5em;
+        background: rgba(0,128,0,0.6);
+        -o-border-radius: 0.25em;
+            -moz-border-radius: 0.25em;
+            -webkit-border-radius: 0.25em;
+            -ms-border-radius: 0.25em;
+            border-radius: 0.25em;
+            padding: 0.25em;
+        }
+    a.enlaces {
+            color: white;
+            background: rgb(54,54,54);
+            font: 1.5em 'AftasansRegular', Arial, sans-serif;
+            -o-border-radius: 0.25em;
+            -moz-border-radius: 0.25em;
+            -webkit-border-radius: 0.25em;
+            -ms-border-radius: 0.25em;
+            border-radius: 0.25em;
+            padding: 0.25em;
+            }
+    a.enlaces:after {
+        content: "▸";
+        margin-left: 10px;
+        cursor: pointer;
+        }
+    a.enlaces:hover{
+        color: white;
+        background: rgba(0,128,0,0.6);
+        font: 1.5em 'AftasansRegular', Arial, sans-serif;
+        }

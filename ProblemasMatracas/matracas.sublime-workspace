@@ -1,0 +1,473 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"h5	Tag"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"tar",
+				"target=  (attribute)"
+			],
+			[
+				"hr",
+				"href=  (attribute)"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"fix",
+				"fixed"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"moz-bor",
+				"-moz-border-radius:   (property)"
+			],
+			[
+				"tex",
+				"textarea  (element)"
+			],
+			[
+				"conta",
+				"contact_form"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"l",
+				"legend	Tag"
+			],
+			[
+				"blo",
+				"block-axis"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"san",
+				"sans-serif"
+			],
+			[
+				"s",
+				"slideDown"
+			],
+			[
+				"rg",
+				"rgba	rgba()"
+			],
+			[
+				"a",
+				"article	Tag"
+			],
+			[
+				"spa",
+				"letter-spacing"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"PADD",
+				"padding-top"
+			],
+			[
+				"fun",
+				"funcion1"
+			],
+			[
+				"fu",
+				"funcion2"
+			],
+			[
+				"i",
+				"input	input - button"
+			],
+			[
+				"my",
+				"mycanvas"
+			],
+			[
+				"fa",
+				"factorial"
+			],
+			[
+				"rr",
+				"regla_trapecio"
+			],
+			[
+				"tra",
+				"trapecio_simple2"
+			],
+			[
+				"der",
+				"derivada"
+			],
+			[
+				"lo",
+				"logaritmo"
+			],
+			[
+				"T",
+				"T0"
+			],
+			[
+				"su",
+				"sumasenos"
+			],
+			[
+				"m",
+				"math  (module)"
+			],
+			[
+				"ar",
+				"arcotg"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"p",
+				"pprint2"
+			],
+			[
+				"py",
+				"python"
+			],
+			[
+				"Im",
+				"Impares"
+			],
+			[
+				"I",
+				"Impar"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"C",
+				"Caproxi"
+			],
+			[
+				"F",
+				"F"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 302.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Tobal/Dropbox/ProblemasMatracas/Contacto.html",
+		"/home/tobal/Webs/htdocs/ProblemasMatracas/Contacto.html",
+		"/home/tobal/Webs/htdocs/ProblemasMatracas/css/style.css",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/css/style.css",
+		"/home/tobal/Webs/htdocs/ProblemasMatracas/contacto.php",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/T3SegundoBat.html",
+		"/home/tobal/Webs/htdocs/Practica1/T3SegundoBat.html",
+		"/home/tobal/.config/sublime-text-2/Packages/UnicodeMath/UnicodeMath.sublime-settings",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/EjemplosSegundoBatTema1.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/index.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/Contacto.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/EjemplosSegundoBatTema2.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/T2SegundoBat.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/T1SegundoBat.html",
+		"/home/tobal/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/User/PlainTasks.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/PlainTasks/PlainTasks (Linux).sublime-settings",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/css/fonts.css",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/js/accordion.js",
+		"/home/tobal/.config/sublime-text-2/Packages/Prefixr/Default (Linux).sublime-keymap",
+		"/home/tobal/.config/sublime-text-2/Packages/LaTeXTools/LaTeXTools Preferences.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/home/tobal/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/home/tobal/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/css/mathmlstyle.css",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/SegundoBat.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/js/menuacordeon.js",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/Contaacto.html",
+		"/media/TOSHIBA EXT/DISCO FLASH/DesarrolloWeb/Practica1/contacto.php",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/SegundoBat.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/css/style.css",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/EjemplosSegundoBatTema1.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/EjemplosSegundoBatTema2.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/T2SegundoBat.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/ApuntesMathML.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/css/canvas_funciones.css",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/css/slider.css",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/index.html",
+		"/media/MIFLASH/DesarrolloWeb/Practica1/probarcanvas.html",
+		"/home/tobal/DesarrolloWeb/DibujaFunciones/index.html",
+		"/home/tobal/DesarrolloWeb/Practica1/js/graficar.js",
+		"/home/tobal/DesarrolloWeb/DibujaFunciones/canvas-graph.js",
+		"/home/tobal/DesarrolloWeb/DibujaFunciones/plot.js",
+		"/home/tobal/DesarrolloWeb/DibujaFunciones/graficar.js",
+		"/home/tobal/DesarrolloWeb/DibujaFunciones/rectangulo.js",
+		"/home/tobal/DesarrolloWeb/Practica1/ApuntesMathML.html",
+		"/home/tobal/DesarrolloWeb/Practica1/index.html",
+		"/home/tobal/Descargas/menu/css/style.css",
+		"/home/tobal/Descargas/chapter9/chapter9/css/style.css",
+		"/home/tobal/DesarrolloWeb/Practica1/css/style.css",
+		"/home/tobal/Descargas/chapter9/chapter9/css/style.min.css",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/ball_table2.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/coor1.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/diff_f.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/fact.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/int1_f.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/int2_f.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/Simpson.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/int3_f.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/egg_func.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/pathlength.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/pi_approx.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/sinesum1.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/Gaussian_function2.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/area_triangle.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/sum_while.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/sum_for.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/polynomial_prod.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/inverse_sine.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/sum_compact.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/ball_table1.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/f2c_table_while.py",
+		"/home/tobal/Mates/src/looplist/c2f_table_while.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/odd_list2.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/odd_list1.py",
+		"/home/tobal/.config/sublime-text-2/Packages/Pylinter/Pylinter.sublime-settings",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/odd.py",
+		"/home/tobal/Mates/EjerciciosLibroPythonMates/f2c_approx_table.py",
+		"/home/tobal/Rpm/SPECS/texmaker.spec",
+		"/home/tobal/.config/sublime-text-2/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/tobal/.config/sublime-text-2/Packages/Terminal/Terminal.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/Tag/Tag Package.sublime-settings",
+		"/home/tobal/.config/sublime-text-2/Packages/User/Tag Package.sublime-settings",
+		"/home/tobal/Mates/dibujafuncion.py",
+		"/home/tobal/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"negrita",
+			"h5",
+			"vertical-align",
+			"background",
+			"vertical",
+			"align",
+			"0px",
+			"0%",
+			"2px",
+			"5px",
+			"1px",
+			"10px",
+			"php"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"background-image",
+			"0",
+			"0.125em",
+			"0.3125em",
+			"0.0625em",
+			"0.625em"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 36.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true
+}

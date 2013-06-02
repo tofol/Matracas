@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <?php
+      include('xua.php');
+    ?>
+    <title>Ejemplos Segundo Bachiller Tema 1</title>
+
+    <meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+    <meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+    <meta name="author" content="Cristobal Lopez Silla" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+
+    <link href="css/normalize.css" rel="stylesheet" media="all" />
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+        <!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+	<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+    <script type="text/javascript" src="js/accordion.js"></script>
+
+</head>
+
+<body xmlns="http://www.w3.org/1998/Math/MathML">
+    <!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  <![endif]-->
+    <section class="contenedor">
+        <header>
+            <h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+                        include("navclass.php");
+                        hacer_nav();
+                    ?>
+                </nav>
+        </header>
+        <section class="contenido-ppal">
+		<aside>
+			<?
+                        include("asideclass.php");
+                        hacer_aside();
+            ?>
+		</aside>
+
+
+
+            <section class="contenido-texto">
+                <p class="titulos_ejemplos">Ejemplos Resueltos Del M&eacute;todo De Gauss.</p>
+
+                    <h4 class="acordeon"><a href="#">Ejemplo 1:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Resolver por el m&eacute;todo de Gauss el siguiente sistema de ecuaciones lineales:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mn>3</mn><mi>x</mi><mo>-</mo><mn>5</mn><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>4</mn></mtd></mtr>
+				<mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+				<mtr><mtd><mn>5</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>7</mn><mi>z</mi><mo>=</mo><mn>11</mn></mtd></mtr>
+                                </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>Primero escribimos su matriz ampliada y a partir de ah&iacute; realizamos las operaciones elementales por
+                    filas permitidas:
+                    <math>
+                        <mrow>
+                          <mfenced open="(" close=")" separators=",">
+                            <mrow>
+                              <mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-5</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                              <mtr><mtd><mn mathcolor="red">1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                              <mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd></mtr>
+                              </mtable><mo>|</mo>
+                              <mtable><mtr><mtd><mn>4</mn></mtd></mtr>
+                              <mtr><mtd><mn>3</mn></mtd></mtr>
+                              <mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                        </math></p>
+                    <p>Lo primero es convertir el sistema en un <span class="subrayado">Sistema Escalonado,</span> que es lo mismo en matrices el tener que
+                    <span class="subrayado">Convertir la Matriz Ampliada en Matriz Triangular Superior,</span> y eso es lo que vamos a hacer.<br/>
+                    F&iacute;jate que en la segunda fila su primer elemento es un 1 <span class="resaltado">(lo tienes marcado de rojo),</span> como lo m&aacute;s
+                    f&aacute;cil para convertir la matriz en triangular superior es que el primer elemento de su matriz sea un 1,
+                    aprovechamos que tenemos un 1 y cambiaremos la fila 1 por la fila 2, lo indicaremos como <math><mrow mathcolor="blue"><msub><mtext>F</mtext><mtext>1</mtext></msub><mo>&harr;</mo><msub><mtext>F</mtext><mtext>2</mtext></msub></mrow></math>
+                    <br/>Aqu&iacute; tienes todos los pasos:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-5</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>1</mn></msub><mo>&harr;</mo><msub><mi>F</mi><mn>2</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr mathcolor="blue"><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn>2</mn></mtd><mtd><mn>-5</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr mathcolor="blue"><mtd><mn>3</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+
+                    <math display="block"><mrow>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mtext>-5</mtext><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow><mtable>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>11</mn></mtd><mtd><mn>2</mn></mtd>
+                        </mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mtext>+11</mtext><mo>&CenterDot;</mo><msub><mtext>F</mtext><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow><mtable>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>13</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>-26</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <p>Ya tenemos nuestra matriz triangular superior, ahora empezando por la &uacute;ltima fila de la matriz hallaremos
+                    x,y,z.</p>
+                    <math display="block"><mrow><mn>13</mn><mi>z</mi><mo>=</mo><mn>-26</mn><mi>&srarr;</mi><mi>z</mi><mo>=</mo>
+                    <mfrac><mrow><mn>-26</mn></mrow><mrow><mn>13</mn></mrow></mfrac><mo>&srarr;</mo>
+                    <mtable class="m-boxed" frame="solid"><mtr><mtd><mi>z</mi><mo>=</mo><mn>-2</mn></mtd></mtr></mtable></mrow></math>
+
+                    <math display="block"><mrow><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>-2</mn><mo>&srarr;</mo>
+                    <mo>-</mo><mi>y</mi><mo>-</mo><mn>2</mn><mo>=</mo><mn>-2</mn><mo>&srarr;</mo>
+                    <mtable class="m-boxed" frame="solid"><mtr><mtd><mi>y</mi><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mrow></math>
+
+                    <math display="block"><mrow><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>3</mn><mo>&srarr;</mo>
+                    <mi>x</mi><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><mn>0</mn><mo>-</mo><mn>2</mn><mo>=</mo><mn>3</mn><mo>&srarr;</mo>
+                    <mtable class="m-boxed" frame="solid"><mtr><mtd><mi>x</mi><mo>=</mo><mn>5</mn></mtd></mtr></mtable></mrow></math>
+                    <br/>
+                    <p>&rarr;<span class="resaltado">Soluci&oacute;n &rarr; P(5,0,2) </span>&rarr; <span class="subrayado">Gr&aacute;ficamente significa que tenemos 3 planos que se cortan en el punto P.</span></p>
+			</div>
+		</section>
+
+
+                    <h4 class="acordeon"><a href="#">Ejemplo 2:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Resolver por el M&eacute;todo de Gauss el siguiente sistema:
+                    <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable groupalign="{left left}">
+                        <mtr><mtd><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>7</mn><mi>z</mi><mo>=</mo><mn>10</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>8</mn></mtd></mtr>
+                        <mtr><mtd><mi>x</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>-</mo><mn>10</mn><mi>z</mi><mo>=</mo><mn>-11</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math></p>
+                    </section>
+                    <p>Para resolverlo procederemos del mismo modo que en el ejemplo anterior, primero hemos de convertir
+                    su matriz ampliada en triangular superior:</p>
+
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>7</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-10</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>-11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>5</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>7</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">14</mn></mtd><mtd><mn mathcolor="blue">-34</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-10</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>10</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>-42</mn></mtd></mtr><mtr><mtd><mn>-11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>7</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>14</mn></mtd><mtd><mn>-34</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">7</mn></mtd><mtd><mn mathcolor="blue">-17</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mi>-42</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">-21</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+		    </math>
+
+		    <math display="block"><mrow>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><mfrac><mrow><msub><mtext>F</mtext><mtext>2</mtext></msub></mrow><mrow><mn>2</mn></mrow></mfrac></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>7</mn></mtd></mtr>
+                        <mtr mathcolor="red"><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>-17</mn></mtd></mtr>
+                        <mtr mathcolor="red"><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>-17</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mi mathcolor="red">-21</mi></mtd></mtr><mtr><mtd><mn mathcolor="red">-21</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <p>Ooooppss, tenemos 2 filas iguales !!! &iquest;Y ahora qu&eacute;? No te asustes, como tenemos 2 filas iguales pues nos cargamos la
+                    &uacute;ltima fila y arreglado. <br/> &iquest;Pero ahora tenemos m&aacute;s ecuaciones que inc&oacute;gnitas? Bueno, pues convirtamos
+                    nuestra matriz ampliada a sistema, como aprendiste en la teor&iacute;a. Observa:</p>
+                    <math display="block"><mrow><mfenced open="{" close="}" separators=","><mrow><mtable groupalign="{left left}">
+                        <mtr><mtd><mi>x-3y+7z</mi><mo>=</mo><mn>10</mn></mtd></mtr>
+                        <mtr><mtd><mi>7y-17z</mi><mo>=</mo><mn>-21</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <p>Como tenemos m&aacute;s ecuaciones que inc&oacute;gnitas lo que haremos es despejar en la segunda ecuaci&oacute;n
+                    la y, y a la z la llamaremos &lambda; <span class="subrayado"> (z=&lambda;); </span> porque la vamos a considerar como un par&aacute;metro, en vez de como una inc&oacute;gnita. F&iacute;jate:</p>
+
+                    <math display="block">
+                        <mrow><mn>7</mn><mi>y</mi><mn>-17</mn><mi>z</mi><mo>=</mo><mn>-21</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mfrac><mrow><mn>17</mn><mi>z</mi><mn>-21</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid"><mtr><mtd>
+                        <mi>y</mi><mo>=</mo><mfrac><mrow><mn>17</mn><mi>&lambda;</mi><mo>-</mo><mn>21</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mtext>;</mtext><mo lspace="thinmathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Ya sabemos qu&eacute; valor tienen la y, como la z. Falta saber qu&eacute; vale la x. Para ello toma la primera ecuaci&oacute;n,
+                    despeja x, sustituye z por &lambda; y la y por lo que acabamos de averiguar. Observa con atenci&oacute;n:</p>
+
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>7</mn><mi>z</mi><mo>=</mo><mn>10</mn><mo>&rarr;</mo>
+                        <mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>3</mn><mi>y</mi><mo>-</mo><mn>7</mn><mi>z</mi><mo>&rarr;</mo>
+                        <mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mfrac><mrow><mn>17</mn><mi>&lambda;</mi><mo>-</mo><mn>21</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>-</mo><mn>7</mn><mi>&lambda;</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mfrac><mrow><mn>51</mn><mi>&lambda;</mi><mo>-</mo><mn>63</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>-</mo><mn>7</mn><mi>&lambda;</mi><mo>&rarr;</mo></mrow>
+                    </math>
+                    <br />
+                    <math display="block">
+                        <mrow><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>70</mn><mo>+</mo><mn>51</mn><mi>&lambda;</mi><mo>-</mo><mn>63</mn><mo>-</mo><mn>49</mn><mi>&lambda;</mi></mrow><mrow><mn>7</mn></mrow></mfrac>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>&lambda;</mi><mo>+</mo><mn>7</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid"><mtr><mtd><mi>x</mi><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>&CenterDot;</mo><mi>&lambda;</mi><mo>+</mo><mn>1</mn><mtext>;</mtext><mo lspace="thinmathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Perfecto, ya conocemos qu&eacute; valen nuestras inc&oacute;gnitas, as&iacute; pues ya hemos solucionado nuestro
+                    sistema.</p>
+                    <math display="block"><mrow><mtext>Soluci&oacute;n</mtext><mo>&rarr;</mo><mtable class="m-boxed" frame="solid"><mtr><mtd><mfenced open="(" close=")" separators=","><mrow><mtext>x,y,z</mtext></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mfrac><mrow><mn>2</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mo>&CenterDot;</mo><mi>&lambda;</mi><mo>+</mo><mn>1</mn><mtext>,</mtext>
+                    <mfrac><mrow><mn>17</mn><mi>&lambda;</mi><mo>-</mo><mn>21</mn></mrow><mrow><mn>7</mn></mrow></mfrac><mtext>,</mtext><mi>&lambda;</mi></mrow></mfenced><mtext>;</mtext><mo lspace="thinmathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Pero, &iquest;cu&aacute;ntas soluciones hemos obtenido? Pues hemos obtenido infinitas soluciones, porque hemos
+                    supuesto que z es un par&aacute;metro real, es decir, hemos supuesto que z es una constante real. </p>
+                    <p><span class="subrayado">Como hemos obtenido infinitas soluciones decimos que nuestro sistema es Compatible Indeterminado.</span>
+                    <a href="#" class="tooltip">Profundiza !!! <span>Para que entiendas bien lo del par&aacute;metro &lambda; te aconsejo que
+                    sustituyas el par&aacute;metro por el n&uacute;mero real que quieras y ver&aacute;s que obtienes diferentes x,y,z. Por ejemplo,
+                    para &lambda; = 7, obtienes x = 3, y = 14, z = 7. Prueba sin miedo, es la mejor forma de que aprendas !!!</span></a>
+                    </p>
+			</div>
+		    </section>
+
+                    <h4 class="acordeon"><a href="#">Ejemplo 3:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Resolver por el M&eacute;todo de Gauss el siguiente sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>7</mn></mtd></mtr>
+                                <mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mn>15</mn><mi>z</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>8</mn><mi>y</mi><mo>-</mo><mn>21</mn><mi>z</mi><mo>=</mo><mn>11</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>A estas alturas seguro que ya sabes c&oacute;mo empezar, esasto !!! Montamos la matriz ampliada y aplicamos las
+                    operaciones permitidas por filas hasta obtener nuestra Matriz Triangular Superior. As&iacute;:</p>
+
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>15</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-8</mn></mtd><mtd><mn>-21</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">5</mn></mtd><mtd><mn mathcolor="blue">19</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-8</mn></mtd><mtd><mn>-21</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>7</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>-11</mn></mtd></mtr><mtr><mtd><mn>11</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi>-3</mi></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>19</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">-5</mn></mtd><mtd><mn mathcolor="blue">-19</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mi>-11</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">4</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+		    </math>
+		    <math display="block"><mrow>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>+</mo><msub><mtext>F</mtext><mtext>2</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>19</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">0</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mi>-11</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">-7</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <p>Mmmm ... la fila tercera de la matriz ampliada es un poco diferente, casi todos sus elementos son cero.
+                    Veamos qu&eacute; ocurre, hacemos la sustituci&oacute;n hacia atr&aacute;s empezando por la &uacute;ltima fila:</p>
+                    <math display="block">
+                        <mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>|</mo></mrow><mrow><mtable><mtr><mtd><mi>-7</mi></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mn>0</mn><mo>&CenterDot;</mo>
+                        <mi>z</mi><mo>=</mo><mi>-7</mi><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mi>-7</mi></mrow><mrow><mn>0</mn></mrow></mfrac><mo>&rarr;</mo><mo rspace="mediummathspace" mathcolor="red">&nexist;</mo><mtext mathcolor="red">Soluci&oacute;n</mtext></mrow>
+                    </math>
+                    <p>Como no existe soluci&oacute;n para z, tampoco existe soluci&oacute;n para x e y. As&iacute; pues, nuestro
+                    sistema <span class="resaltado">NO TIENE SOLUCI&Oacute;N.</span> Como no tiene soluci&oacute;n es un <span class="subrayado">Sistema Incompatible.</span>
+                    <a href="#" class="tooltip">Recuerda !!! <span>Recuerda que cuando tenemos ecuaciones de la forma 0x=c, con
+                    c un n&uacute;mero distinto de cero, no tienen soluci&oacute;n, porque no existe ning&uacute;n n&uacute;mero x que multiplicado por cero de un
+                    n&uacute;mero distinto de cero. Por eso en nuestro ejemplo 0z=-7 no tiene soluci&oacute;n, no hay ning&uacute;n z que
+                    multiplicado por 0 de -7. </span></a></p>
+
+                    <h5>NOTA:</h5>
+                    <p><span class="resaltado">El s&iacute;mbolo matem&aacute;tico <math><mo>&nexist;</mo></math> significa NO EXISTE.</span></p>
+                    <p><span class="resaltado">El s&iacute;mbolo matem&aacute;tico <math><mo>&exist;</mo></math> significa EXISTE.</span></p>
+		    </div>
+		    </section>
+
+                     <h4 class="acordeon"><a href="#">Ejemplo 4:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Discutir y resolver, cuando se pueda, el siguiente sistema; seg&uacute;n los valores del par&aacute;metro k real:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>k</mi><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>k</mi><mi>x</mi><mo>+</mo><mi>(k-1)</mi><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mi>k</mi></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>Antes de empezar a resolver el ejemplo debe quedarte clara una cosa, y es que en el enunciado no nos dan un &uacute;nico
+                    sistema. Nos dan un conjunto infinito de sistemas diferentes (todos ellos lineales).<br />
+                    &iquest;Infinito? S&iacute;, uno por cada valor que le demos al par&aacute;metro k que pertenece al conjunto de los n&uacute;meros reales.
+                    <a href="#" class="tooltip">Consejo !!! <span>Para que esto te quede claro lo mejor es que cojas un l&aacute;piz y un papel y sustituyas los
+                    valores que t&uacute; quieras de k en el sistema, ver&aacute;s que obtienes diferentes sistemas. Puedes probar con 1, 1.5,2, 3.8 ...
+                    Los que quieras. Esto debe quedarte muy claro, porque aunque no se utilice de forma directa para resolver el sistema, s&iacute; es muy
+                    importante para entender el resultado final de este tipo de ejercicios.</span></a>
+                    </p>
+                    <p>Ahora s&iacute;, pasemos a resolver el ejemplo. Seguramente est&aacute;s pensando que el enunciado del ejemplo no se parece mucho a los ejemplos
+                    anteriores, o &iquest;qu&eacute; es eso de la k? No te preocupes, es m&aacute;s sencillo de lo que parece. Piensa en k como en un n&uacute;mero
+                    cualquiera y hagamos lo de siempre, montar la matriz ampliada y triangulizarla. Observa:</p>
+
+                    <math display="block"><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>k</mi></mtd></mtr>
+                        <mtr><mtd><mi>k</mi></mtd><mtd><mi>k</mi><mo>-</mo><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr><mtr><mtd><mi>k</mi><mo>+</mo><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>k</mi></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">-1</mn></mtd><mtd mathcolor="blue"><mn>1</mn><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">0</mn></mtd></mtr><mtr><mtd><mi>k</mi><mo>+</mo><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>k</mi></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="blue"><mn>1</mn><mo>-</mo><mi>k</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mi>k</mi></mtd></mtr></mtable></mrow></mfenced>
+		    </math>
+                    <p>Perfecto, hemos obtenido nuestra matriz triangular superior, ahora a partir de nuestra &uacute;ltima fila y despejando
+                    obtendremos las soluciones de x,y,z; que en &eacute;ste caso depender&aacute;n de k; f&iacute;jate:</p>
+                    <math display="block">
+                        <mrow><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfenced><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><mi>k</mi><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd><mi>z</mi><mo>=</mo><mfrac><mrow><mi>k</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mi>;</mi><mo lspace="thinmathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi><mo>-</mo><mfenced open="{" close="}" separators=","><mrow><mn>1</mn></mrow></mfenced></mtd></mtr></mtable></mrow>
+                    </math>
+
+                    <math display="block">
+                        <mrow><mo>-</mo><mi>y</mi><mo>+</mo><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfenced><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><mn>0</mn>
+                        <mo>&rarr;</mo><mi>y</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfenced><mo>&CenterDot;</mo><mi>z</mi>
+                        <mo>&rarr;</mo><mi>y</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>+</mo><mi>k</mi></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfenced><mo>&CenterDot;</mo><mfrac><mrow><mi>k</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mo linebreak='newline'>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd><mi>y</mi><mo>=</mo><mi>k</mi><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mi>;</mi><mo lspace="thinmathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>k</mi><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><mn>1</mn>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>y</mi><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><mi>z</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><mfrac><mrow><mi>k</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac>
+                        <mo linebreak='newline'>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mi>k</mi><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=",">
+                        <mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mo>&rarr;</mo></mrow>
+                    </math>
+
+                    <math display="block">
+                        <mrow><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>-</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>+</mo><msup><mi>k</mi><mn>3</mn></msup><mo>-</mo><mi>k</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd><mi>x</mi><mo>=</mo><mfrac><mrow><msup><mi>k</mi><mn>3</mn></msup><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>-</mo><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mi>;</mi><mo lspace="thinmathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi><mo>-</mo><mfenced open="{" close="}" separators=","><mrow><mn>1</mn></mrow></mfenced></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>As&iacute; pues hemos obtenido la siguiente soluci&oacute;n del ejemplo:</p>
+
+                    <p><span class="subrayado">Si k = 1 </span>&rarr; El sistema NO tiene soluci&oacute;n &rarr; <span class="resaltado">Sistema Incompatible</span></p>
+                    <p><span class="subrayado">Si k &ne; 1 </span>&rarr; <span class="subrayado">Soluci&oacute;n &rarr;</span>
+                    <math>
+                        <mtable class="m-boxed" frame="solid" mathcolor="red"><mtr><mtd>
+                        <mrow>
+                            <mfenced open="(" close=")" separators=","><mrow><mfrac><mrow><msup><mi>k</mi><mn>3</mn></msup><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>-</mo><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow>
+                            </mfrac><mi>,</mi><mi>k</mi><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mi>,</mi><mfrac><mrow><mi>k</mi></mrow>
+                            <mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac></mrow></mfenced><mo lspace="mediummathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi><mo>-</mo><mfenced open="{" close="}" separators=","><mrow><mn>1</mn></mrow></mfenced>
+                        </mrow></mtd></mtr></mtable>
+                        </math>
+                    &rarr; <span class="resaltado">Sistemas Compatibles Determinados</span></p>
+                    <p>&iquest;Recuerdas el consejo que te di m&aacute;s arriba? Pues ahora va a ser clave que lo hayas entendido para que entiendas perfectamente
+                    la soluci&oacute;n que hemos obtenido en el problema. Ten en cuenta que para cada valor de k tenemos un sistema lineal diferente con su respectiva
+                    soluci&oacute;n. <br /> <span class="negrita">Para k = 1 &rarr;</span>
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math>
+                    , hemos obtenido que el sistema NO tiene soluci&oacute;n.
+                    <br /><br /><span class="negrita">Para k = 0 &rarr;</span>
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math>
+                    , obtenemos como soluci&oacute;n el punto P(1, 0, 0).
+                    <br /><br /><span class="negrita">Para k = -1 &rarr;</span>
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>-x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>-1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math>
+                    , obtenemos como soluci&oacute;n el punto Q(1/2, 0, -1/2).<br /> Estos puntos que son soluci&oacute;n de cada sistema se
+                    obtienen f&aacute;cilmente sustituyendo el valor de k en la soluci&oacute;n
+                    <math>
+                        <mtable class="m-boxed" frame="solid"><mtr><mtd>
+                        <mrow>
+                            <mfenced open="(" close=")" separators=","><mrow><mfrac><mrow><msup><mi>k</mi><mn>3</mn></msup><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>-</mo><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow>
+                            </mfrac><mn>,</mn><mi>k</mi><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mn>,</mn><mfrac><mrow><mi>k</mi></mrow>
+                            <mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac></mrow></mfenced><mo lspace="mediummathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi><mo>-</mo><mfenced open="{" close="}" separators=","><mrow><mn>1</mn></mrow></mfenced>
+                        </mrow></mtd></mtr></mtable>
+                        </math>
+                    <a href="#" class="tooltip">Consejo !!! <span>Para que lo acabes de entender coge papel y l&aacute;piz y sustituye cada valor que quieras de k en la soluci&oacute;n. M&aacute;s vale que pierdas unos minutos aqu&iacute; entendiendo el ejemplo
+                    que quedarte con la duda y lo hagas mal en el examen.</span></a></p>
+                    <p><span class="subrayado">Por &uacute;ltimo, date cuenta de algo muy importante, cada vez que queramos saber la soluci&oacute;n de un sistema que tenga la forma del ejemplo NO tendremos que hacer cada vez lo de la
+                    matriz ampliada y su triangularizaci&oacute;n, es suficiente que sustituyamos un valor de k en la soluci&oacute;n.</span>
+                    </p>
+                    </div>
+		    </section>
+                     <h4 class="acordeon"><a href="#">Ejemplo 5:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Discutir y resolver, cuando se pueda, el siguiente sistema; seg&uacute;n los valores del par&aacute;metro k real:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mi>k</mi></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+                                <mtr><mtd><mi>kx</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>Montamos la matriz ampliada y triangulizamos:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr><mtd><mi>k</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mi>k</mi></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>1</mtext></msub><mo>&harr;</mo><msub><mtext>F</mtext><mtext>2</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr mathcolor="blue"><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+                        <mtr><mtd><mi>k</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd mathcolor="blue"><mn>2</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mi>k</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr><mtd><mi>k</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mi>k</mi><mo>-</mo><mn>8</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <math display="block">
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><mi>k</mi><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr><mtd mathcolor ="red"><mn>0</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn><mo>-</mo><mi>k</mi></mtd><mtd><mn>1</mn><mo>+</mo><mi>k</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>k</mi><mo>-</mo><mn>8</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>1</mn><mo>-</mo><mn>2</mn><mi>k</mi></mtd></mtr></mtable></mrow></mfenced></math>
+                        <math display="block">
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><mfrac><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="35px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr><mtd mathcolor ="red"><mn>0</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>3</mn><mo>-</mo><mi>k</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>k</mi><mo>-</mo><mn>8</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mfrac><mrow><msup><mrow><mo>-</mo><mi>k</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Hallamos las soluciones de los sistemas mediante la sustituci&oacute;n hacia atr&aacute;s, como siempre:</p>
+                    <math display="block">
+                        <mrow><mfenced open="(" close=")" separators=","><mrow><mn>3</mn><mo>-</mo><mi>k</mi></mrow></mfenced><mi>z</mi><mo>=</mo><mfrac><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+                        <mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn></mrow><mrow><mn>2</mn><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>3</mn><mo>-</mo><mi>k</mi></mrow></mfenced></mrow></mfrac>
+                        <mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>3</mn></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></mfenced></mrow><mrow><mn>2</mn><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>3</mn></mrow></mfenced></mrow></mfrac>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>z</mi><mo>=</mo><mfrac><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mtext>;</mtext><mo lspace="mediummathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p><span class="resaltado">F&iacute;jate Bien</span> &rarr; Para llegar a la z totalmente simplificada de arriba hemos factorizado el polinomio
+                    <math><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn></mrow></math>
+                    , para ello debes solucionar la ecuaci&oacute;n
+                    <math><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn><mo>=</mo><mn>0</mn></mrow></math>
+                     por la f&oacute;rmula general de la ecuaci&oacute;n de segundo grado que ya conoces. Sus soluciones son 3 y 2. As&iacute;,
+                    el polinomio nos queda factorizado como:
+                    <math><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>k</mi><mo>-</mo><mn>6</mn><mo>=</mo><mo>-</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>3</mn></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></mfenced></mrow></math>
+                    . Y teniendo en cuenta que 3-k = -(k-3), obtenemos la z de arriba.</p>
+                    <p>Hallemos ahora la y:</p>
+                    <math display="block">
+                        <mrow><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mi>k</mi><mo>-</mo><mn>8</mn><mo>&rarr;</mo><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>4</mn><mo>&CenterDot;</mo><mfrac><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+                        <mo>=</mo><mi>k</mi><mo>-</mo><mn>8</mn><mo>&rarr;</mo><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></mfenced><mo>=</mo><mi>k</mi><mo>-</mo><mn>8</mn><mo>&rarr;</mo></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mo>&rarr;</mo><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>2</mn><mi>k</mi><mo>-</mo><mn>4</mn><mo>=</mo><mi>k</mi><mo>-</mo><mn>8</mn><mo>&rarr;</mo><mo>-</mo><mn>2</mn><mi>y</mi><mo>=</mo><mo>-</mo><mi>k</mi><mo>-</mo><mn>4</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo>
+                        <mfrac><mrow><mo>-</mo><mfenced open="(" close=")" separators=","><mrow><mi>k</mi><mo>+</mo><mn>4</mn></mrow></mfenced></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>y</mi><mo>=</mo><mfrac><mrow><mi>k</mi><mo>+</mo><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mtext>;</mtext><mo lspace="mediummathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Finalmente hallamos la x:</p>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>2</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>-</mo><mfrac><mrow><mi>k</mi><mo>+</mo><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>4</mn><mo>-</mo><mi>k</mi><mo>-</mo><mn>4</mn><mo>+</mo><mi>k</mi><mo>-</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>x</mi><mo>=</mo><mo>-</mo><mn>1</mn></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Por tanto, hemos obtenido como soluci&oacute;n del ejemplo, para cada sistema, los puntos de la forma:</p>
+                    <math display="block">
+                        <mrow><mtext>Soluciones</mtext><mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="red"><mtr><mtd>
+                        <mtext>P</mtext><mfenced open="(" close=")" separators=","><mrow><mi>-1</mi><mtext>,</mtext><mfrac><mrow><mi>k</mi><mo>+</mo><mn>4</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mtext>,</mtext><mfrac><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></mfenced><mtext>;</mtext><mo lspace="mediummathspace">&forall;</mo><mi>k</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Es decir, para cada valor de k real obtenemos una &uacute;nica soluci&oacute;n; con lo que para cada valor de k real
+                    tenemos que su respectivo sistema es Compatible Determinado.</p>
+                    </div>
+		    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 6:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Resuelve el siguiente sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>Este sistema es lineal, pero a diferencia de los anteriores, tiene m&aacute;s inc&oacute;gnitas que ecuaciones. En concreto, tiene 3 inc&oacute;gnitas y
+                    2 ecuaciones. Al tener menos ecuaciones que inc&oacute;gnitas es seguro que, si tiene soluci&oacute;n, tendr&aacute; infinitas soluciones, es decir;
+                    ser&aacute; Compatible Indeterminado.<br />
+                    Para resolverlo lo primero que haremos es restar n&uacute;mero de inc&oacute;gnitas menos n&uacute;mero de ecuaciones. En nuestro ejemplo tenemos, 3-2 = 1.
+                    El n&uacute;mero que obtenemos, en el ejemplo es 1, nos sirve para saber cu&aacute;ntas inc&oacute;gnitas pasaremos al lado derecho del igual de cada una de
+                    las ecuaciones del sistema, como par&aacute;metros. Da igual qu&eacute; inc&oacute;gnita elegimos.
+                    </p>
+                    <p>Muy bien, tenemos que escoger una inc&oacute;gnita cualquiera, escogeremos la z y le cambiaremos el nombre por &lambda;. Luego z = &lambda;.
+                    Obtenemos as&iacute; el siguiente sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi></mtd></mtr>
+                                <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>&lambda;</mi></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    <p>El nuevo sistema que obtenemos tiene el mismo n&uacute;mero de ecuaciones que inc&oacute;gnitas, 2. <br /><span class="resaltado">Es muy importante que entiendas que z = &lambda;
+                    ahora ya no es una inc&oacute;gnita, ahora pasa a ser un par&aacute;metro.</span></p>
+                    <math display="block"><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn><mo>+</mo><mi>&lambda;</mi></mtd></mtr><mtr><mtd><mn>3</mn><mo>+</mo><mn>2</mn><mi>&lambda;</mi></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">-5</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn><mo>+</mo><mi>&lambda;</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">1</mn></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Ya tenemos una matriz triangular superior, por tanto; hacemos la sustituci&oacute;n hacia atr&aacute;s para hallar x e y:</p>
+                    <math display="block">
+                        <mrow><mi>-5</mi><mi>y</mi><mo>=</mo><mn>1</mn>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>y</mi><mo>=</mo><mfrac><mrow><mi>-1</mi></mrow><mrow><mn>5</mn></mrow></mfrac></mtd></mtr></mtable></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo>
+                        <mfenced open="(" close=")" separators=","><mrow><mfrac><mrow><mi>-1</mi></mrow><mrow><mn>5</mn></mrow></mfrac></mrow></mfenced>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>x</mi><mo>=</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>+</mo><mi>&lambda;</mi><mtext>;</mtext><mo lspace="mediummathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <p>Por tanto, la soluci&oacute;n de nuestro problema es:</p>
+                    <math display="block">
+                        <mrow><mtext>Soluci&oacute;n</mtext>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="red"><mtr><mtd>
+                        <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mfrac><mrow><mn>8</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>+</mo><mi>&lambda;</mi>
+                        <mtext>,</mtext></mtd><mtd><mfrac><mrow><mi>-1</mi></mrow><mrow><mn>5</mn></mrow></mfrac><mtext>,</mtext></mtd>
+                        <mtd><mi>&lambda;</mi></mtd></mtr></mtable></mrow></mfenced><mtext>;</mtext><mo lspace="thickmathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    </div>
+		    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 7:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Resuelve el siguiente sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>+</mo><mi>w</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>-</mo><mi>w</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    </section>
+                    <p>N&uacute;mero de inc&oacute;gnitas - N&uacute;mero de ecuaciones = 4 - 2 = 2.<br />Luego tomamos, por ejemplo, z y w como par&aacute;metros. Por tanto;
+                    z = &lambda;, w = &mu;.
+                     <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi></mtd></mtr>
+                                <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>2</mn><mo>-</mo><mn>2</mn><mi>&lambda;</mi><mo>+</mo><mi>&mu;</mi></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+
+                    <math display="block"><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi></mtd></mtr><mtr><mtd><mn>2</mn><mo>-</mo><mn>2</mn><mi>&lambda;</mi><mo>+</mo><mi>&mu;</mi></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="50px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">-1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi></mtd></mtr><mtr mathcolor="blue"><mtd><mn>-4</mn><mi>&lambda;</mi><mo>+</mo><mn>3</mn><mi>&mu;</mi></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Realizamos la sustituci&oacute;n hacia atr&aacute;s para hallar x e y:</p>
+                    <math display="block">
+                        <mrow><mi>-y</mi><mo>=</mo><mi>-4</mi><mi>&lambda;</mi><mo>+</mo><mn>3</mn><mi>&mu;</mi>
+                        <mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>y</mi><mo>=</mo><mn>4</mn><mi>&lambda;</mi><mo>-</mo><mn>3</mn><mi>&mu;</mi>
+                        <mtext>;</mtext><mo lspace="thickmathspace">&forall;</mo><mi>&lambda;</mi><mtext>,</mtext><mi>&mu;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi><mo>-</mo><mi>y</mi>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&lambda;</mi><mo>-</mo><mi>&mu;</mi><mo>-</mo><mfenced open="(" close=")" separators=","><mrow><mn>4</mn><mi>&lambda;</mi><mo>-</mo><mn>3</mn><mi>&mu;</mi></mrow></mfenced>
+                        <mo>&rarr;</mo><mo linebreak='newline'>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>x</mi><mo>=</mo><mn>1</mn><mo>-</mo><mn>3</mn><mi>&lambda;</mi><mo>+</mo><mn>2</mn><mi>&mu;</mi><mtext>;</mtext><mo lspace="thickmathspace">&forall;</mo><mi>&lambda;</mi><mtext>,</mtext><mi>&mu;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mtext>Solución</mtext><mo>&rarr;</mo><mtable class="m-boxed" frame="solid" mathcolor="red"><mtr><mtd>
+                        <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn><mo>-</mo><mn>3</mn><mi>&lambda;</mi><mo>+</mo><mn>2</mn><mi>&mu;</mi><mtext>,</mtext></mtd>
+                        <mtd><mn>4</mn><mi>&lambda;</mi><mo>-</mo><mn>3</mn><mi>&mu;</mi><mtext>,</mtext></mtd><mtd><mi>&lambda;</mi><mtext>,</mtext></mtd><mtd><mi>&mu;</mi></mtd></mtr></mtable></mrow></mfenced>
+                        <mtext>;</mtext><mo lspace="mediummathspace">&forall;</mo><mi>&lambda;</mi><mtext>,</mtext><mi>&mu;</mi><mo>&isin;</mo><mi>&reals;</mi></mtd></mtr></mtable>
+                        <mo>&rarr;</mo><mtext mathcolor="blue">Sistema Compatible Indeterminado</mtext></mrow>
+                    </math>
+                    </div>
+		    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 8:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Una compa&ntilde;&iacute;a tiene tres camiones (P, Q, R), en los que caben exactamente un cierto n&uacute;mero de contenedores
+                    de tres tipos (A, B, C), de acuerdo con la siguiente tabla:</p>
+                    <table class="tabla1">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">A</th>
+                                <th scope="col">B</th>
+                                <th scope="col">C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">P</th>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Q</th>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">R</th>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Si se han de transportar 45 contenedores del tipo A, 44 del tipo B y 58 del C, &iquest;cu&aacute;ntos viajes ha de hacer cada cami&oacute;n
+                    si todos los viajes los hacen totalmente llenos?</p>
+                    </section>
+                    <p>Como puedes ver es un problema de sistemas lineales. Lo primero es especificar bien nuestras inc&oacute;gnitas:<br />
+                    x &rarr; N&uacute;mero de viajes que ha de hacer el cami&oacute;n P.<br />
+                    y &rarr; N&uacute;mero de viajes que ha de hacer el cami&oacute;n Q.<br />
+                    z &rarr; N&uacute;mero de viajes que ha de hacer el cami&oacute;n R.<br />
+                    Ahora hemos de determinar nuestro sistema, analicemos la primera ecuaci&oacute;n del sistema: <br />
+                    5x + 2y + 4z = 45 <br />
+                    Nos dice que si multiplicamos 5 contenedores del tipo A por el n&uacute;mero de viajes que ha de hacer el cami&oacute;n P y luego le sumamos la
+                    multiplicaci&oacute;n de 2 contenedores de tipo A por el n&uacute;mero de viajes que ha de hacer el cami&oacute;n Q y le sumamos la multiplicaci&oacute;n de
+                    los 4 contenedores de tipo A por el n&uacute;mero de viajes que ha de hacer el cami&oacute;n R eso nos da el n&uacute;mero total de contenedores que se han
+                    de transportar del tipo A, que en &eacute;ste caso el problema nos dice que son 45 contenedores. Y esto es lo que queremos.<br />
+                    Si procedemos de igual forma que hemos hecho en la ecuaci&oacute;n para las otras dos ecuaciones pero para sus respectivos tipos B y C
+                    obtenemos el siguiente sistema lineal a resolver:</p>
+                    <math display="block">
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mn>5</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>45</mn></mtd></mtr>
+                                <mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>44</mn></mtd></mtr>
+                                <mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>+</mo><mn>6</mn><mi>z</mi><mo>=</mo><mn>58</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math>
+                    <p>Ahora tan s&oacute;lo queda resolverlo por el M&eacute;todo de Gauss que ya conoces:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>45</mn></mtd></mtr><mtr><mtd><mn>44</mn></mtd></mtr><mtr><mtd><mn>58</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><mn>5</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>2</mn></msub><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>1</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>19</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>45</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>85</mn></mtd></mtr><mtr><mtd><mn>58</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><mn>5</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>19</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>17</mn></mtd><mtd><mn>14</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>45</mn></mtd></mtr><mtr><mtd><mi>85</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">110</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <math display="block">
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo><mn>19</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><mn>17</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>2</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>19</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">215</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>45</mn></mtd></mtr><mtr><mtd><mn>85</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">645</mn></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Finalmente realizamos la sustituci&oacute;n hacia atr&aacute;s para resolver el sistema:</p>
+                    <math display="block">
+                        <mrow><mn>215</mn><mi>z</mi><mo>=</mo><mn>645</mn><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mn>645</mn></mrow><mrow><mn>215</mn></mrow></mfrac><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>3</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mn>19</mn><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>85</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo>
+                        <mfrac><mrow><mn>85</mn><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo><mn>3</mn></mrow><mrow><mn>19</mn></mrow></mfrac><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>4</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>45</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo>
+                        <mfrac><mrow><mn>45</mn><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><mn>4</mn><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><mn>3</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>5</mn></mrow>
+                    </math>
+                    <p><span class="resaltado">Soluci&oacute;n</span> &rarr; El Cami&oacute;n P hace 5 viajes, el Q hace 4 viajes, y el R 3 viajes.</p>
+                    </div>
+		    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 9:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Halla un n&uacute;mero de tres cifras sabiendo que estas suman 9; que, si del n&uacute;mero dado se le resta el que resulta de invertir
+                    el orden de sus cifras, la diferencia es 198, y que la cifra de las decenas es la media aritm&eacute;tica de las otras dos.</p>
+                    </section>
+                    <p>Nos dicen que hemos de hallar un n&uacute;mero de 3 cifras, lo llamamos n = xyz donde:
+                    <a href="#" class="tooltip">
+				Ojo !!!!
+				<span> Cuando escribo xyz no estoy escribiendo una triple multiplicaci&oacute;n de x por y por z. Lo que escribo es simplemente que quiero
+				calcular un n&uacute;mero de tres cifras. Por ejemplo, si n = 123 estoy diciendo que x =1, y = 2, z = 3; y no se multiplican !!!.</span></a> <br />
+                    <span class="negrita">x &rarr; Es la cifra de las centenas. <br />
+                    y &rarr; Es la cifra de las decenas. <br />
+                    z &rarr; Es la cifra de las unidades.</span></p>
+                    <p>Veamos cu&aacute;les son las ecuaciones: <br />
+                    + Primero nos dicen que sus cifras suman 9 &rarr; <span class="negrita">x + y + z = 9</span> . Ya tenemos la primera ecuaci&oacute;n.<br />
+                    + Luego nos dicen que si a <span class="negrita">n</span> se le resta el n&uacute;mero que da al invertir sus cifras nos da 198. Para expresar la segunda ecuaci&oacute;n es necesario que recuerdes
+                    c&oacute;mo se escribe un n&uacute;mero en base 10 (o base decimal).<br />
+                    Por ejemplo, <span class="negrita">123 = 3 + 2&CenterDot;10 + 1&CenterDot;100.</span> Por lo que <span class="negrita">n = xyz = z + 10y + 100x</span> .<br />
+                    Ahora debemos expresar el n&uacute;mero que resulta de invertir el orden de sus cifras a <span class="negrita">n = xyz</span>. Pero eso es sencillo, le llamamos <span class="negrita">m</span> y tenemos que
+                     <span class="negrita">m = zyx</span>, que escrito en base 10 es <span class="negrita">m = x + 10y + 100z</span>. Como nos dicen que si restamos <span class="negrita">n</span> menos <span class="negrita">m</span> nos da 198, tenemos la ecuaci&oacute;n que buscamos: <br />
+                    <span class="negrita">n - m = 198</span>. En base 10 es: <span class="negrita">z + 10y + 100x - ( x + 10y + 100z ) = 198</span>. Simplificando nos queda: <span class="negrita">99x - 99z = 198</span>. Hagamos un esfuerzo m&aacute;s,
+                    todos los n&uacute;meros de la ecuaci&oacute;n son divisibles por 99, dividimos la ecuaci&oacute;n por 99 y tenemos ya que nuestra segunda ecuaci&oacute;n del sistema es: <br />
+                    <span class="negrita">x - z = 2</span>. Ya est&aacute;.<br />
+                    + Para la tercera ecuaci&oacute;n hemos de expresar la cifra de las decenas, <span class="negrita">y</span>, como la media aritm&eacute;tica de <span class="negrita">x</span> y <span class="negrita">z</span>. La media aritm&eacute;tica de 2 n&uacute;meros es la suma de los 2 dividida por 2.
+                    Igual que cuando sacas las nota media de tus notas. Luego:
+                    <math display="block" mathvariant="bold">
+                        <mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>z</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&rarr;</mo><mn>2</mn><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mi>z</mi><mo>&rarr;</mo><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow>
+                    </math>
+                    <br />Ya tenemos nuestra tercera ecuaci&oacute; simplificada. Por tanto, nuestro sistema a resolver es:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>9</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    <p>Lo resolvemos por el m&eacute;todo de Gauss:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><msub><mi>F</mi><mn>2</mn></msub><mo>-</mo><msub><mi>F</mi><mn>1</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>9</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>-7</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mi>-7</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">-9</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <math display="block">
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo><msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>2</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">6</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>-7</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">12</mn></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Averiguamos las inc&oacute;gnitas del sistema con la sustituci&oacute;n hacia atr&aacute;s:</p>
+                    <math display="block">
+                        <mrow><mn>6</mn><mi>z</mi><mo>=</mo><mn>12</mn><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>2</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mo>-</mo><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>-7</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>7</mn><mo>-</mo><mn>2</mn><mi>z</mi><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>9</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>9</mn><mo>-</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>&rarr;</mo>
+                        <mi>x</mi><mo>=</mo><mn>9</mn><mo>-</mo><mn>3</mn><mo>-</mo><mn>2</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>4</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mtext mathcolor="blue">Soluci&oacute;n</mtext><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>n</mi><mo>=</mo><mn>4</mn><mn>3</mn><mn>2</mn></mtd></mtr></mtable></mrow>
+                    </math>
+                    </div>
+                    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 10:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>Dos amigos invierten 20 000 &euro; cada uno. El primero coloca una cantidad A al 4% de inter&eacute;s, una cantidad B al 5%
+                    y el resto al 6%. El otro invierte la misma cantidad A al 5%, la B al 6% y el resto al 4%. <br />
+                    Determina las cantidades A, B y C; sabiendo que el primero obtiene unos intereses de 1 050 &euro; y el segundo de 950 &euro;.</p>
+                    </section>
+                    <p>Lo primero que debes tener en cuenta es que ambos invierten la misma cantidad A, la misma cantidad B y la misma cantidad C; esto hace que el problema
+                    sea mucho m&aacute;s sencillo de resolver. <br /> Otra cosa muy importante es que en nuestras ecuaciones no podemos escribir 4%, <span class="subrayado">debemos pasarlo a tantos por uno.</span> Para ello debemos dividir el 4 por 100.
+                     Luego 4% es 0'04. Y as&iacute; con todos los dem&aacute;s intereses.<br /> Vamos a denotar <span class="subrayado">A = x, B = y, C = z.</span> Para ver m&aacute;s claro el sistema lo que haremos es escribir los datos del problema en una tabla:</p>
+                    <table class="tabla1">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">x</th>
+                                <th scope="col">y</th>
+                                <th scope="col">z</th>
+                                <th scope="col">20 000 &euro;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Amigo 1</th>
+                                <td>0'04</td>
+                                <td>0'05</td>
+                                <td>0'06</td>
+                                <td>1 050 &euro;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Amigo 2</th>
+                                <td>0'05</td>
+                                <td>0'06</td>
+                                <td>0'04</td>
+                                <td>950 &euro;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> = TOTALES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Ahora si sumas por filas en la tabla e igualas a totales obtienes el sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>20000</mn></mtd></mtr>
+                                <mtr><mtd><mn>0.04</mn><mi>x</mi><mo>+</mo><mn>0.05</mn><mi>y</mi><mo>+</mo><mn>0.06</mn><mi>z</mi><mo>=</mo><mn>1050</mn></mtd></mtr>
+                                <mtr><mtd><mn>0.05</mn><mi>x</mi><mo>+</mo><mn>0.06</mn><mi>y</mi><mo>+</mo><mn>0.04</mn><mi>z</mi><mo>=</mo><mn>950</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math></p>
+                    <p>Para no trabajar con decimales que es mucho rollo, aun utilizando la calcu, vamos a multiplicar la segunda y tercera ecuaciones por 100, obteniendo el sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>20000</mn></mtd></mtr>
+                                <mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>+</mo><mn>6</mn><mi>z</mi><mo>=</mo><mn>105000</mn></mtd></mtr>
+                                <mtr><mtd><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>95000</mn></mtd></mtr>
+                              </mtable>
+                            </mrow>
+                          </mfenced>
+                        </mrow>
+                    </math>
+                    Y ahora aplicamos Gauss:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>20000</mn></mtd></mtr><mtr><mtd><mn>105000</mn></mtd></mtr><mtr><mtd><mn>95000</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><msub><mi>F</mi><mn>2</mn></msub><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>1</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>20000</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>25000</mn></mtd></mtr><mtr><mtd><mn>95000</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><mn>5</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="49px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>20000</mn></mtd></mtr><mtr><mtd><mi>25000</mi></mtd></mtr><mtr><mtd><mn mathcolor="blue">-5000</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <math display="block">
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo><msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><msub><mi>F</mi><mn>2</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">-3</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>20000</mn></mtd></mtr><mtr><mtd><mn>25000</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">-30000</mn></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Realizamos la sustituci&oacute;n hacia atr&aacute;s para hallar x, y, z:</p>
+                    <math display="block">
+                        <mrow><mo>-</mo><mn>3</mn><mi>z</mi><mo>=</mo><mo>-</mo><mn>30000</mn><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>10000</mn><mtext>&euro;</mtext></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>25000</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>25000</mn><mo>-</mo><mn>2</mn><mi>z</mi>
+                        <mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>25000</mn><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><mn>10000</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>5000</mn><mtext>&euro;</mtext></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>20000</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>20000</mn><mo>-</mo><mi>y</mi><mo>-</mo><mi>z</mi>
+                        <mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>20000</mn><mo>-</mo><mn>5000</mn><mo>-</mo><mn>10000</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>5000</mn><mtext>&euro;</mtext></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mtext mathcolor="blue">Soluci&oacute;n</mtext><mo>&rarr;</mo>
+                        <mtable class="m-boxed" frame="solid" mathcolor="blue"><mtr><mtd>
+                        <mi>A</mi><mo>=</mo><mn>5000</mn><mtext>&euro;</mtext><mtext>,</mtext><mi>B</mi><mo>=</mo><mn>5000</mn><mtext>&euro;</mtext><mtext>,</mtext><mi>C</mi><mo>=</mo><mn>10000</mn><mtext>&euro;</mtext></mtd></mtr></mtable></mrow>
+                    </math>
+                    </div>
+                    </section>
+                    <h4 class="acordeon"><a href="#">Ejemplo 11:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>La edad de un padre es doble de la suma de las edades de sus dos hijos, mientras que hace unos a&ntilde;os (exactamente la diferencia de las
+                    edades actuales de los hijos) la edad del padre era triple que la suma de las edades en aquel tiempo de sus hijos. Cuando pasen tantos a&ntilde;os
+                     como la suma de las edades actuales de los hijos, entre los tres sumar&aacute;n 150 a&ntilde;os. &iquest;Qu&eacute; edad ten&iacute;a el padre cuando nacieron sus hijos?</p>
+                    </section>
+                    <p>En el problema nos piden la edad que ten&iacute;a el padre cuando nacieron cada uno de sus hijos, pero para hacerlo m&aacute;s sencillo el sistema lo haremos calculando las edades
+                    actuales de los 3, y luego hallaremos lo que nos piden. Establecemos nuestras inc&oacute;gnitas: <br />
+                    <span class="negrita">x &rarr; Edad actual del padre.<br />
+                    y &rarr; Edad actual de uno de los hijos.<br />
+                    z &rarr; Edad actual del otro hijo.<br />
+                    t = y - z &rarr; Los a&ntilde;os que han pasado, que son la diferencia de las edades de los 2 hijos. <br />
+                    w = y + z &rarr; Los a&ntilde;os que han de pasar, que son la suma de las edades de los 2 hijos. <br /></span>
+                    Seguidamente veamos cu&aacute;les son las ecuaciones del sistema:</p>
+                    <p>+ La edad del padre es el doble de la suma de las edades de sus hijos &rarr; <span class="negrita">x = 2(y + z)</span></p>
+                    <p>+ Mientras que hace unos a&ntilde;os (exactamente la diferencia de las edades actuales de los hijos) la edad del padre era triple que la suma de las edades en aquel tiempo de sus hijos. &rarr; <span class="negrita">x - t = 3(y - t + z - t)</span></p>
+                    <p>+ Cuando pasen tantos a&ntilde;os como la suma de las edades actuales de los hijos, entre los tres sumar&aacute;n 150 a&ntilde;os. &rarr; <span class="negrita">x + w + y + w + z + w = 150</span></p>
+                    <p>Lo montamos todo en un sistema de ecuaciones:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>-</mo><mn>3</mn><mi>z</mi><mo>+</mo><mn>5</mn><mi>t</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>+</mo><mn>3</mn><mi>w</mi><mo>=</mo><mn>150</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math></p>
+                    <p>Como sabemos que <span class="negrita">t = y - z, w = y + z,</span> sustituimos ambas en la segunda y tercera ecuaciones del sistema; simplificamos y obtenemos el siguiente sistema:
+                    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>-</mo><mn>8</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>150</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math></p>
+                    <p>Muy bien, ahora ya tenemos un sistema de 3 ecuaciones con 3 inc&oacute;gnitas, aplicamos Gauss para resolverlo:</p>
+                    <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>-8</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>150</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><msub><mi>F</mi><mn>2</mn></msub><mo>-</mo><msub><mi>F</mi><mn>1</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-6</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr mathcolor="blue"><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>150</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-6</mn></mtd></mtr>
+                        <mtr mathcolor="blue"><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">150</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math>
+                    <math display="block">
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mn>2</mn></msub></mrow><mrow><mn>2</mn></mrow></mfrac></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr>
+                        <mtr><mtd><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mn>3</mn></msub></mrow><mrow><mn>3</mn></mrow></mfrac></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">2</mn></mtd><mtd><mn mathcolor="blue">-3</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn  mathcolor="blue">2</mn></mtd><mtd><mn mathcolor="blue">2</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn  mathcolor="blue">0</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">50</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo><msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><msub><mi>F</mi><mn>2</mn></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>-3</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn  mathcolor="red">0</mn></mtd><mtd><mn mathcolor="blue">5</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">50</mn></mtd></mtr></mtable></mrow></mfenced>
+                    </math>
+                    <p>Realizamos la sustituci&oacute;n hacia atr&aacute;s para resolver el sistema:</p>
+                    <math display="block">
+                        <mrow><mn>5</mn><mi>z</mi><mo>=</mo><mn>50</mn><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>10</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mn>2</mn><mi>y</mi><mo>-</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mfrac><mrow><mn>3</mn><mi>z</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>15</mn></mrow>
+                    </math>
+                    <math display="block">
+                        <mrow><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>50</mn></mrow>
+                    </math>
+                    <p>Finalmente calculamos la soluci&oacute;n del problema: <br />
+                    <span class="negrita">Edad Del Padre Cuando Naci&oacute; El Hijo Menor = x - z = 50 - 10 = 40 a&ntilde;os.<br />
+                    Edad Del Padre Cuando Naci&oacute; El Hijo Mayor = x - y = 50 - 15 = 35 a&ntilde;os.</span></p>
+		    </div>
+                    </section>
+		    <p class="titulos_ejemplos">Ejemplos Resueltos De Cuestiones Te&oacute;ricas.</p>
+		    <h4 class="acordeon"><a href="#">Cuesti&oacute;n 1:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+                    <p>&iquest; Para qu&eacute; valores de a y b ser&aacute; compatible este sistema? &iquest;Ser&aacute; determinado?
+		    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mi>a</mi></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mi>b</mi></mtd></mtr></mtable></mrow></mfenced></mrow>
+                    </math></p>
+                    </section>
+		    <p>En la primera pregunta nos preguntan en realidad para qu&eacute; valores de <span class="negrita">a</span> y <span class="negrita">b</span> el sistema tiene
+		    soluci&oacute;n, y en la segunda si la soluci&oacute;n es &uacute;nica o hay infinitas soluciones. <br />
+		    Como la matriz de coeficientes:
+		    <math display="block">
+			<mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=",">
+			<mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mi>-1</mi></mtd><mtd><mi>-1</mi></mtd></mtr></mtable></mrow></mfenced></mrow>
+		    </math> sus elementos no dependen de <span class="negrita">a</span> y <span class="negrita">b</span>,
+		    <a href="#" class="tooltip">
+				Aclaraci&oacute;n
+				<span>Que no dependen de a y b significa que en la matriz A de coeficientes no aparecen por ning&uacute;n lado las letras a y b.
+				Si apareciese alguna de las dos o las dos deber&iacute;amos resolver el sistema para ver si es Compatible o Incompatible.</span></a>
+		     y tiene m&aacute;s inc&oacute;gnitas que ecuaciones, tenemos que el sistema es Compatible para cualesquiera
+		    valores de <span class="negrita">a</span> y <span class="negrita">b</span>. <br />
+		    Como el sistema tiene que:</p>
+		    <span class="negrita">N&uacute;mero Inc&oacute;gnitas = 3 &lt; 2 = N&uacute;mero de ecuaciones</span>, entonces; el sistema siempre ser&aacute; Compatible Indeterminado, nunca ser&aacute; Determinado.
+			</div>
+		    </section>
+		    <h4 class="acordeon"><a href="#">Cuesti&oacute;n 2:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+			<p>&iquest;Es posible convertir este sistema en compatible indeterminado cambiando un signo?
+			<math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math></p>
+		    </section>
+		    <p>S&iacute; es posible, tan s&oacute;lo hay que cambiar el signo que haga que en el sistema tengamos 2 ecuaciones iguales, lo cual nos permitir&aacute;
+		    tachar (eliminar) una de esas dos ecuaciones que son iguales. Hay varias formas, optamos por cambiar el signo menos de la segunda ecuaci&oacute;n por un signo +. Eliminamos la
+		    segunda ecuaci&oacute;n por ser la misma que la primera; y obtenemos el sistema:
+		    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math> Para resolverlo consideramos y = &lambda; luego:
+		    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>&lambda;</mi></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>&lambda;</mi></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math></p>
+		    <p>Para acortar vamos a solucionar el sistema por Reducci&oacute;n, sumamos las 2 ecuaciones del sistema y tenemos:</p>
+		    <math display="block">
+			<mrow><mn>2</mn><mi>x</mi><mo>=</mo><mn>2</mn><mo>-</mo><mn>2</mn><mi>&lambda;</mi><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>&lambda;</mi><mtext>;</mtext><mo lspace="thickmathspace">&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mrow>
+		    </math>
+		    <math display="block">
+			<mrow><mi>z</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>&lambda;</mi><mo>-</mo><mi>x</mi><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>1</mn><mo>-</mo><mi>&lambda;</mi><mo>-</mo>
+			<mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><mi>&lambda;</mi></mrow></mfenced><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow>
+		    </math>
+		    <p class="negrita">Soluci&oacute;n &rarr; P(1-&lambda;, &lambda;, 0); &forall; &lambda; &isin; &reals; &rarr; Compatible Indeterminado</p>
+			</div>
+		    </section>
+		    <h4 class="acordeon"><a href="#">Cuesti&oacute;n 3:</a></h4>
+		    <section class="contacordeon">
+			<div class="block">
+                    <section class="enunciados">
+		    <p>Encuentra razonadamente dos valores del par&aacute;metro <span class="negrita">a</span> para los cuales el siguiente sistema sea incompatible:
+		    <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>ax</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+				<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>az</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+                    </math></p>
+		    </section>
+		    <p><p><span class="resaltado">FORMA 1:</span> &rarr; Para ser Incompatible hemos de conseguir que al aplicar operaciones elementales en Gauss alguna de las filas de la <span class="subrayado">Matriz De Coeficientes</span> tenga todos
+		    sus elementos iguales a 0. Un valor sencillo es que a = 1; ya que de esta forma las 2 primeras ecuaciones son iguales excepto en sus t&eacute;rminos independientes.<br />
+		    <span class="negrita">Si a = 1</span> &rarr; <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+				<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+			<mtable><mtr><mtd><mtext>1&ordf;. Ecuaci&oacute;n &minus; 2&ordf;. Ecuaci&oacute;n</mtext></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+			<mrow><mn>0</mn><mo>=</mo><mn>1</mn><mo>&xrarr;</mo><mtext>Lo cual es falso</mtext><mo>&xrarr;</mo><mtext>Incompatible</mtext></mrow>
+                    </math></p>
+		    <p>Ya tenemos uno de los valores pedidos. Para el segundo valor de <span class="negrita">a</span> puede ser algo m&aacute;s dif&iacute;cil
+		    de encontrar pero no mucho. Nos vamos a fijar solamentes en las dos &uacute;ltimas ecuaciones del sistema, y vamos a intentar encontrar un valor
+		    de <span class="negrita">a</span> para el cual al restar las 2 ecuaciones nos pase igual que antes. <br />
+		    En la primera ecuaci&oacute;n el coeficiente que acompa&ntilde;a a la <span class="negrita">z</span> es un 3, y en la segunda ecuaci&oacute;n el coeficiente que
+		    acompa&ntilde;a a la <span class="negrita">x</span> es un 2. Pues vamos a hacer el sistema con estas dos ecuaciones por reducci&oacute;n.
+		    Consideraremos <span class="negrita">a = 2 &CenterDot; 3 = 6</span></p>
+		    <span class="negrita">Si a = 6</span> &rarr; <math>
+                        <mrow>
+                          <mfenced open="{" close="}" separators=",">
+                            <mrow>
+                              <mtable groupalign="{left left}">
+                                <mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr>
+				<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>6</mn><mi>z</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+                              </mtable></mrow></mfenced></mrow>
+			<mtable><mtr><mtd><mn>2</mn><mo>&CenterDot;</mo><mtext>1&ordf;. Ecuaci&oacute;n</mtext><mo>-</mo><mtext> 2&ordf;. Ecuaci&oacute;n</mtext></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+			<mrow><mn>0</mn><mo>=</mo><mn>1</mn><mo>&xrarr;</mo><mtext>Lo cual es falso</mtext><mo>&xrarr;</mo><mtext>Incompatible</mtext></mrow>
+            </math>
+            <p>Luego tenemos que para <span class="negrita">a = 1, a = 6 </span>el sistema es Incompatible, como nos ped&iacute;an.</p>
+            <p><span class="resaltado">FORMA 2:</span> &rarr; Si esta forma de hacerlo te ha resultado un poco complicada o "sacada de la manga" puedes hacerlo de otra forma, y esa forma es aplicando Gauss, haciendo que la matriz ampliada sea triangular superior, al no tener el mismo n&uacute;mero de ecuaciones que de inc&oacute;gnitas, la matriz no es cuadrada; as&iacute; que la forma de la matriz triangular superior variar&aacute; un poco de a lo que estas acostumbrado/da, pero no mucho. Apliquemos Gauss:</p>
+            <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mi>a</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>2</mtext></msub><mo>-</mo><mi>a</mi><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="blue"><mn>1</mn><mo>-</mo><mi>a</mi></mtd><mtd mathcolor="blue"><mn>2</mn><mo>-</mo><mn>2</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn mathcolor="blue">1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>-</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>1</mn><mo>-</mo><mi>a</mi></mtd><mtd><mn>2</mn><mo>-</mo><mn>2</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd  mathcolor="blue"><mn>-1</mn></mtd><mtd mathcolor="blue"><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable>
+                        </mrow></mfenced></mrow>
+            </math>
+
+            <math display="block"><mrow>
+                        <mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>&harr;</mo><msub><mi>F</mi><mn>3</mn></msub></mtd></mtr><mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="blue"><mn>-1</mn></mtd><mtd mathcolor="blue"><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="blue"><mn>1</mn><mo>-</mo><mi>a</mi></mtd><mtd mathcolor="blue"><mn>2</mn><mo>-</mo><mn>2</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>2</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable>
+                        </mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>3</mtext></msub><mo>+</mo><mo>(</mo><mn>1</mn><mo>-</mo><mi>a</mi><mo>)</mo><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>2</mtext></msub></mtd></mtr>
+                        <mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="red"><mn>0</mn></mtd><mtd mathcolor="blue"><mn>3</mn><mo>-</mo><mn>3</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable>
+                        </mrow></mfenced></mrow></math>
+            <math display="block"><mrow>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>4</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>4</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>1</mtext></msub></mtd></mtr><mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn  mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="red"><mn>0</mn></mtd><mtd><mn>3</mn><mo>-</mo><mn>3</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="blue"><mn>-2</mn></mtd><mtd mathcolor="blue"><mi>a</mi><mo>-</mo><mn>4</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>3</mn></mtd></mtr></mtable></mrow></mfenced>
+                        <mtable><mtr><mtd><msub><mtext>F</mtext><mtext>4</mtext></msub><mo>=</mo><msub><mtext>F</mtext><mtext>4</mtext></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mtext>F</mtext><mtext>2</mtext></msub></mtd></mtr><mtr><mtd><mo mathsize="45px">&xrarr;</mo></mtd></mtr></mtable>
+                        <mfenced open="(" close=")" separators=","><mrow>
+                        <mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="red"><mn>0</mn></mtd><mtd><mn>3</mn><mo>-</mo><mn>3</mn><mi>a</mi></mtd></mtr>
+                        <mtr><mtd><mn mathcolor="red">0</mn></mtd><mtd mathcolor="red"><mn>0</mn></mtd><mtd mathcolor="blue"><mi>a</mi><mo>-</mo><mn>6</mn></mtd></mtr></mtable><mo>|</mo>
+                        <mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>-1</mn></mtd></mtr></mtable>
+                        </mrow></mfenced></mrow>
+            </math>
+            <p>Realizando la sustituci&oacute;n hacia atr&aacute;s tenemos:</p>
+            <math display="block">
+                <mrow><mfenced open="(" close=")" separators=",">
+                <mrow><mi>a</mi><mo>-</mo><mn>6</mn></mrow></mfenced><mi>z</mi><mo>=</mo><mi>-1</mi><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mi>-1</mi></mrow><mrow><mi>a</mi><mo>-</mo><mn>6</mn></mrow></mfrac></mrow>
+            </math>
+            <p>Teniendo en cuenta que <span class="negrita">z es un n&uacute;mero racional</span> <a href="#" class="tooltip">
+                Lee Aqu&iacute;<span>Sabemos que los racionales solamente se pueden calcular cuando su denominador no es 0.</span></a>. Luego, veamos para qu&eacute; valores de <span class="negrita">a</span> el denominador es 0; simplemente igualamos el denominador a cero y resolvemos la ecuaci&oacute;: </p>
+            <math display="block">
+                <mrow><mi>a</mi><mo>-</mo><mn>6</mn><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>a</mi><mo>=</mo><mn>0</mn></mrow>
+            </math>
+            <p>Obtenemos que para <span class="negrita">a = 6</span> no podemos calcular <span class="negrita">z</span>, que es lo mismo que decir que el sistema no tiene soluci&oacute;n para <span class="negrita">a = 6</span>, es decir; que para <span class="negrita">a = 6</span> el sistema es Incompatible.</p>
+            <p>Procedemos del mismo modo para la tercera fila de la matriz triangular que hemos obtenido:</p>
+            <math display="block">
+                <mrow><mfenced open="(" close=")" separators=","><mrow><mn>3</mn><mo>-</mo><mn>3</mn><mi>a</mi></mrow></mfenced><mi>z</mi><mo>=</mo><mn>3</mn><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>3</mn><mfenced open="(" close=")" separators=","><mrow><mn>1</mn><mo>-</mo><mi>a</mi></mrow></mfenced></mrow></mfrac><mo>&rarr;</mo><mi>z</mi><mo>=</mo><mfrac><mrow><mi>-1</mi></mrow><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mrow>
+            </math>
+            <p>Por lo mismo de antes igualamos el denominador a 0 y obtenemos:<math><mi>a</mi><mo>-</mo><mn>1</mn><mo>=</mo><mn>0</mn><mo>&xrarr;</mo><mi>a</mi><mo>=</mo><mn>1</mn></math> Luego para <span class="negrita">a = 1</span> tenemos que no podemos calcular <span class="negrita">z</span>, por lo que para <span class="negrita">a = 1</span> el sistema es Incompatible.</p>
+            <p><span class="subrayado">Vemos que de las dos formas obtenemos la misma soluci&oacute;n del problema.</span></p>
+			</div>
+		    </section>
+            </section>
+        </section>
+        <footer>
+			<?
+                        include("footerclass.php");
+                        hacer_footer();
+            ?>
+	</footer>
+    </section>
+</body>
+</html>

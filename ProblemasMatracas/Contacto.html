@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<?php
+      		include('xua.php');
+    	?>
+		<title>Contacto.</title>
+		<!--[if IE]><script src="js/HTML5forIE.js" type="text/javascript"></script><![endif]-->
+		<!--[if lt IE 10]><script type="text/javascript" src="js/flexie.js"></script><![endif]-->
+
+		<meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+		<meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+		<meta name="author" content="Cristobal Lopez Silla" />
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+		<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+		
+
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link type="text/css" href="css/style.css" rel="stylesheet" media = "all" />
+		<link rel="stylesheet" type="text/css" href="css/slider.css" media="all" />
+  		<script src="js/modernizr.custom.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  		<![endif]-->
+		<section class="contenedor">
+			<header>
+				<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>
+			</header>
+
+	<!-- INICIO DEL SLIDER DE LA CABECERA -->
+			<?
+						include("sliderclass.php");
+						hacer_slider();
+			?>
+    <!-- FIN DEL SLIDER DE LA CABECERA -->
+
+	<section class="contenido-ppal">
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+
+		<section class="contenido-texto">
+			<article>
+				<p>Si encuentras errores matem&aacute;ticos en la web y quieres informarme sobre ellos para que los subsane, lo puedes hacer mediante &eacute;ste formulario de contacto. Gracias por tu colaboraci&oacute;n.</p><br /><br />
+				<form class="contact_form" action="contacto.php" method="post" enctype="application/x-www-form-urlencoded">
+					<fieldset>
+						<legend>Contacta Para Informarme De Erratas.</legend>
+				    <ul>
+				       <li>
+				           <label for="name">Nombre:</label>
+				           <input type="text" id="name" name="nombre" placeholder="Tu nombre o nick" required="required" />
+				       </li>
+				       <li>
+				           <label for="email">E-mail:</label>
+				           <input type="email" id="email" name="email" placeholder="Tu correo" required="required" />
+				       </li>
+				       <li>
+				           <label for="website">Sitio Web:</label>
+				           <input type="url" id="website" name="web" placeholder="Direcci&oacute;n web donde hay un error." required="required" />
+				       </li>
+				       <li>
+				           <label for="Mensaje">Mensaje:</label>
+				           <textarea id="Mensaje" name="mensaje" cols="40" rows="10" placeholder="Explica cu&aacute;l es el error." required="required" ></textarea>
+				       </li>
+				        <li>
+				          <button class="submit" type="submit">Enviar</button>
+				        </li>
+				    </ul>
+				</fieldset>
+				</form>
+
+			</article>
+		</section>
+	</section>
+
+			<footer>
+				<?
+						include("footerclass.php");
+						hacer_footer();
+				?>
+			</footer>
+	</section>
+	</body>
+</html>

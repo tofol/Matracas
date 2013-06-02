@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<?php
+      include('xua.php');
+    ?>
+	<title>Teoria Tema 2 Segundo Bachiller</title>
+	
+	<meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+	<meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+	<meta name="author" content="Cristobal Lopez Silla" />
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+	
+	<link href="css/normalize.css" rel="stylesheet" media="all" />
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+	
+
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	  <script src="js/modernizr.js"></script>
+  		<!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+  		<!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+	  <script src="js/plugins.js"></script>
+	  <script src="js/main.js"></script>
+	
+	<script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  	</script>
+
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  	<![endif]-->
+	<section class="contenedor">
+	<header> 
+		<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>
+	 
+	</header>
+	
+	<section class="contenido-ppal">	
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+	
+	
+	
+	<section class="contenido-texto">
+		<article>
+	 		<h2>T2. &Aacute;LGEBRA DE MATRICES.</h2>
+	  		<h3>Nomenclatura. Definiciones.</h3>
+			<h4>Definici&oacute;n: </h4>
+			<p>Una <span class="negrita">Matriz</span> no es mas que una colecci&oacute;n de n&uacute;meros y/o variables colocados en "cajas" rectangulares, ordenadas en <span class="subrayada negrita">filas</span> y <span class="subrayada negrita">columnas</span>.</p>
+			<h5>Ejemplos:</h5>
+			<ol>
+				<li><p>
+					<math>
+						<mrow><mtext>A</mtext><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mi>-3</mi></mtd><mtd><mi>x</mi></mtd></mtr></mtable></mrow></mfenced></mrow>
+					</math> &rarr; Matriz formada por 1 fila y 3 columnas.</p>
+				</li>
+				<li>
+					<p><math>
+						<mrow><mtext>B</mtext><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mi>-15</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+					</math> &rarr; Matriz formada por 3 filas y una columna.</p>		
+				</li>
+				<li>
+					<p><math>
+						<mrow><mtext>C</mtext><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+					</math> &rarr; Matriz formada por 2 filas y 2 columnas.</p>
+				</li>
+			</ol>
+			<h4>Notaci&oacute;n</h4>
+			<p>Las matrices se pueden denotar entre par&eacute;ntesis o entre corchetes, aqu&iacute; las denotaremos entre par&eacute;ntesis. Dentro de los par&eacute;ntesis meteremos sus elementos ordenados en filas/columnas.<br /> Supongamos que una matriz tiene <span class="subrayada">m filas</span> y <span class="subrayada">n columnas</span>. Cada elemento de una matriz lo denotaremos de forma general como: <br /> <math mathvariant="bold"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mtext>;</mtext><mn>1</mn><mo>&les;</mo><mi>i</mi><mo>&les;</mo><mi>m</mi><mtext>;</mtext><mn>1</mn><mo>&les;</mo><mi>j</mi><mo>&les;</mo><mi>m</mi></mrow></math><br /> Luego cada elemento de una matriz lleva 2 sub&iacute;ndices, el primero especifica el n&uacute;mero de filas y el segundo especifica el n&uacute;mero de columnas. De esta forma podemos representar de forma general una matriz A de m filas y n columnas como:</p>
+			<math display="block">
+				<mrow><mi>A</mi><mo>=</mo><msub><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>3</mn></mrow></msub></mtd><mtd><mo>&hellip;</mo></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub></mtd><mtd><mo>&hellip;</mo></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>3</mn></mrow></msub></mtd><mtd><mo>&hellip;</mo></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>&hellip;</mo></mtd><mtd><mo>&hellip;</mo></mtd><mtd><mo>&hellip;</mo></mtd><mtd><mo>&hellip;</mo></mtd><mtd><mo>&hellip;</mo></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mn>3</mn></mrow></msub></mtd><mtd><mo>&hellip;</mo></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable></mrow></mfenced></mrow><mrow><mi>m</mi><mo>&times;</mo><mi>n</mi></mrow></msub></mrow>
+			</math>
+			<p>Al par <math><mrow><mi>m</mi><mo>&times;</mo><mi>n</mi></mrow></math> se le denomina <span class="subrayada">Dimensi&oacute;n</span>.<br />Por lo general, las matrices las llamaremos con letras may&uacute;sculas. </p>
+			<h4>Definiciones:</h4>
+			<p><span class="subrayada negrita">Matriz Cuadrada</span> &rarr; Cuando tiene el mismo n&uacute;mero de filas y columnas (m = n) </p>
+			<p><span class="subrayada negrita">Matriz Traspuesta</span> &rarr; Es cuando a una matriz cualquiera intercambiamos las filas por columnas y las columnas por filas. Es decir, si una matriz tiene dimensi&oacute;n m &times; n, su traspuesta tiene dimensi&oacute;n n &times; m. Dada una matriz A su traspuesta viene escrita por cualquiera de estas formas: <math mathvariant="bold"><mrow><msup><mi>A</mi><mi>t</mi></msup><mo>=</mo><msup><mi>A</mi><mi>T</mi></msup><mo>=</mo><msup><mi>A</mi><mi>'</mi></msup></mrow></math> Las 3 formas son igual de v&aacute;lidas.</p>
+			<p><span class="negrita subrayada">Ejemplo</span> &rarr; 
+			<math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+  			<mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+        	<mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+        	<math><mrow><msup><mi>A</mi><mi>t</mi></msup><mo>=</mo><mfenced open="(" close=")" separators=" ">
+  			<mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+        	<mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+			<p><span class="subrayada negrita">Matriz Sim&eacute;trica</span> &rarr; Es cuando la matriz coincide con su traspuesta, es decir; <math mathvariant="bold"><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>t</mi></msup></math>. Para que una matriz sea sim&eacute;trica necesariamente ha de ser cuadrada.</p>
+			<p><span class="negrita subrayada">Ejemplo</span> &rarr; La matriz B es sim&eacute;trica. 
+			<math><mrow><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+  			<mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>-5</mn></mtd></mtr>
+        	<mtr><mtd><mn>6</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+        	<mtr><mtd><mn>-5</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+        	</mtable></mrow></mfenced></mrow><mo>=</mo><msup><mi>B</mi><mi>t</mi></msup></math></p>
+			<p><span class="subrayada negrita">Diagonal Principal</span> &rarr; Es la diagonal de la matriz formada por los elementos que cumplen <math mathvariant="bold"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mrow></math> <br /> Se denota por <span class="negrita">diag(A)</span>.</p>
+			<p>En la siguiente matriz te marco de rojo los elementos de su diagonal principal:
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd>
+			<mn  mathcolor="#FF0000">1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+			<mtr><mtd><mn>4</mn></mtd><mtd><mn  mathcolor="#FF0000">5</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+			<mtr><mtd><mn>7</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn  mathcolor="#FF0000">9</mn></mtd></mtr></mtable>
+		    </mrow></mfenced></mrow></math></p>
+			<p><span class="subrayada negrita">Diagonal Secundaria</span> &rarr; Para no hacerte mucho lío te digo que es la otra diagonal opuesta a la diagonal principal, mira la matriz anterior con su diagonal secundaria marcada de rojo:
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd>
+			<mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn mathcolor="#FF0000">3</mn></mtd></mtr>
+			<mtr><mtd><mn>4</mn></mtd><mtd><mn  mathcolor="#FF0000">5</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+			<mtr><mtd><mn mathcolor="#FF0000">7</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable>
+		    </mrow></mfenced></mrow></math></p>
+		    <p><span class="subrayada negrita">Traza</span> &rarr; Es la suma de todos los elementos que forman su diagonal principal. Se denota por <span class="negrita">tr(A)</span>. En la matriz anterior su traza es: <br /> <span class="negrita">tr(A) = 1 + 5 + 9 = 15</span>. </p>
+			<p><span class="subrayada negrita">Matriz Triangular</span> &rarr; Es toda matriz cuyos elementos que est&aacute;n por debajo o por encima de la diagonal principal son 0.</p>
+			<p><span class="subrayada negrita">Matriz Triangular Superior</span> &rarr; Cuando son 0 los que est&aacute;n por debajo de su diagonal principal.</p>
+			<p><span class="subrayada negrita">Matriz Triangular Inferior</span> &rarr; Cuando son 0 los que est&aacute;n por encima de su diagonal principal. <br /> Te dejo 2 ejemplos, uno de triangular superior, y el otro de triangular inferior. 
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd>
+			<mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+			<mtr><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+			<mtr><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd>
+			<mn>1</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd></mtr>
+			<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd></mtr>
+			<mtr><mtd><mn>7</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+			<p><span class="subrayada negrita">Matriz Diagonal</span> &rarr; Es toda matriz cuadrada que es a la vez triangular superior e inferior. Como ejemplo tenemos la matriz:
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd>
+			<mn>1</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd></mtr>
+			<mtr><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd></mtr><mtr><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn mathcolor="#FF0000">0</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+			<p><span class="subrayada negrita">Matriz Identidad</span> &rarr; Es toda matriz cuadrada y diagonal, en la que los elementos de su diagonal principal son 1. En general se denota por <math><msub><mi>I</mi><mi>n</mi></msub></math>, siendo <span class="subrayada">n</span> su dimensi&oacute;n. Por ejemplo, la matriz identidad de dimensi&oacute;n 3 es:
+			<math>
+			<mrow><msub><mi>I</mi><mn>3</mn></msub><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable>
+        	<mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+        	<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+        	<mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+			</p>
+		</article>
+
+		<article>
+			<h2>Operaciones Con Matrices.</h2>
+			<p>En esta secci&oacute;n veremos c&oacute;mo sumar, restar y multiplicar matrices; al igual que multiplicar un n&uacute;mero por una matriz. <span class="resaltado"> En matrices, dividir dos matrices no es una operaci&oacute;n v&aacute;lida</span>.</p>
+			<h3>Suma Y Resta De Matrices.</h3>
+			<p>Lo primero que debes tener en cuenta es que s&oacute;lo pueden sumarse matrices que tengan la misma dimensi&oacute;n. Por ejemplo, si una matriz A es de dimensi&oacute;n 3 &times; 4 y otra matriz B es de dimensi&oacute;n 4 &times; 3 NO las podremos ni sumar ni restar.<br /> Para sumar o restar dos matrices es tan sencillo como sumar/restar sus respectivos elementos. Lo mejor es que lo veas con un ejemplo.</p>
+
+            <p><span class="negrita subrayada">Ejemplo</span> &rarr; Sean las matrices:
+            <math>
+			<mrow>
+  			<mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+        	<mtr><mtd><mi>-4</mi></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced>
+        	<mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+        	<mtr><mtd><mi>-2</mi></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced>
+			</mrow>
+			</math></p>
+			<p>
+			<math>
+			<mrow>
+  			<mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>2</mn><mo>+</mo><mn>3</mn></mtd><mtd><mn>3</mn><mo>+</mo><mn>1</mn></mtd></mtr>
+        	<mtr><mtd><mi>-4</mi><mo>+</mo><mo>(</mo><mn>-2</mn><mo>)</mo></mtd><mtd><mn>5</mn><mo>+</mo><mn>4</mn></mtd></mtr></mtable></mrow></mfenced>
+        	<mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+        	<mtr><mtd><mi>-6</mi></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced>
+			</mrow></math></p>
+			<p>
+			<math>
+			<mrow>
+  			<mi>A</mi><mo>-</mo><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>2</mn><mo>-</mo><mn>3</mn></mtd><mtd><mn>3</mn><mo>-</mo><mn>1</mn></mtd></mtr>
+        	<mtr><mtd><mi>-4</mi><mo>-</mo><mo>(</mo><mn>-2</mn><mo>)</mo></mtd><mtd><mn>5</mn><mo>-</mo><mn>4</mn></mtd></mtr></mtable></mrow></mfenced>
+        	<mo>=</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>-1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+        	<mtr><mtd><mi>-2</mi></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+			</mrow></math></p>
+			<h3>Multiplicar Un N&uacute;mero Por Una Matriz.</h3>
+			<p>Esta operaci&oacute;n es muy sencilla y seguro que es lo que piensas, es multiplicar el n&uacute;mero por todos los elementos de la matriz.</p>
+			<p><span class="negrita subrayada">Ejemplo</span> &rarr; Sean las matrices:
+            <math>
+			<mrow>
+  			<mn>5</mn><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><mn>5</mn><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+        	<mtr><mtd><mi>-4</mi></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+        	<mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>5</mn><mo>&CenterDot;</mo><mn>2</mn></mtd><mtd><mn>5</mn><mo>&CenterDot;</mo><mn>3</mn></mtd></mtr>
+        	<mtr><mtd><mn>5</mn><mo>&CenterDot;</mo><mo>(</mo><mi>-4</mi><mo>)</mo></mtd><mtd><mn>5</mn><mo>&CenterDot;</mo><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+        	<mfenced open="(" close=")" separators=" ">
+    		<mrow><mtable><mtr><mtd><mn>10</mn></mtd><mtd><mn>15</mn></mtd></mtr>
+        	<mtr><mtd><mi>-20</mi></mtd><mtd><mn>25</mn></mtd></mtr></mtable></mrow></mfenced>
+			</mrow>
+			</math></p>
+			<h3>Multiplicar Una Matriz Fila Por Una Matriz Columna.</h3>
+			<p>&Eacute;ste es un caso particular del producto de 2 matrices, y adem&aacute;s coincide con la operaci&oacute;n de vectores llamada <span class="subrayado">Producto Escalar</span>. Veamos la forma general de &eacute;ste producto: </p>
+			<math display="block">
+				<mrow><mfenced open="(" close=")" separators=" ">
+    			<mrow><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd><mtd><msub><mi>a</mi><mn>2</mn></msub>
+		        </mtd><mtd><msub><mi>a</mi><mn>3</mn></msub></mtd><mtd><mo>&CenterDot;&CenterDot;&CenterDot;</mo></mtd>
+		        <mtd><msub><mi>a</mi><mi>n</mi></msub></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+		  		<mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr>
+		        <mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>3</mn></msub></mtd></mtr>
+		        <mtr><mtd><mo>&CenterDot;&CenterDot;&CenterDot;</mo></mtd></mtr>
+		        <mtr><mtd><msub><mi>b</mi><mi>n</mi></msub></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+		  		<msub><mi>a</mi><mn>1</mn></msub><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub>
+		  		<msub><mi>b</mi><mn>2</mn></msub><mo>+</mo><msub><mi>a</mi><mn>3</mn></msub><msub><mi>b</mi><mn>3</mn></msub><mo>+</mo>
+		  		<mo>&CenterDot;&CenterDot;&CenterDot;</mo><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><msub><mi>b</mi><mi>n</mi></msub></mrow>
+			</math>
+			<p><span class="subrayada">Las dos matrices deben tener la misma dimensi&oacute;n. Su resultado siempre es un n&uacute;mero, que se le llama Escalar.</span></p>
+			<p><span class="negrita subrayada">Ejemplo</span> &rarr; 
+			<math>
+				<mrow><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+  				<mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr></mtable></mrow>
+  				</mfenced><mo>=</mo><mn>1</mn><mo>&CenterDot;</mo><mn>4</mn><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo>
+  				<mn>5</mn><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mn>6</mn><mo>=</mo><mn>3</mn><mn>2</mn></mrow></math></p>
+  			<h3>Producto De Matrices.</h3>
+  			<p>Sea A una matriz cualquiera de dimensi&oacute;n m&times;n, y sea B otra matriz de dimensi&oacute;n p&times;q. Para poder hacer el producto de ambas A&CenterDot;B se ha de cumplir que <span class="negrita">el n&uacute;mero de columnas de A ha de ser igual al n&uacute;mero de filas de B, es decir; m = p</span>.<br />Debes tener muy en cuenta que, en general, no se cumple que A&CenterDot;B = B&CenterDot;A, incluso puede ocurrir que podamos hacer A&CenterDot;B pero no podamos hacer B&CenterDot;A, ya que por la regla que acabamos de escribir puede ocurrir que el n&uacute;mero de columnas de B no sea igual al n&uacute;mero de filas de A, es decir; que p&ne;m . </p>
+  			<p>Para multiplicar dos matrices A&CenterDot;B lo que hacemos es multiplicar cada fila de A por su correspondiente columna de B.</p>
+  			<p>Adem&aacute;s podemos saber cu&aacute;l es la dimensi&oacute;n de la matriz resultante de hacer la multiplicaci&oacute;n, siempre es, su n&uacute;mero de filas es el n&uacute;mero de filas de la primera matriz, y su n&uacute;mero de columnas es el n&uacute;mero de columnas de la segunda matriz, en nuestro caso la dimensi&oacute;n es m&times;q</p>
+  			<span class="negrita subrayada">Ejemplos:</span>
+  			<p>1) <math>
+			<mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>
+          	<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mspace depth="0.5ex" height="0.5ex" width="1ex"/><mtext>y</mtext><mspace depth="0.5ex" height="0.5ex" width="1ex"/>
+			<mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable>
+   			<mtr><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+   			<mtr><mtd><mn>7</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+   			<mtr><mtd><mn>0</mn></mtd><mtd><mn>-5</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+   			<math display="block"><mrow><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn><mo>&CenterDot;</mo><mn>1</mn><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mn>7</mn><mo>+</mo><mn>5</mn><mo>&CenterDot;</mo><mn>0</mn></mtd>
+          	<mtd><mn>2</mn><mo>&CenterDot;</mo><mn>6</mn><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mn>2</mn><mo>+</mo><mn>5</mn><mo>&CenterDot;</mo>
+            <mfenced open="(" close=")" separators=" "><mrow><mi>-5</mi></mrow></mfenced></mtd></mtr><mtr><mtd><mn>7</mn><mo>&CenterDot;</mo><mn>1</mn><mo>+</mo><mn>2</mn>
+            <mo>&CenterDot;</mo><mn>7</mn><mo>+</mo><mn>4</mn><mo>&CenterDot;</mo><mn>0</mn></mtd><mtd><mn>7</mn>
+            <mo>&CenterDot;</mo><mn>6</mn><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo>&CenterDot;</mo>
+            <mfenced open="(" close=")" separators=" "><mrow><mi>-5</mi></mrow></mfenced></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>23</mn></mtd><mtd><mi>-7</mi></mtd></mtr>
+        	<mtr><mtd><mn>21</mn></mtd><mtd><mn>26</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+			</math>
+
+
+
+			<math display="block"><mrow><mi>B</mi><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable>
+  			<mtr><mtd><mn>1</mn><mo>&CenterDot;</mo><mn>2</mn><mo>+</mo><mn>6</mn><mo>&CenterDot;</mo><mn>7</mn></mtd>
+          	<mtd><mn>1</mn><mo>&CenterDot;</mo><mn>3</mn><mo>+</mo><mn>6</mn><mo>&CenterDot;</mo><mn>2</mn></mtd>
+          	<mtd><mn>1</mn><mo>&CenterDot;</mo><mn>5</mn><mo>+</mo><mn>6</mn><mo>&CenterDot;</mo><mn>4</mn></mtd></mtr>
+          	<mtr><mtd><mn>7</mn><mo>&CenterDot;</mo><mn>2</mn><mo>+</mo><mn>2</mn>
+            <mo>&CenterDot;</mo><mn>7</mn></mtd>
+            <mtd><mn>7</mn><mo>&CenterDot;</mo><mn>3</mn><mo>+</mo><mn>2</mn>
+            <mo>&CenterDot;</mo><mn>2</mn></mtd>
+      		<mtd><mn>7</mn><mo>&CenterDot;</mo><mn>5</mn><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><mn>4</mn></mtd></mtr>
+			<mtr><mtd><mn>0</mn><mo>&CenterDot;</mo><mn>2</mn><mo>+</mo><mo>(</mo><mn>-5</mn><mo>)</mo>
+            <mo>&CenterDot;</mo><mn>7</mn></mtd>
+      		<mtd><mn>0</mn><mo>&CenterDot;</mo><mn>3</mn><mo>+</mo><mo>(</mo><mn>-5</mn><mo>)</mo><mo>&CenterDot;</mo><mn>2</mn></mtd>
+      		<mtd><mn>0</mn><mo>&CenterDot;</mo><mn>5</mn><mo>+</mo><mo>(</mo><mn>-5</mn><mo>)</mo><mo>&CenterDot;</mo><mn>4</mn></mtd></mtr>
+      		</mtable></mrow></mfenced><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable>
+  			<mtr><mtd><mn>44</mn></mtd><mtd><mi>15</mi></mtd><mtd><mn>29</mn></mtd></mtr>
+        	<mtr><mtd><mn>28</mn></mtd><mtd><mn>25</mn></mtd><mtd><mn>43</mn></mtd></mtr>
+        	<mtr><mtd><mn>-35</mn></mtd><mtd><mn>-10</mn></mtd><mtd><mn>-20</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+        	<p>Aqu&iacute; puedes ver que A&times;B &ne; B&times;A, aunque hayamos podido hacer ambos productos.</p>
+        	2) <math>
+			<mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>
+          	<mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mspace depth="0.5ex" height="0.5ex" width="1ex"/><mtext>y</mtext><mspace depth="0.5ex" height="0.5ex" width="1ex"/>
+			<mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable>
+   			<mtr><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd></mtr>
+   			<mtr><mtd><mn>7</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+   			</mtable></mrow></mfenced></mrow></math>
+   			<p>En este ejemplo NO podemos hacer A&times;B porque: <br />
+   			N&uacute;mero Columnas de A = 3 &ne; 2 = N&uacute;mero Filas de B <br /> Sin embargo, s&iacute; podemos hacer B&times;A y su resultado es una matriz de dimensi&oacute;n 2&times;3. Te dejo a ti que la calcules para que practiques, no es complicada.</p>
+		</article>
+		<article>
+			<h2>Propiedades De Las Operaciones Con Matrices.</h2>
+			<p>En &eacute;sta secci&oacute;n veremos qu&eacute; propiedades cumplen la suma y producto de matrices, esas propiedades que vamos a ver son como cuando las aprendiste para n&uacute;meros: conmutativa, elemento neutro, elemento opuesto, asociativa, distributiva ...</p>
+			<h3>Propiedades De La Suma De Matrices</h3>
+			<span class="negrita">1.) Elemento Neutro</span> &rarr; En matrices el elemento neutro es la matriz nula, que es la que tiene todos sus elementos iguales a 0; ya qu cumple: A + 0 = 0 + A = A, para cualquier matriz A. <a href="#" class="tooltip">Recuerda<span>El elemento neutro en la suma es aquel elemento que al sumarle otra cantidad, esa cantidad sumada no cambia. Por ejemplo, en la suma de n&uacute;meros el 0 es el neutro. 7 + 0 = 0 +7 = 7</span></a><br />
+			<span class="negrita">2.) Conmutativa</span> &rarr; A + B = B + A<br />
+			<span class="negrita">3.) Asociativa</span> &rarr; (A + B) + C = A + (B + C)<br />
+			<span class="negrita">4.) Matriz Opuesta</span> &rarr; Dada una matriz cualquiera A, su matriz opuesta es -A,<br /> la cual cumple: A + (-A) = -A + A = 0 <a href="#" class="tooltip">Recuerda <span>El opuesto es todo aquel n&uacute;mero que al sumarle el n&uacute;mero da cero. Por ejemplo, el opuesto de 7 es -7, porque al sumarlos da 0, 7 + (-7) = 0 = -7 + 7. Y el opuesto de -7 es 7. </span></a><br />
+			<p>Si denotamos el conjunto de matrices de dimensi&oacute;n m &times; n en el conjunto de los n&uacute;meros reales como: 
+			<math><mrow><msub><mi>&Mellintrf;</mi><mrow><mi>m</mi><mo>&times;</mo><mi>n</mi></mrow></msub><mfenced open="(" close=")" separators=" "><mrow><mi>&reals;</mi></mrow></mfenced></mrow></math>, decimos que &eacute;ste conjunto que cumple con las cuatro propiedades anteriores con el operador suma es un <span class="negrita subrayada">Grupo Abeliano</span>, y lo ver&aacute;s denotado como: 
+			<math><mrow><mfenced open="(" close=")" separators=" "><mrow><msub><mi>&Mellintrf;</mi><mrow><mi>m</mi><mo>&times;</mo><mi>n</mi></mrow></msub><mfenced open="(" close=")" separators=" "><mrow><mi>&reals;</mi></mrow></mfenced><mn>,</mn><mo lspace="1em">+</mo></mrow></mfenced></mrow></math> <a href="#" class="tooltip">Recuerda<span>Un Grupo es todo conjunto con una operaci&oacute;n que cumple las propiedades de neutro, opuesto y asociativa. Si adem&aacute;s, cumple la conmutativa se le llama Grupo Conmutativo o Abeliano, en honor al matem&aacute;tico Abel.</span></a> <a href="#" class="tooltip">El matem&aacute;tico Abel<span>Niels Henrik Abel, matem&aacute;tico noruego del siglo XIX, c&eacute;lebre por demostrar que en los polinomios de grado mayor que 4 sus ra&iacute;ces o ceros no se pueden calcular mediante una f&oacute;rmula algebraica, como la que conoces, por ejemplo, para los polinomios de grado 2.</span></a></p>
+			<h3>Propiedades Del Producto De N&uacute;meros Por Matrices.</h3>
+			<p>Sean <math><mi>a</mi><mtext>,</mtext><mi>b</mi><mo>&isin;</mo><mi>&reals;</mi></math>, y <math><mi>A</mi><mtext>,</mtext><mi>B</mi><mo>&isin;</mo><mrow><msub><mi>&Mellintrf;</mi><mrow><mi>m</mi><mo>&times;</mo><mi>n</mi></mrow></msub></mrow></math>; se cumplen las siguientes propiedades:</p>
+			<p><span class="negrita">1.)</span> a&CenterDot;(b&CenterDot;A) = (a&CenterDot;b)&CenterDot;A<br />
+			<span class="negrita">2.)</span> (a + b)&CenterDot;A = a&CenterDot;A + b&CenterDot;A<br />
+			<span class="negrita">3.)</span> (A + B)&CenterDot;a = A&CenterDot;a + B&CenterDot;a<br />
+			<span class="negrita">4.)</span> 1&CenterDot;A = A<br />
+			</p>
+			<h3>Propiedades Del Producto De Matrices.</h3>
+			<p>
+			<span class="negrita">1.) Asociativa: </span> (A&CenterDot;B)&CenterDot;C = A&CenterDot;(B&CenterDot;C) = A&CenterDot;B&CenterDot;C<br />
+			<span class="negrita">2.) Distributiva Respecto De La Suma:</span><br />
+			<span class="negrita">2.1.)</span> A&CenterDot;(B + C) = A&CenterDot;B + A&CenterDot;C<br />
+			<span class="negrita">2.2.)</span> (B + C)&CenterDot;D = B&CenterDot;D + C&CenterDot;D<br />
+			</p>
+			<p>Si estamos en el Conjunto De Las Matrices Cuadradas tenemos que en el producto de matrices su <span class="subrayado">Elemento Neutro es la Matriz Identidad</span>.</p>
+			<p><span class="resaltado">En el producto de matrices NO se cumple la propiedad Conmutativa.</span> </p>
+			</article>
+			<article>
+			<h2>La Matriz Inversa.</h2>
+			<p>Dentro del conjunto de las matrices cuadradas podremos hallar la matriz inversa de una matriz dada, siempre que &eacute;sta exista <a href="#" class="tooltip">Ojo!!!<span>En el tema siguiente de Determinantes se ve cuando a una matriz cuadrada se le puede calcular su matriz inversa o no.</span></a> Se define la matriz inversa de una matriz cualquiera A de dimensi&oacute;n n a aquella matriz cuadrada de dimensi&oacute;n n, denotada como <math><mrow><msup><mi>A</mi><mn>-1</mn></msup></mrow></math>, que cumple: <math><mrow><mi>A</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub><mi>;</mi><mo lspace="1em">&forall;</mo><mi>A</mi><mo>&isin;</mo><msub><mi>&Mellintrf;</mi><mi>n</mi></msub><mfenced open="(" close=")" separators=" "><mrow><mi>&reals;</mi></mrow></mfenced></mrow></math> </p>
+			<h4 class="subrayada">Ejemplo:</h4>
+			<p class="enunciados">Calcula la matriz inversa de <math><mrow><mi>A</mi><mo>=</mo>
+  			<mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> </p>
+  			<p>Consideramos <math><mrow><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mi>z</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mi>t</mi></mtd></mtr></mtable></mrow></mfenced></mrow><mo>&xrarr;</mo><mi>A</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mi>x</mi></mtd><mtd><mi>z</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mi>t</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&xrarr;</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>7</mn><mi>y</mi></mtd><mtd><mn>3</mn><mi>z</mi><mo>+</mo><mn>7</mn><mi>t</mi></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi></mtd><mtd><mn>2</mn><mi>z</mi><mo>+</mo><mn>5</mn><mi>t</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></math></p>
+  			<p>Igualando elementos obtenemos dos sencillos sistemas de ecuaciones lineales de 2 ecuaciones con 2 inc&oacute;gnitas, y con soluciones:</p>
+  			<math display="block">
+			<mrow><mfenced open="{" close="}" separators=" "><mrow><mtable><mtr>
+          	<mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>7</mn><mi>y</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+        	<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo>
+  			<mi>x</mi><mo>=</mo><mn>5</mn><mn>,</mn><mi>y</mi><mo>=</mo><mn>-2</mn></mrow></math>
+
+  			<math display="block">
+			<mrow><mfenced open="{" close="}" separators=" "><mrow><mtable><mtr>
+          	<mtd><mn>3</mn><mi>z</mi><mo>+</mo><mn>7</mn><mi>t</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+        	<mtr><mtd><mn>2</mn><mi>z</mi><mo>+</mo><mn>5</mn><mi>t</mi><mo>=</mo><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo>
+  			<mi>z</mi><mo>=</mo><mn>-7</mn><mn>,</mn><mi>t</mi><mo>=</mo><mn>3</mn></mrow></math>
+  			<p><span class="negrita subrayada">Soluci&oacute;n</span> &rarr;
+  			<math><mrow><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-7</mn></mtd></mtr><mtr><mtd><mn>-2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+  			<p>Te dejo que compruebes que esta bien hecho comprobando la igualdad: <math><mi>A</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><msub><mi>I</mi><mn>2</mn></msub></math></p>
+			</article>
+	</section>
+	</section>
+
+		<footer>
+			<?
+						include("footerclass.php");
+						hacer_footer();
+			?>
+		</footer>
+</section>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<?php
+      include('xua.php');
+    ?>
+	<title>Teoria Tema 3 Segundo Bachiller</title>
+	
+	<meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+	<meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+	<meta name="author" content="Cristobal Lopez Silla" />
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+	
+	<link href="css/normalize.css" rel="stylesheet" media="all" />
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+	
+	  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/modernizr.js"></script>
+  		<!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+  		<!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+	  <script src="js/plugins.js"></script>
+	  <script src="js/main.js"></script>
+	
+	<!--
+	<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full'></script> -->
+	<script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  	</script>
+		
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  	<![endif]-->
+	<section class="contenedor">
+	<header> 
+		<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>
+	 
+	</header>
+	
+	<section class="contenido-ppal">	
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+	
+	
+	
+	<section class="contenido-texto">
+		<article>
+	 		<h2>T3. DETERMINANTES.</h2>
+	  		<h3>Determinantes De Orden Dos.</h3>
+			<h4>Definici&oacute;n: </h4>
+			<p>Un <span class="negrita">Determinante</span> es un tipo de operaci&oacute;n que realizamos sobre <span class="negrita">Matrices Cuadradas</span> de la cual obtenemos un n&uacute;mero o escalar. Esta definici&oacute;n no es rigurosa, pero s&iacute; es lo bastante rigurosa para que lo entiendas. Si quieres profundizar en el tema te doy un enlace directo en la Wikipedia, <span class="resaltado"><a href="http://es.wikipedia.org/wiki/Determinante_%28matem%C3%A1tica%29" target="_blank">Determinantes En La Wikipedia</a></span></p>
+			<h4>Notaci&oacute;n:</h4>
+			<p>Generalmente, los determinantes los denotamos con 2 barras verticales, en vez de los par&eacute;ntesis que se usan para las matrices. Y esto se hace as&iacute; independientemente de la dimensi&oacute;n de la matriz cuadrada.</p>
+			<h5>Ejemplos:</h5>
+			<p><span class="negrita">1.)</span> Si <math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>, escribimos su determinante como <math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mtext>det</mtext><mfenced open="(" close=")" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p><br />
+
+			<p><span class="negrita">2.)</span> Si <math><mrow><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>, escribimos su determinante como <math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>B</mi></mrow></mfenced><mo>=</mo><mtext>det</mtext><mfenced open="(" close=")" separators=" "><mrow><mi>B</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p><br />
+
+			<p><span class="negrita">3.)</span> Si <math><mrow><mi>C</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-4</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>, <span class="subrayado">NO podemos calcular su determinante porque C NO es una matriz cuadrada</span>.</p><br />
+			<h4>C&aacute;lculo Determinantes De Orden Dos.</h4>
+			<p>Para calcular el determinante de cualquier matriz cuadrada de orden 2 lo hacemos mediante la siguiente f&oacute;rmula:</p>
+			<math display="block"><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mstyle  mathcolor="#FF0000"><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mstyle></mtd><mtd><mstyle  mathcolor="#000099"><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mstyle></mtd></mtr><mtr><mtd><mstyle  mathcolor="#000099"><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mstyle></mtd><mtd><mstyle  mathcolor="#FF0000"><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mstyle></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mstyle  mathcolor="#FF0000"><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mstyle><mo>&CenterDot;</mo><mstyle  mathcolor="#FF0000"><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mstyle><mo>-</mo><mstyle  mathcolor="#000099"><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mstyle><mo>&CenterDot;</mo><mstyle  mathcolor="#000099"><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mstyle></mrow></math>
+			<p>Es decir, lo que haremos es: <span class="subrayado">Restar el Producto de los elementos de la Diagonal Principal, menos el Producto de los elementos de la Diagonal Secundaria</span>. Veamos un par de ejemplos:</p>
+			<p><span class="negrita">1.) </span><math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=" "><mn>-1</mn></mfenced><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo><mn>0</mn><mo>=</mo><mn>-2</mn></mrow></math></p>
+			<p><span class="negrita">2.) </span><math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>B</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&CenterDot;</mo><mn>5</mn><mo>-</mo><mn>3</mn><mo>&CenterDot;</mo><mn>6</mn><mo>=</mo><mn>-8</mn></mrow></math></p>
+			<h3>Determinantes De Orden Tres.</h3>
+			<h4>C&aacute;lculo Del Determinante Por La Regla De Sarrus.</h4>
+			<p>Para calcular los determinantes de orden 3 utilizamos normalmente lo que llamamos <span class="negrita">La Regla De Sarrus.</span> <span class="resaltado"><a href="http://es.wikipedia.org/wiki/Pierre_Fr%C3%A9d%C3%A9ric_Sarrus" target="_blank">Sarrus En La Wikipedia</a></span></p>
+			<p>La f&oacute;rmula de la Regla De Sarrus es la siguiente:</p>
+			<math display="block" indentalign='left'><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo>
+  			<mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mn>3</mn></mrow></msub></mtd></mtr></mtable></mrow></mfenced>
+  			<mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>3</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>3</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>1</mn></mrow></msub></mrow></mfenced><mo>-</mo></mrow></math><br />
+  			<math display='block' indentalign='left'><mrow><mo>-</mo><mfenced open="(" close=")" separators=" "><mrow><msub><mi>a</mi><mrow><mn>1</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>3</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></mfenced></mrow></math>
+  			<p>Como puedes ver la f&oacute;rmula parece muy larga y aparatosa, pero a medida que la vayas utilizando se te queda en la memoria y te sale de forma natural.</p>
+  			<h5>Ejemplos:</h5>
+  			<span class="negrita">1.) </span> <math display="block"><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mn>5</mn><mo>&CenterDot;</mo><mn>3</mn><mo>&CenterDot;</mo><mn>8</mn><mo>+</mo><mn>0</mn><mo>&CenterDot;</mo><mn>6</mn><mo>&CenterDot;</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo>&CenterDot;</mo><mn>6</mn><mo>&CenterDot;</mo><mn>9</mn></mrow></mfenced><mo>-</mo><mfenced open="(" close=")" separators=" "><mrow><mn>4</mn><mo>&CenterDot;</mo><mn>3</mn><mo>&CenterDot;</mo><mn>9</mn><mo>+</mo><mn>1</mn><mo>&CenterDot;</mo><mn>0</mn><mo>&CenterDot;</mo><mn>8</mn><mo>+</mo><mn>6</mn><mo>&CenterDot;</mo><mn>6</mn><mo>&CenterDot;</mo><mn>5</mn></mrow></mfenced><mo>=</mo><mn>6</mn></mrow></math>
+
+  			<span class="negrita">2.) </span> <math display="block"><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mn>3</mn><mo>&CenterDot;</mo><mn>7</mn><mo>&CenterDot;</mo><mn>0</mn><mo>+</mo><mn>1</mn><mo>&CenterDot;</mo><mn>1</mn><mo>&CenterDot;</mo><mn>5</mn><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><mn>3</mn><mo>&CenterDot;</mo><mn>4</mn></mrow></mfenced><mo>-</mo><mfenced open="(" close=")" separators=" "><mrow><mn>5</mn><mo>&CenterDot;</mo><mn>7</mn><mo>&CenterDot;</mo><mn>4</mn><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><mn>1</mn><mo>&CenterDot;</mo><mn>0</mn><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mn>1</mn><mo>&CenterDot;</mo><mn>3</mn></mrow></mfenced><mo>=</mo><mn>-120</mn></mrow></math>
+  			<h3>Propiedades De Los Determinantes.</h3>
+  			<p>Veamos algunas de las propiedades m&aacute;s importantes de los determinantes, la mayor&iacute;a tienen gran uso para calcular determinantes de orden mayor a 3. Tambi&eacute;n para calcular los de orden 3 sin desarrollarlos por la Regla De Sarrus.</p>
+  			<span class="negrita">1.) </span><math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><msup><mi>A</mi><mi>t</mi></msup></mrow></mfenced></mrow></math><br /><br />
+  			<span class="negrita">2.) </span>El determinante de toda matriz cuadrada que tenga una fila o columna nula, es cero.<br /><br />
+  			<span class="negrita">3.) </span>Si se permutan (cambian) dos filas o columnas paralelas, su determinante cambia de signo.<br /><br />
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-120</mn></mrow></math><br /><br />
+
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr mathcolor="#000099"><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr mathcolor="#000099"><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>120</mn><mo>&rarr;</mo></mrow></math> Hemos permutado las 2 primeras filas y el determinante da lo mismo pero cambiado de signo. 
+  			<p><span class="resaltado">Es una buena pr&aacute;ctica que pruebes por tu cuenta cambiando filas o columnas ;-)</span></p>
+  			<span class="negrita">4.) </span>Si una matriz tiene 2 filas o columnas paralelas iguales entonces, su determinante es cero.<br /><br />
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr mathcolor="#000099"><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr mathcolor="#000099"><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn></mrow></math><br /><br />
+  			<p><span class="negrita">5.) </span>Si multiplicamos en un determinante todos los elementos de una misma fila o columna por una constante (n&uacute;mero), el nuevo determinante tambi&eacute;n queda multiplicado por dicha constante.</p><br />
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-120</mn></mrow></math><br /><br />
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr mathcolor="#000099"><mtd><mn>3</mn><mo>&CenterDot;</mo><mn mathcolor="red">4</mn></mtd><mtd><mn>2</mn><mo>&CenterDot;</mo><mn mathcolor="red">4</mn></mtd><mtd><mn>5</mn><mo>&CenterDot;</mo><mn mathcolor="red">4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-120</mn><mo>&CenterDot;</mo><mn>4</mn><mo>=</mo><mn>-480</mn></mrow><mo>&rarr;</mo></math> Hemos multiplicado la primera fila por 4.<br /><br />
+  			<p><span class="negrita">6.) </span>Si una matriz cuadrada tiene dos filas o dos columnas proporcionales entonces, su determinante es 0.</p>
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn></mrow><mo>&rarr;</mo></math> Porque la segunda fila es proporcional (en este caso es el doble) respecto la primera fila, o viceversa (la primera es la mitad de la segunda).<br /><br />
+  			<p><span class="negrita">7.) </span>El determinante de la suma (resta) respecto de una o l&iacute;nea (fila o columna) es la suma (resta) de determinantes.</p>
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn><mo>+</mo><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn><mo>+</mo><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>4</mn><mo>+</mo><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>+</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+  			<p><span class="negrita">8.) </span>Si a una l&iacute;nea de una matriz cuadrada le sumamos una combinaci&oacute;n lineal de las dem&aacute;s paralelas, su determinante no var&iacute;a.</p>
+  			<p><span class="negrita">9.) </span><math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=" "><mi>A</mi></mfenced><mo>&CenterDot;</mo><mfenced open="|" close="|" separators=" "><mi>B</mi></mfenced></mrow></math> Para cualesquiera matrices cuadradas A y B.</p>
+  			<h3>Menor Complementario Y Menor Adjunto.</h3>
+  			<h4>Menor De Una Matriz.</h4>
+  			<p>Si en una matriz de orden cualquiera seleccionamos <span class="negrita">r</span> filas y <span class="negrita">r</span> columnas, los elementos en los que se cruzan forman una submatriz cuadrada de orden <span class="negrita">r</span>. El determinante de esa submatriz se llama <span class="negrita">menor de orden r</span> de la matriz inicial.</p>
+  			<h4>Menor Complementario.</h4>
+  			<p>En una matriz cuadrada de orden n podemos destacar el elemento <math><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math>, si suprimimos su fila y columna obtenemos una submatriz de orden n-1, si le calculamos su determinante, hablamos del <span class="negrita">menor complementario <math><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math></span></p>
+  			<h4>Menor Adjunto</h4>
+  			<p>El menor adjunto es el menor complementario al que le tenemos en cuenta el signo seg&uacute;n la suma <span class="negrita">i + j</span> sea par o impar. Lo denotamos y calculamos como: <math><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo> <msup><mrow><mfenced open="(" close=")" separators=" "><mrow><mn>-1</mn></mrow></mfenced></mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math></p>
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>10</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+  			<p>De la matriz A podemos tener por ejemplo un menor de orden 2 como <math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+  			<p>Un menor complementario puede ser:  
+  			<math><mrow><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>10</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>118</mn></mrow></math> <span class="subrayado">Lo que hacemos es "tachar" los elementos de la fila 3 y la columna 2, y quedarnos con los elementos restantes; as&iacute; es como formamos los menores complementarios.</span></p>
+  			<p>Y su respectivo menor adjunto es: <math><mrow><msub><mi>A</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>=</mo><msup><mfenced open="(" close=")" separators=" "><mn>-1</mn></mfenced><mrow><mn>3</mn><mo>+</mo><mn>2</mn></mrow></msup><mo>&CenterDot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>=</mo><mn>-118</mn></mrow></math></p>
+  			<h3>Desarrollo De Un Determinante Por Los Elementos De Una L&iacute;nea.</h3>
+  			<p>En esta secci&oacute;n vamos a ver c&oacute;mo calcular determinantes de orden mayor a 3, ya que en estos casos no podemos aplicar la regla de Sarrus.</p>
+  			<p>Para su c&aacute;lculo lo que hacemos es elegir una fila o columna del determinante y desarrollarla por su combinaci&oacute;n lineal de menores adjuntos y calcularlos. Elegimos, siempre que sea posible; la fila/columna que m&aacute;s ceros contenga. Si nuestro determinante no posee elementos nulos trataremos de conseguirlos utilizando las operaciones y propiedades permitidas para los determinantes.</p>
+  			<p>Explicado as&iacute; puede parecer muy confuso, lo mejor es verlo con un ejemplo.</p>
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo></mrow><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr mathcolor="red"><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+  			<p>Vamos a elegir la segunda fila del determinante porque tiene un cero, y as&iacute; nos resultar&aacute; m&aacute;s corto su c&aacute;lculo.</p>
+  			<math><mrow><mfenced open="|" close="|" separators=" "><mrow><mi>A</mi></mrow></mfenced><mo>=</mo></mrow><mn>2</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo>+</mo><mn>0</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub><mo>+</mo><mn>7</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>4</mn></mrow></msub><mo>=</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo>+</mo><mn>7</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><msub><mi>A</mi><mrow><mn>2</mn><mn>4</mn></mrow></msub><mo>=</mo></math>
+  			<p>
+  			<math><mo>=</mo>
+  				<mn>2</mn><mo>&CenterDot;</mo><msup><mfenced open="(" close=")" separators=" "><mn>-1</mn></mfenced><mrow><mn>2</mn><mo>+</mo><mn>1</mn></mrow></msup><mo>&CenterDot;</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced><mo>+</mo><mn>7</mn><mo>&CenterDot;</mo><msup><mfenced open="(" close=")" separators=" "><mn>-1</mn></mfenced><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow></msup><mo>&CenterDot;</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable></mrow></mfenced><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><msup><mfenced open="(" close=")" separators=" "><mn>-1</mn></mfenced><mrow><mn>2</mn><mo>+</mo><mn>4</mn></mrow></msup><mo>&CenterDot;</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+  			</math></p>
+  			<p>
+  			<math><mrow><mo>=</mo><mn>-2</mn><mo>&CenterDot;</mo><mn>287</mn><mo>-</mo><mn>7</mn><mo>&CenterDot;</mo><mo>(</mo><mn>-151</mn><mo>)</mo><mo>+</mo><mn>3</mn><mo>&CenterDot;</mo><mo>(</mo><mn>-11</mn><mo>)</mo><mo>=</mo><mn>450</mn></mrow>
+  			</math></p>
+  			<p><span class="subrayado">Observa que los tres menores que nos aparecen son de orden 3 y, por tanto; los podemos calcular utilizando la Regla De Sarrus.</span></p>
+  			<h4>Nota.</h4>
+  			<p><span class="resaltado">Los determinantes de orden 3 y 2 tambi&eacute;n podemos calcularlos por &eacute;ste m&eacute;todo, pero al ser muy largo no es recomendable su uso para orden 3 y 2.</span></p>
+  			<h3>Rango De Una Matriz.</h3>
+  			<p>El rango de una matriz es el número máximo de columnas (filas respectivamente) que son <span class="resaltado"><a href="http://es.wikipedia.org/wiki/Vectores_independientes" target="_blank">Linealmente Independientes</a></span>. Si el rango fila y la columna son iguales, este número es llamado simplemente rango de A. Comúnmente se expresa como <span class="negrita">rg(A)</span>.<br />Para calcular el rango de una matriz lo podremos hacer tambi&eacute;n de matrices que no sean cuadradas. Para calcularlo lo haremos mediante el c&aacute;lculo de sus <span class="negrita subrayada">Menores</span>.</p>
+  			<h5>Ejemplo:</h5>
+  			<math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=" "><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>8</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+  			<p>Como puedes ver esta matriz es muy grande, si lo hacemos directamente por menores deber&iacute;amos ir calculando los menores de orden 3 hasta encontrar uno que no de cero para calcular que su rango es 3, pero ya te digo yo que no hay ninguno no nulo. La raz&oacute;n de ello es que todas sus filas son <span class="negrita">Linealmente Dependientes</span>. Y es que cualquier fila la podemos obtener sumando/restando por las otras filas. Por ejemplo, la primera fila la podemos obtener restando a la tercera fila la segunda fila. <span class="subrayado">Te dejo como buena pr&aacute;ctica que intentes obtener las dem&aacute;s filas como he hecho con la primera fila.</span></p>
+  			<p>Por tanto, ahora hemos de pasar a encontrar alg&uacute;n menor de orden 2 que sea no nulo. Hay unos cuantos, por ejemplo, <math><mrow><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mrow></math></p>
+  			<p><math><mrow><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub><mo>=</mo><mfenced open="|" close="|" separators=" "><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-1</mn><mo>-</mo><mn>6</mn><mo>=</mo><mn>-7</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mrow mathcolor="blue"><mtext>rg</mtext><mo>(</mo><mtext>A</mtext><mo>)</mo><mo>=</mo><mn>2</mn></mrow></mrow></math></p>
+  			<h4>Nota.</h4>
+  			<p><span class="negrita">Debes dominar bien calcular el rango de una matriz, ya que es clave en muchos temas, sobre todo en lo que respecta a la parte de geometr&iacute;a tridimensional, para saber las posiciones relativas entre planos y rectas, que se estudia en este curso. En ello entra en batalla el Teorema de Rouch&eacute;-Frobenius.</span></p>
+		</article>
+</section>
+	</section>
+
+		<footer>
+			<?
+						include("footerclass.php");
+						hacer_footer();
+			?>
+		</footer>
+</section>
+</body>
+</html>			

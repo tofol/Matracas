@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<?php
+      include('xua.php');
+    ?>
+	<title>Teoria Tema 4 Segundo Bachiller</title>
+	
+	<meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+	<meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+	<meta name="author" content="Cristobal Lopez Silla" />
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+	
+	<link href="css/normalize.css" rel="stylesheet" media="all" />
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+	
+	  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/modernizr.js"></script>
+  		<!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+  		<!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+	  <script src="js/plugins.js"></script>
+	  <script src="js/main.js"></script>
+	
+	<!--
+	<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full'></script> -->
+	<script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  	</script>
+		
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  	<![endif]-->
+	<section class="contenedor">
+	<header> 
+		<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>
+	 
+	</header>
+	
+	<section class="contenido-ppal">	
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+	
+	
+	
+	<section class="contenido-texto">
+		<article>
+	 		<h2>T4. RESOLUCI&Oacute;N SISTEMAS POR CRAMER. TEOREMA ROUCH&Eacute;-FRÖBENIUS.</h2>
+	 		<h3>Introducci&oacute;n.</h3>
+	 		<p>En &eacute;ste tema se va a ver otro m&eacute;todo de resolver sistemas de ecuaciones lineales utilizando determinantes, el cual recibe el nombre de <span class="resaltado">Regla De Cramer.</span> Aunque en un principio se crea que solamente se puede aplicar para sistemas <span class="negrita subrayada">Compatibles Determinados</span>, veremos que tambi&eacute;n lo podremos aplicar para los <span class="negrita subrayada">Indeterminados.</span><br />Tambi&eacute;n veremos c&oacute;mo saber cu&aacute;ntas soluciones tiene un sistema sin resolverlo mediante la aplicaci&oacute;n del <span class="resaltado">Teorema De Rouch&eacute;-Fröbenius</span> y su consecuencia. Esto es muy &uacute;til, por ejemplo; cuando deduzcamos que el sistema no tiene soluci&oacute;n.<br />Finalmente, veremos c&oacute;mo calcular la matriz inversa de una matriz regular mediante el c&aacute;lculo de la traspuesta de su adjunta.</p>
+	 		<h2>Teorema De Rouch&eacute;</h2>
+	 		<p>Dado un sistema de ecuaciones <span class="resaltado">LINEAL</span> de <span class="negrita">m</span> ecuaciones y <span class="negrita">n</span> inc&oacute;gnitas; cuya matriz de coeficientes es <math><mrow><mi>A</mi></mrow></math> y <math><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></math> su matriz ampliada; se cumple lo siguiente:<br />
+	 		Dicho sistema tiene soluci&oacute;n <span class="negrita">(Es COMPATIBLE)</span> <math><mrow><mo>&hArr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></mfenced></mrow></math></p>
+	 		<h4>Observaciones Al Teorema:</h4>
+	 		<ol>
+	 			<li>El teorema es una <span class="subrayado">Condici&oacute;n necesaria y suficiente</span>, es decir; si en un problema sabemos que el sistema tiene soluci&oacute;n entonces se cumplir&aacute; que los rangos son iguales.<br />Y si en otro problema sabemos que los rangos son iguales, podremos deducir que el sistema tiene soluci&oacute;n.</li>
+	 			<li>El teorema nos habla de que el sistema tiene soluci&oacute;n, pero no si tiene una &uacute;nica soluci&oacute;n o infinitas <span class="negrita">(Determinado o Indeterminado)</span>. Esto lo vamos a ver como consecuencia o <a class="resaltado" href="http://es.wikipedia.org/wiki/Corolario" title="Corolario del teorema" target="_blank">Corolario del teorema</a>.</li>
+	 			<li>El teorema es muy &uacute;til cuando deducimos del mismo que un sistema no tiene soluci&oacute;n, porque en dicho caso no la tendremos que calcular.</li>
+	 			<li>Si los rangos son diferentes lo que deducimos es que el sistema es <span class="negrita">INCOMPATIBLE</span>, es decir; que no tiene soluci&oacute;n.</li>
+	 		</ol>
+	 		<h5>Ejemplos:</h5>
+	 		<p>Estudiar mediante el teorema de Rouch&eacute; si los siguientes sistemas tienen o no soluci&oacute;n:</p>
+	 		<span class="negrita">a) </span><math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>-</mo><mi>z</mi><mo>=</mo><mn>4</mn></mtd></mtr>
+			<mtr><mtd><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>5</mn></mtd></mtr>
+			<mtr><mtd><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+		    </mtable></mrow></mfenced></mrow></math>
+		    <span class="negrita">b) </span><math><mrow><mo>{</mo><mtable>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mi>y</mi><mo>=</mo><mn>-1</mn></mtd></mtr>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mn>4</mn><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>2</mn></mtd></mtr></mtable><mo>}</mo></mrow></math>
+			<p>
+			<span class="negrita">a) </span><math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mn>-2</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mn>3</mn></mrow></math><br />
+			<math><mrow><msup><mi>A</mi><mo>*</mo></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></mfenced><mo>=</mo><mn>3</mn></mrow></math><br />
+			Los dos rangos son iguales, por lo que el sistema tiene soluci&oacute;n, es decir; es Compatible.</p>
+			<span class="negrita">b) </span><math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>&ne;</mo><mn>3</mn><mo>&rarr;</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>1</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mn>2</mn></mrow></math><br />
+			<math><mrow><msup><mi>A</mi><mo>*</mo></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></mfenced><mo>=</mo><mn>3</mn></mrow></math><br />
+			Por tanto, los rangos son distintos. Luego el sistema no tiene soluci&oacute;n, es Incompatible.<br />
+			<h2>La Regla De Cramer.</h2>
+			<p>En esta secci&oacute;n vamos a ver una nueva manera de resolover un sistema de ecuaciones lineales utilizando determinantes, se le llama <span class="negrita">La Regla De Cramer</span>. <a class="resaltado" href="http://es.wikipedia.org/wiki/Gabriel_Cramer" title="Cramer" target="_blank">Gabriel Cramer En La Wikipedia</a>.<br />Primero empezaremos a saber resolver sistemas Compatibles Determinados, con una &uacute;nica soluci&oacute;n. Consideremos, para no hacerlo muy lioso, que queremos resolver un sistema lineal de 3 ecuaciones con 3 inc&oacute;gnitas compatible determinado, que tendr&aacute; la forma siguiente:</p>
+			<p><math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><mi>x</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><mi>y</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr>
+			<mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><mi>x</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><mi>y</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr>
+			<mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>1</mn></mrow></msub><mo>&CenterDot;</mo><mi>x</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>2</mn></mrow></msub><mo>&CenterDot;</mo><mi>y</mi><mo>+</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>3</mn></mrow></msub><mo>&CenterDot;</mo><mi>z</mi><mo>=</mo><msub><mi>b</mi><mn>3</mn></msub></mtd></mtr>
+		    </mtable></mrow></mfenced></mrow><mo>&rarr;</mo><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>3</mn></mrow></msub></mtd></mtr></mtable></mrow></mfenced></math> Matriz De Coeficientes.</p>
+		    <p>Supondremos que <math><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>&ne;</mo><mn>0</mn></mrow></math>. <span class="subrayado">Si fuese 0 NO podremos aplicar Cramer</span>.<br />Consideremos los siguientes determinantes:</p>
+		    <p><math><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>3</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>3</mn></mrow></msub></mtd></mtr></mtable></mrow></mfenced><mspace width='2em' />
+            <mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>2</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>1</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>3</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>3</mn></mrow></msub></mtd></mtr></mtable></mrow></mfenced><mspace width='2em' />
+            <mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>z</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>1</mn></mrow></msub></mtd><mtd><msub><mrow><mi>a</mi></mrow><mrow><mn>3</mn><mn>2</mn></mrow></msub></mtd><mtd mathcolor="blue"><msub><mrow><mi>b</mi></mrow><mrow><mn>3</mn></mrow></msub></mtd></mtr></mtable></mrow></mfenced><mspace width='2em' /></mrow></math><a href="#" class="tooltip">
+				L&Eacute;EME
+				<span>Observa las columnas coloreadas de azul, para el primer determinante cambiamos la primera columna por los t&eacute;rminos independientes del sistema porque se corresponde con nuestra primera inc&oacute;gnita que es la "x". Con el segundo cambiamos la segunda columna porque "y" es la segunda inc&oacute;gnita; y as&iacute; sucesivamente.</span></a></p>
+			<p>Con todo esto podemos establecer c&oacute;mo calcular nuestras inc&oacute;gnitas del sistema mediante las siguientes f&oacute;rmulas:</p>
+			<p><math mathcolor="blue"  mathsize='1.5em'><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mspace width='2em' />
+            <mi>y</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mspace width='2em' />
+            <mi>z</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>z</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac></mrow></math></p>
+            <p>Bien, vista la teor&iacute;a de la regla de Cramer, para que la entiendas mejor, lo que haremos es verlo con un ejemplo.</p>
+            <h5>Ejemplo.</h5>
+            <p>Resuelve el siguiente sistema mediante la Regla De Cramer:</p>
+            <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>-24</mn></mtd></mtr>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>-8</mn></mtd></mtr>
+			<mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>9</mn></mtd></mtr>
+		    </mtable></mrow></mfenced></mrow></math>
+		    <p>Primero calculamos el determinante de la matriz de coeficientes y vemos si no es cero para cerciorarnos de que podemos aplicar Cramer.</p>
+            <math><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-1</mn><mo>&ne;</mo><mn>0</mn></mrow></math>
+            <p>Y ahora calculamos los otros 3 determinantes:</p>
+            <math><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd mathcolor="blue"><mn>-24</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>-8</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd mathcolor="blue"><mn>9</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-7</mn><mspace width='2em' />
+            <mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd mathcolor="blue"><mn>-24</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd mathcolor="blue"><mn>-8</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd mathcolor="blue"><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-2</mn><mspace width='2em' />
+            <mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>z</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-3</mn></mtd><mtd mathcolor="blue"><mn>-24</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd mathcolor="blue"><mn>-8</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd mathcolor="blue"><mn>9</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>5</mn></mrow></math>
+            <p>Finalmente calculamos las inc&oacute;gnitas:</p>
+            <math mathcolor="blue"  mathsize='1.25em'><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mo>=</mo><mfrac><mn>-7</mn><mn>-1</mn></mfrac><mo>=</mo><mn>7</mn><mspace width='2em' />
+            <mi>y</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mo>=</mo><mfrac><mn>-2</mn><mn>-1</mn></mfrac><mo>=</mo><mn>2</mn><mspace width='2em' />
+            <mi>z</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>z</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>-1</mn></mfrac><mo>=</mo><mn>-5</mn></mrow></math>
+            <h3>NOTA.</h3>
+            <p>Antes de pasar a ver c&oacute;mo resolver un sistema lineal Indeterminado por Cramer vamos a completar el Teorema de Rouch&eacute; con el siguiente con un Corolario; el cual nos dir&aacute; cu&aacute;ndo un sistema es Determinado o Indeterminado mediante el estudio de Rangos.</p>
+            <h2>Corolario Al Teorema De Rouch&eacute;-Fröbenius.</h2>
+            <p>Supongamos que tenemos un sistema de ecuaciones lineales, con <span class="negrita">m</span> ecuaciones y <span class="negrita">n</span> inc&oacute;gnitas. Sea <math><mrow><mi>A</mi></mrow></math> su matriz de coeficientes y <math><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></math> su matriz ampliada. Se cumple lo siguiente:</p>
+
+            <math display='block'>
+            	<mrow>
+            		<mtext>Sistema</mtext>
+            		<mfenced open="{" close="}" separators=" ">
+            			<mrow>
+            				<mtable groupalign="{left}">
+            					<mtr>
+            						<mtd>
+            							<maligngroup/>            
+            							<mtable groupalign="{left}">
+            								<mtr>
+            									<mtd>
+            										<maligngroup/>            
+            										<mtext>Compatible</mtext>
+            									</mtd>
+            								</mtr>
+            								<mtr>
+            									<mtd>
+            										<maligngroup/>            
+            										<mi>rg</mi>
+            										<mo>&ApplyFunction;</mo>
+            										<mfenced open="(" close=")" separators=" ">
+            											<mrow>
+            												<mi>A</mi>
+            											</mrow>
+            										</mfenced>
+            										<mo>=</mo>
+            										<mi>rg</mi>
+            										<mo>&ApplyFunction;</mo>
+            										<mfenced open="(" close=")" separators=" ">
+            											<mrow>
+            												<msup>
+            													<mi>A</mi>
+            													<mo>*</mo>
+            												</msup>
+            											</mrow>
+            										</mfenced>
+            									</mtd>
+            								</mtr>
+            								<mtr>
+            									<mtd>
+            										           
+            									</mtd>
+            								</mtr>
+            							</mtable>
+
+            								
+            							<mfenced open="{" close=" " separators=" ">
+            								<mrow>
+            									<mtable groupalign="{left}">
+            										<mtr>
+            											<mtd>
+            												<maligngroup/>            
+            												<mtable groupalign="{left}">
+            													<mtr>
+            														<mtd>
+            															<maligngroup/>            
+            															<mtext>Determinado</mtext>
+            														</mtd>
+            													</mtr>
+            													<mtr>
+            														<mtd>
+            															<maligngroup/>            
+            															<mi>rg</mi>
+            															<mo>&ApplyFunction;</mo>
+            															<mfenced open="(" close=")" separators=" ">
+            																<mrow>
+            																	<mi>A</mi>
+            																</mrow>
+            															</mfenced>
+            															<mo>=</mo>
+            															<mi>rg</mi>
+            															<mo>&ApplyFunction;</mo>
+            															<mfenced open="(" close=")" separators=" ">
+            																<mrow>
+            																	<msup>
+            																		<mi>A</mi>
+            																		<mo>*</mo>
+            																	</msup>
+            																</mrow>
+            															</mfenced>
+            															<mo>=</mo>
+            															<mi>n</mi>
+            														</mtd>
+            													</mtr>
+            													<mtr>
+            														<mtd>
+            													            
+            														</mtd>
+            													</mtr>
+            												</mtable>
+            											</mtd>
+            										</mtr>
+            										<mtr>
+            											<mtd>
+            												<maligngroup/>            
+            												<mtable groupalign="{left}">
+            													<mtr>
+            														<mtd>
+            															<maligngroup/>            
+            															<mtext>Indeterminado</mtext>
+            														</mtd>
+            													</mtr>
+            													<mtr>
+            														<mtd>
+            															<maligngroup/>            
+            															<mi>rg</mi>
+            															<mo>&ApplyFunction;</mo>
+            															<mfenced open="(" close=")" separators=" ">
+            																<mrow>
+            																	<mi>A</mi>
+            																</mrow>
+            															</mfenced>
+            															<mo>=</mo>
+            															<mi>rg</mi>
+            															<mo>&ApplyFunction;</mo>
+            															<mfenced open="(" close=")" separators=" ">
+            																<mrow>
+            																	<msup>
+            																		<mi>A</mi>
+            																		<mo>*</mo>
+            																	</msup>
+            																</mrow>
+            															</mfenced>
+            															<mo>=</mo>
+            															<mi>p</mi>
+            															<mo>&lt;</mo>
+            															<mi>n</mi>
+            														</mtd>
+            													</mtr>
+            												</mtable>
+            											</mtd>
+            										</mtr>
+            									</mtable>      
+            								</mrow>
+            							</mfenced><!--LLAVE INTERNA-->
+
+            						</mtd>
+            					</mtr>
+            					<mtr><!--INCOMPATIBLE-->
+            									<mtd>
+            										       
+            										<mtext>Incompatible</mtext>
+            									</mtd>
+            								</mtr>
+            								<mtr>
+            									<mtd>
+            										          
+            										<mi>rg</mi>
+            										<mo>&ApplyFunction;</mo>
+            										<mfenced open="(" close=")" separators=" ">
+            											<mrow>
+            												<mi>A</mi>
+            											</mrow>
+            										</mfenced>
+            										<mo>&ne;</mo>
+            										<mi>rg</mi>
+            										<mo>&ApplyFunction;</mo>
+            										<mfenced open="(" close=")" separators=" ">
+            											<mrow>
+            												<msup>
+            													<mi>A</mi>
+            													<mo>*</mo>
+            												</msup>
+            											</mrow>
+            										</mfenced>
+            									</mtd>
+            								</mtr>
+            				</mtable>
+            			</mrow>
+            		</mfenced>
+            	</mrow>
+            </math>
+        	<h3>Definici&oacute;n.</h3>
+        	<p>En el caso en que el sistema es <span class="negrita">Compatible Indeterminado</span> definimos lo que se llama el <span class="negrita subrayada">Grado De Indeterminaci&oacute;n</span> a la siguiente f&oacute;rmula: </p>
+        	<p><span class="negrita">Grado De Indeterminaci&oacute;n = N&uacute;mero De Inc&oacute;gnitas - rang(A) = n - p</span></p>
+        	<p>Es decir, es el n&uacute;mero de ecuaciones que son <span class="negrita">Linealmente Dependientes</span> en el sistema. Este n&uacute;mero nos dice cu&aacute;ntas inc&oacute;gnitas tendremos que considerarlas como <span class="negrita subrayada">Par&aacute;metros</span> para poder resolver un Sistema Compatible Indeterminado utilizando la Regla De Cramer.<br />Como siempre, para que puedas entenderlo mejor lo vemos con un ejemplo.</p>
+        	<h5>Ejemplo:</h5>
+        	<p>Discutir y resolver el siguiente sistema de ecuaciones lineales:</p>
+        	<math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>-</mo><mi>t</mi><mo>=</mo><mn>-2</mn></mtd></mtr>
+			<mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>-</mo><mi>z</mi><mo>+</mo><mn>2</mn><mi>t</mi><mo>=</mo><mn>3</mn></mtd></mtr>
+			<mtr><mtd><mn>5</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>+</mo><mi>t</mi><mo>=</mo><mn>1</mn></mtd></mtr>
+			<mtr><mtd><mn>-13</mn><mi>y</mi><mo>+</mo><mn>14</mn><mi>z</mi><mo>-</mo><mn>7</mn><mi>t</mi><mo>=</mo><mn>-12</mn></mtd></mtr>
+		    </mtable></mrow></mfenced></mrow></math>
+		    <p>Primero debemos discutir por el Teorema de Rouch&eacute; qu&eacute; tipo de sistema es. Es decir, debemos calcular los rangos de la matriz de coeficientes y su ampliada. Hacerlo de esta manera resulta muy largo y engorroso, por lo que para hacerlo m&aacute;s corto intentaremos ver si hay alguna ecuaci&oacute;n que sea Dependiente de las otras.
+		    </p>  
+		    <p><span class="subrayado">Tercera Ecuaci&oacute;n = Primera Ecuaci&oacute;n + Segunda Ecuaci&oacute;n <br />
+            Cuarta Ecuaci&oacute;n = 3*(Primera Ecuaci&oacute;n) - 2*(Segunda Ecuaci&oacute;n)</span></p>
+            <p>Por tanto, como la tercera y cuarta ecuaci&oacute;n son combinaci&oacute;n lineal de las 2 primeras, podemos eliminarlas, y obtenemos el siguiente sistema equivalente:</p>
+            <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>-</mo><mi>t</mi><mo>=</mo><mn>-2</mn></mtd></mtr>
+			<mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>-</mo><mi>z</mi><mo>+</mo><mn>2</mn><mi>t</mi><mo>=</mo><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+			<p>Ahora en &eacute;ste sistema equivalente calculamos los rangos.</p>
+			<math><mrow><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>13</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rg</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mi>rg</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&lt;</mo><mn>4</mn></mrow></math>
+			<p>Luego el sistema es Compatible Indeterminado, con: <br /><span class="negrita">Grado De Indeterminaci&oacute;n = N&uacute;mero De Inc&oacute;gnitas - rang(A) = n - p = 4 - 2 = 2</span></p>
+			<p>Por tanto, 2 de las inc&oacute;gnitas las consideraremos como par&aacute;metros; da igual las que consideremos, en &eacute;ste caso vamos a considerar z y t. Luego: <math><mrow><mi>z</mi><mo>=</mo><mo>&alpha;</mo><mo>,</mo><mi>t</mi><mo>=</mo><mo>&beta;</mo></mrow></math>. Las sustituimos en el segundo sistema y las "pasamos" al lado derecho de la igualdad porque ya no son inc&oacute;gnitas, son par&aacute;metros. Observa:</p>
+			<math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>-2</mn><mo>-</mo><mn>4</mn><mi>&alpha;</mi><mo>+</mo><mi>&beta;</mi></mtd></mtr>
+			<mtr><mtd><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>3</mn><mo>+</mo><mi>&alpha;</mi><mo>-</mo><mn>2</mn><mi>&beta;</mi></mtd></mtr></mtable></mrow></mfenced><mspace width="1.5em" /><mo>&forall;</mo><mo>&alpha;</mo><mo>,</mo><mo>&beta;</mo><mo>&isin;</mo><mo>&reals;</mo></mrow></math>
+			<p>Y aunque no es obligatorio, vamos a resolver &eacute;ste sistema por Cramer. F&iacute;jate que ahora s&iacute; podemos aplicar Cramer porque tenemos el mismo n&uacute;mero de ecuaciones que inc&oacute;gnitas, que son 2. El determinante de la matriz de coeficientes es:</p>
+			<math><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>13</mn></mrow></math>
+			<p>Y los otros dos determinantes son:</p>
+			<math><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>-2</mn><mo>-</mo><mn>4</mn><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mtd><mtd><mn>-3</mn></mtd></mtr><mtr><mtd><mn>3</mn><mo>+</mo><mo>&alpha;</mo><mo>-</mo><mn>2</mn><mo>&beta;</mo></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>5</mn><mo>-</mo><mn>5</mn><mo>&alpha;</mo><mo>-</mo><mn>4</mn><mo>&beta;</mo></mrow></math>
+			<math><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced><mo>=</mo><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-2</mn><mo>-</mo><mn>4</mn><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>3</mn><mo>+</mo><mo>&alpha;</mo><mo>-</mo><mn>2</mn><mo>&beta;</mo></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>12</mn><mo>+</mo><mn>14</mn><mo>&alpha;</mo><mo>-</mo><mn>7</mn><mo>&beta;</mo></mrow></math>
+			<p>Ahora calculamos x e y:</p>
+			<math mathsize='1em'><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>x</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>13</mn></mfrac><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>5</mn><mo>-</mo><mn>5</mn><mo>&alpha;</mo><mo>-</mo><mn>4</mn><mo>&beta;</mo></mrow></mfenced><mspace width='2em' />
+            <mi>y</mi><mo>=</mo><mfrac><mrow><mfenced open="|" close="|" separators=","><mrow><msub><mi>A</mi><mi>y</mi></msub></mrow></mfenced></mrow><mrow><mfenced open="|" close="|" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>13</mn></mfrac><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>12</mn><mo>+</mo><mn>14</mn><mo>&alpha;</mo><mo>-</mo><mn>7</mn><mo>&beta;</mo></mrow></mfenced></mrow></math>
+            <p>Uniendo todo, tenemos que la soluci&oacute;n es:</p>
+            <math mathcolor="blue"><mrow>
+            <mtext>Soln</mtext><mo>&rarr;</mo>
+            <mfenced open="{" close="}" separators=","><mrow>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi>
+            </mrow></mfenced>
+            <mo>&isin;</mo><msup><mi>&reals;</mi><mn>4</mn></msup><mo>/</mo>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi>
+            </mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mfrac><mn>1</mn><mn>13</mn></mfrac><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>5</mn><mo>-</mo><mn>5</mn><mo>&alpha;</mo><mo>-</mo><mn>4</mn><mo>&beta;</mo></mrow></mfenced><mo>,</mo>
+            <mfrac><mn>1</mn><mn>13</mn></mfrac><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mn>12</mn><mo>+</mo><mn>14</mn><mo>&alpha;</mo><mo>-</mo><mn>7</mn><mo>&beta;</mo></mrow></mfenced><mo>,</mo><mo>&alpha;</mo><mo>,</mo><mo>&beta;</mo>
+            </mrow></mfenced>
+            <mo>;</mo><mspace width="0.5em" /><mo>&forall;</mo><mo>&alpha;</mo><mo>,</mo><mo>&beta;</mo><mo>&isin;</mo><mo>&reals;</mo>
+            </mrow></mfenced>
+            </mrow></math>
+            <p>Luego hemos obtenido infinitas soluciones por Cramer, que es lo que obtuvimos por el Teorema de Rouch&eacute;, al que demostramos que el sistema es Compatible Indeterminado (Infinitas Soluciones).<a href="#" class="tooltip">
+				ATENCI&Oacute;N
+				<span>Aunque no te lo parezca &eacute;sta es la forma m&aacute;s corta, aunque necesitas un poco de pr&aacute;ctica. En muchos libros encontrar&aacute;s que para resolverlo lo hacen aplicando el Teorema de Rouch&eacute; directamente al sistema del enunciado, pero ello implica que tengas que calcular, como m&iacute;nimo, 6 determinantes de orden 3, y uno de orden 4.<br />Adem&aacute;s, de esta forma si lo resuelves en la P.A.U. das a entender que dominas la materia, y eso da mayor calificaci&oacute;n.</span></a></p>
+<h2>Estudio De Sistemas Homog&eacute;neos.</h2>
+<h3>Definici&oacute;n.</h3>
+<p>Decimos que un sistema es <span class="negrita">Homog&eacute;neo</span> si TODOS sus t&eacute;rminos independientes son cero. En caso contrario, decimos que el sistema es <span class="negrita">No Homog&eacute;neo.</span> <span class="subrayado">Estas definiciones son igualmente correctas tanto para sistemas lineales como no lineales. </span></p>
+<h3>Estudio De Sistemas Homog&eacute;neos Por El Teorema De Rouch&eacute;.</h3>
+<p>Lo primero que debemos tener en cuenta es que estos sistemas SIEMPRE tienen al menos una soluci&oacute;n, que es la soluci&oacute;n nula o trivial. Por lo tanto, siempre son, al menos, Compatibles. Y en nuestro estudio deberemos ver si son Determinados o Indeterminados. Esto lo realizaremos mediante el Teorema De Rouch&eacute;. <br />Afortunadamente, en los sistemas homog&eacute;neos el estudio ser&aacute; m&aacute;s sencillo, solamente deberemos calcular el rango de la matriz de coeficientes, ya que la matriz ampliada siempre tendr&aacute; su columna correspondiente a sus t&eacute;rminos independientes nula.</p>
+<h4>Proposici&oacute;n.</h4>
+<p>Consideremos un sistema de ecuaciones lineal homog&eacute;neo con <span class="negrita">"m"</span> ecuaciones y <span class="negrita">"n"</span> inc&oacute;gnitas. Se cumple:</p>
+<math><mrow><mtext>Si</mtext><mspace width="0.5em" /><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mi>n</mi><mo>&rarr;</mo><mtext>Determinado</mtext></mrow></math>
+<math><mrow><mtext>Si</mtext><mspace width="0.5em" /><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>&lt;</mo><mi>n</mi><mo>&rarr;</mo><mtext>Indeterminado</mtext></mrow></math>
+<h4>Observaci&oacute;n.</h4>
+<p>Cuando el sistema es Indeterminado debemos calcular su Grado de Indeterminaci&oacute;n:</p>
+<math mathvariant="bold"><mrow><mtext>Grado Indeterminaci&oacute;n</mtext><mo>=</mo><mi>n</mi><mo>-</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced></mrow></math>
+<p>El Grado De Indeterminaci&oacute;n nos dice el m&iacute;nimo n&uacute;mero de par&aacute;metros independientes que intervienen en su soluci&oacute;n.</p>
+<h5>Ejemplo:</h5>
+<p>Clasificar y resolver: <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+		    </mtable></mrow></mfenced></mrow></math></p>
+<p>Como puedes ver es un sistema homog&eacute;neo, as&iacute; que basta estudiar el rango de su matriz de coeficientes, que le vamos a llamar A.</p>
+<p><math><mrow><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn><mspace width="3em" /><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>3</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&lt;</mo><mn>3</mn><mo>&rarr;</mo></mrow></math>, <span class="subrayada negrita"> Sistema Compatible Indeterminado</span></p>
+<p>Grado Indeterminaci&oacute;n = 3 - 2 = 1. Luego podemos eliminar una de las ecuaciones y hacer que una de las inc&oacute;gnitas pase a ser un par&aacute;metro.<br />Vamos a eliminar la tercera ecuaci&oacute;n y hacemos que z pase a ser el par&aacute;metro, luego <math><mrow><mi>z</mi><mo>=</mo><mo>&alpha;</mo><mo>&rarr;</mo><mfenced open="{" close="}" separators=","><mrow><mtable>
+			<mtr><mtd><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>-2</mn><mi>&alpha;</mi></mtd></mtr>
+			<mtr><mtd><mn>2</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>=</mo><mo>-</mo><mi>&alpha;</mi></mtd></mtr>
+		    </mtable></mrow></mfenced><mo>;</mo><mspace width="0.5em" /><mo>&forall;</mo><mi>&alpha;</mi><mo>&isin;</mo><mo>&reals;</mo></mrow></math></p>
+<math><mrow><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>-2</mn><mi>&alpha;</mi></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>&alpha;</mi></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn><mspace width="3em" /><mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn><mi>&alpha;</mi></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mo>-</mo><mi>&alpha;</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>3</mn><mi>&alpha;</mi></mrow></math><p></p>
+<math><mrow><mo>&rarr;</mo><mi>x</mi><mo>=</mo><mfrac><mn>0</mn><mn>3</mn></mfrac><mo>=</mo><mn>0</mn><mtext>;</mtext><mspace width="2em" /><mi>y</mi><mo>=</mo><mfrac><mrow><mn>3</mn><mi>&alpha;</mi></mrow><mrow><mn>3</mn></mrow></mfrac><mo>=</mo><mi>&alpha;</mi></mrow></math>
+<p>Por tanto, el conjunto de soluciones es:</p>
+<math mathcolor="blue"><mrow>
+            <mtext>Soln</mtext><mo>&rarr;</mo>
+            <mfenced open="{" close="}" separators=","><mrow>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi>
+            </mrow></mfenced>
+            <mo>&isin;</mo><msup><mi>&reals;</mi><mn>3</mn></msup><mo>/</mo>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi>
+            </mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow>
+            <mn>0</mn><mo>,</mo>
+            <mi>&alpha;</mi><mo>,</mo><mi>&alpha;</mi>
+            </mrow></mfenced>
+            <mo>;</mo><mspace width="0.5em" /><mo>&forall;</mo><mo>&alpha;</mo><mo>&isin;</mo><mo>&reals;</mo>
+            </mrow></mfenced>
+            </mrow></math>
+<h2>C&aacute;lculo De La Matriz Inversa Mediante Determinantes.</h2>
+<p>Para finalizar el tema vamos a ver otra forma de calcular la matriz inversa de toda matriz invertible, mediante el c&aacute;lculo previo de la <span class="negrita">Matriz Adjunta.</span> </p>
+<h3>Matriz Adjunta.</h3>
+<p>Dada una matriz A de orden cualquiera, se define su <span class="negrita">Matriz Adjunta,</span> como aquella matriz en la que sus elementos son los respectivos <span class="negrita">Menores Adjuntos</span> de la matriz A. La denotaremos por <math><mrow><msup><mi>A</mi><mi>d</mi></msup></mrow></math>.</p>
+<h3>F&oacute;rmula De La Matriz Inversa.</h3>
+<p>Dada una matriz <span class="negrita">A</span> Regular podemos calcular su matriz inversa mediante la siguiente f&oacute;rmula:</p>
+<math mathsize="1.25em" mathvariant="bold"><mrow><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfrac><mrow><msup><mrow><mfenced open="(" close=")" separators=","><msup><mi>A</mi><mi>d</mi></msup></mfenced></mrow><mrow><mi>T</mi></mrow></msup></mrow><mrow><mfenced open="|" close="|" separators=","><mi>A</mi></mfenced></mrow></mfrac></mrow></math>
+<h5>Ejemplo:</h5>
+<p>Calcular la matriz inversa de <math><mrow><mi>A</mi><mo>=</mo>
+<mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced>
+</mrow></math></p>
+<p>Tenemos que <math><mrow><mfenced open="|" close="|" separators=","><mi>A</mi></mfenced><mo>=</mo><mn>15</mn><mo>&ne;</mo><mn>0</mn><mspace width="0.25em" /></mrow></math> Luego podemos calcular su inversa. Calculemos todos los menores adjuntos de <span class="negrita">A</span> </p>
+<p><math><mrow>
+	<msub><mi>a</mi><mn>11</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-5</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>12</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-3</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>13</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>7</mn></mrow></math></p>
+<p><math><mrow>
+	<msub><mi>a</mi><mn>21</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>2</mn><mo>+</mo><mn>1</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>-2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>10</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>22</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>2</mn><mo>+</mo><mn>2</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>23</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>-5</mn></mrow></math></p>
+<p><math><mrow>
+	<msub><mi>a</mi><mn>31</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>3</mn><mo>+</mo><mn>1</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>-2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>0</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>32</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>3</mn><mo>+</mo><mn>2</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>3</mn><mspace width="2em" />
+	<msub><mi>a</mi><mn>33</mn></msub><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mn>-1</mn></mfenced></mrow><mrow><mn>3</mn><mo>+</mo><mn>3</mn></mrow></msup><mo>&CenterDot;</mo>
+	<mfenced open="|" close="|" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>3</mn></mrow></math></p>
+<p>Luego la matriz adjunta es:
+<math><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-5</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mn>10</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>-5</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> Y si la trasponemos: <math><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-5</mn></mtd><mtd><mn>10</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>-5</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+<p>A esta &uacute;ltima matriz dividimos cada uno de sus elementos por el determinante de A, que en &eacute;ste caso es 15; y simplificamos. De esta forma obtenemos que la matriz inversa de A es:</p>
+<math display="block" mathcolor="blue"><mrow><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mfrac><mn>-1</mn><mn>3</mn></mfrac></mtd><mtd><mfrac><mn>2</mn><mn>3</mn></mfrac></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mfrac><mn>-1</mn><mn>5</mn></mfrac></mtd><mtd><mn>0</mn></mtd><mtd><mfrac><mn>1</mn><mn>5</mn></mfrac></mtd></mtr><mtr><mtd><mfrac><mn>7</mn><mn>15</mn></mfrac></mtd><mtd><mfrac><mn>-1</mn><mn>3</mn></mfrac></mtd><mtd><mfrac><mn>1</mn><mn>5</mn></mfrac></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+		</article>
+	</section>
+</section>
+	<footer>
+		<?
+						include("footerclass.php");
+						hacer_footer();
+		?>
+	</footer>
+</section>
+</body>
+</html>

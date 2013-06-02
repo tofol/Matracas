@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<?php
+      include('xua.php');
+    ?>
+	<title>Teoria Tema 1 Segundo Bachiller</title>
+	
+	<meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+	<meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+	<meta name="author" content="Cristobal Lopez Silla" />
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+	
+	<link href="css/normalize.css" rel="stylesheet" media="all" />
+	<link href="css/style.css" rel="stylesheet" media="all" />
+	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+	
+
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+  	<script src="js/modernizr.js"></script>
+  		<!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+  		<!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+  	<script src="js/plugins.js"></script>
+  	<script src="js/main.js"></script>
+
+	<script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  	</script>
+	
+		<!--[if IE]>
+            <script src="js/excanvas.js"></script>
+		<![endif]-->
+	<script src="js/jsGnuplot/canvastext.js"></script>
+    <script src="js/jsGnuplot/gnuplot_common.js"></script>
+    <script src="js/jsGnuplot/canvas_math.js"></script>
+		
+	<!--
+	<script type="text/x-mathjax-config">
+  		MathJax.Hub.Config({
+  		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  		});
+	</script>
+	<script type='text/javascript' src='js/mathjax/MathJax.js'></script>
+	-->
+
+</head>
+
+<body onload="secantes(); paralelas(); planos(); rectaplano();">
+	<!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  	<![endif]-->
+	<section class="contenedor">
+	<header> 
+		<h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+						include("navclass.php");
+						hacer_nav();
+					?>
+				</nav>
+	 
+	</header>
+	
+	<section class="contenido-ppal">	
+		<aside>
+			<?
+						include("asideclass.php");
+						hacer_aside();
+			?>
+		</aside>
+	
+	
+	
+	<section class="contenido-texto">
+		<article>
+	 		<h2>T1. SISTEMAS DE ECUACIONES LINEALES: EL MÉTODO DE GAUSS.</h2>
+	  		<h3>Sistemas De Ecuaciones Lineales.</h3>
+			<h4>Ecuación Lineal</h4>
+				<p>Se define una 
+				<a href="#" class="tooltip">
+				Ecuación Lineal
+				<span>Ten en cuenta que toda ecuación lineal con dos incógnitas, x e y, es de la forma y=mx+n y, te recuerdo que esta es la
+				forma general de la ecuación de una recta.</span></a> como aquella ecuación polinómica de grado uno con una o más incógnitas.</p>
+			<h5>Ejemplos:</h5>
+				<ol type = a>
+					<li><math>
+						<mrow>
+							<mn>7</mn>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mn>5</mn>
+							<mi>y</mi>
+							<mo>=</mo>
+							<mn>8</mn>
+							<mo>&rarr;</mo>
+						</mrow>
+						</math> Ecuación Lineal con dos incógnitas, que son x e y. </li>
+					<li><math>
+						<mrow>
+							<mn>7</mn>
+							<msup>
+								<mi>x</mi>
+								<mn>2</mn>
+							</msup>
+							<mo>-</mo>
+							<mn>5</mn>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mi>y</mi>
+							<mo>=</mo>
+							<mn>0</mn>
+							<mo>&rarr;</mo>
+						</mrow>
+						</math> <span>No es lineal porque al ser <math><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></math>
+						,tenemos que es una ecuación polinómica de grado 2 y no de grado 1.</span></li>
+					<li><math>
+						<mrow>
+							<mn>7</mn>
+							<mi>x</mi>
+							<mi>y</mi>
+							<mo>-</mo>
+							<mn>4</mn>
+							<mi>y</mi>
+							<mo>=</mo>
+							<mn>5</mn>
+							<mo>&rarr;</mo>
+						</mrow>
+						</math> No es lineal, aun siendo una ecuación polinómica de grado 1, porque aparece <math>
+						<mrow><mn>7</mn><mi>x</mi><mi>y</mi></mrow></math>, es decir, una incógnita multiplicada por otra incógnita.</li>
+				</ol>
+			<h4>Definición Sistemas De Ecuaciones Lineales</h4>
+			<p>Cuando tenemos una o más ecuaciones lineales con una o más incógnitas a calcular, se dice que tenemos un <span class="subrayado">Sistema de Ecuaciones
+			Lineales </span></p>
+			<h5>Ejemplos:</h5>
+				<ol type = a>
+					<li>
+					<math>
+						<mrow>
+							<mo>{</mo>
+							<mtable>
+								<mtr>
+									<mtd>
+										<mn>2</mn>
+										<mi>x</mi>
+										<mo>-</mo>
+										<mn>5</mn>
+										<mi>y</mi>
+										<mo>=</mo>
+										<mn>16</mn>
+									</mtd>
+								</mtr>
+								<mtr>
+									<mtd>
+										<mi>x</mi>
+										<mo>+</mo>
+										<mn>3</mn>
+										<mi>y</mi>
+										<mo>=</mo>
+										<mo>-</mo>
+										<mn>3</mn>
+									</mtd>
+								</mtr>
+							</mtable>
+							<mo>}</mo>
+							<mo>&rarr;</mo>
+						</mrow>
+						</math> Sistema Ecuaciones Lineal con 2 ecuaciones y 2 incógnitas; x e y.
+					</li>
+					<li>
+					<math>
+						<mrow>
+							<mo>{</mo>
+							<mtable>
+								<mtr>
+									<mtd>
+										<mn>2</mn>
+										<msup>
+											<mi>x</mi>
+											<mn>2</mn>
+										</msup>
+										<mo>-</mo>
+										<mn>5</mn>
+										<mi>y</mi>
+										<mo>=</mo>
+										<mn>16</mn>
+									</mtd>
+								</mtr>
+								<mtr>
+									<mtd>
+										<mi>x</mi>
+										<mo>+</mo>
+										<mn>3</mn>
+										<mi>y</mi>
+										<mo>=</mo>
+										<mo>-</mo>
+										<mn>3</mn>
+									</mtd>
+								</mtr>
+							</mtable>
+							<mo>}</mo>
+							<mo>&rarr;</mo>
+						</mrow>
+					</math>Sistema Ecuaciones NO Lineal con 2 ecuaciones y 2 incógnitas; x e y.<br />
+   					Notar que la primera ecuación no es lineal porque es de grado 2 y no de grado 1.
+					</li>
+				</ol>
+		</article>
+		<article>
+			<h4>Interpretación Geométrica Sistemas De Ecuaciones Lineales Con Dos Incógnitas</h4>
+				<p>Hay 2 formas fundamentales de resolver un sistema de ecuaciones, una de ellas es dibujando en un eje de coordenadas
+				sus respectivas ecuaciones e interpretar el resultado. </p> 
+			<h5>Ejemplo 1:</h5>
+			<p>Consideremos en este caso un sistema lineal con 2 incógnitas x e y.</p>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mn>9</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mn>4</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+				</math> 
+   		<p>Su solución es x=3,y=1. Gráficamente tenemos dos rectas
+   		2x+3y=9 y 3x-5y=4 las cuales se cortan en el punto P(3,1), el cual es la solución del sistema.</p>
+	
+	<script src="js/jsFunciones/secantes.js"></script>
+          <canvas id="secantes" width=600 height=400>
+              <div id="err_msg1">No support for HTML 5 canvas element</div>
+          </canvas>
+   
+   	<p>En este caso decimos que las rectas son <span class="subrayado">Secantes;</span> es decir; que se <span class="subrayado">Cortan</span> en el punto P(3,1).</p>
+	<h5>Ejemplo 2:</h5>
+	<p> Consideremos ahora el siguiente sistema de ecuaciones lineales: </p>
+	<math>
+		<mrow>
+			<mo>{</mo>
+			<mtable>
+				<mtr>
+					<mtd>
+						<mn>2</mn>
+						<mi>x</mi>
+						<mo>+</mo>
+						<mn>3</mn>
+						<mi>y</mi>
+						<mo>=</mo>
+						<mn>9</mn>
+					</mtd>
+				</mtr>
+				<mtr>
+					<mtd>
+						<mn>4</mn>
+						<mi>x</mi>
+						<mo>+</mo>
+						<mn>6</mn>
+						<mi>y</mi>
+						<mo>=</mo>
+						<mn>12</mn>
+					</mtd>
+				</mtr>
+			</mtable>
+			<mo>}</mo>
+		</mrow>
+		</math>
+   		<p>Este sistema de ecuaciones no tiene solución alguna, lo que gráficamente obtenemos es que las rectas
+   		2x+3y=9 y 4x+6y=12 no se cortan en ningún punto y, por tanto, decimos que son <span class="subrayado">Rectas Paralelas.</span> Podemos verlo más claramente en su 
+		representación gráfica en la siguiente figura:</p>
+		
+		<script src="js/jsFunciones/paralelas.js"></script>
+          <canvas id="paralelas" width=600 height=400>
+              <div id="err_msg2">No support for HTML 5 canvas element</div>
+          </canvas>
+	</article>
+	<article>
+		<h3>Clasificación De Los Sistemas Según El Número De Soluciones.</h3>
+		<p>Podemos clasificar los sistemas lineales según el número de soluciones que obtengamos en:</p>
+		<div class="listaordenada">
+		<ol>
+			<li><span class="resaltado">Sistemas Compatibles </span> &rarr; Son sistemas que poseen una o más soluciones.
+			<p>Dentro de estos distinguimos dos casos:</p>
+			<ol>
+				<li><span class="resaltado">Compatibles Determinados </span> &rarr; Poseen una única solución.</li>
+				<li><span class="resaltado">Compatibles Indeterminados </span> &rarr; Poseen Infinitas soluciones.</li>
+			</ol>
+		<p>Y luego tenemos los sistemas:</p>
+		</li>
+			<li><span class="resaltado">Sistemas Incompatibles </span> &rarr; No poseen solución alguna.</li>
+		</ol>
+		</div>
+		<p><span class="resaltado">Es importante tener en cuenta que esta clasificación también es válida para sistemas no lineales.</span></p>
+		<h5>Fíjate:</h5>
+		<p>De los ejemplos anteriores tenemos que:</p>
+		<p>+ El primer ejemplo es un <span class="subrayado">Sistema Compatible Determinado</span> porque tiene una única solución, el punto P(3,1)
+		Es <span class="subrayado">Compatible</span> por tener solución, y es <span class="subrayado">Determinado</span> por tener una única solución.</p>
+		<p>+ El segundo ejemplo al ser rectas paralelas no posee solución y, por tanto; es <span class="subrayado">Incompatible.</span></p>
+	</article>
+	<article>
+		<h3>Sistemas Escalonados.</h3>
+		<p>Hay un tipo de sistemas lineales fáciles de resolver, son los llamados <span class="subrayado">Sistemas Escalonados,</span> estos sistemas se caracterizan por tener
+		en su primera ecuación todas (o casi) todas sus incógnitas, y en sus sucesivas ecuaciones el número de incógnitas va decreciendo.<br /> Como 
+		dicho de palabra te puede resultar muy confuso, mejor es que veas estos ejemplos.
+		</p>
+		<h5>Ejemplos:</h5>
+		<ol>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mn>16</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+				</math>
+			<p>Éste sistema es de 2 ecuaciones con 2 incógnitas escalonado porque en la primera ecuación tiene 2 incógnitas y en la
+			segunda ecuación sólo hay 1 incógnita, hemos descendido en una incógnita su número.</p>
+			</li>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>2</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>7</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>-</mo>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>6</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>12</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+				</math>
+			<p>Éste sistema es de 3 ecuaciones con 3 incógnitas escalonado.</p>
+			</li>
+		</ol>
+		<h4>Cómo Resolver Los Sistemas Escalonados.</h4>
+		<p>Para resolver éste tipo de sistemas es muy sencillo, empezamos despejando la incógnita de la ecuación que sólo tiene esa incógnita.
+		Seguidamente la sustituimos en la ecuación que tiene 2 incógnitas y despejamos la otra incógnita. Procedemos sucesivamente con esta forma
+		hasta terminar con todas las ecuaciones.</p>
+		<p>Otra vez resulta muy lioso de palabra, ¿verdad? Pues veamos unos ejemplos:</p>
+		<h5>Ejemplos:</h5>
+		<ol>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mn>16</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+				</math>
+			<p>Bien, como la segunda ecuación sólo tiene una incógnita empezamos despejándola, en éste caso y. Observa:</p>
+			<math display="block">
+				<mrow>
+					<mn>3</mn>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mo>&rarr;</mo>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mfrac linethickness="1">
+						<mrow>
+							<mo>-</mo>
+							<mn>3</mn>
+						</mrow>
+						<mn>3</mn>
+					</mfrac>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>y</mi>
+									<mo>=</mo>
+									<mo>-</mo>
+									<mn>1</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+				</math>
+			<p>Vale, ya tenemos que nuestra y vale -1. Ahora en la primera ecuación sustituimos donde pone y por -1. Observa:</p>
+			<math display="block">
+				<mrow>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mn>16</mn>
+					<mo>&rarr;</mo>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>5</mn>
+					<mo>&sdot;</mo>
+					<mrow>
+						<mo maxsize="1.00em">(</mo>
+						<mo>-</mo>
+						<mn>1</mn>
+						<mo maxsize="1.00em">)</mo>
+					</mrow>
+					<mo>=</mo>
+					<mn>16</mn>
+					<mo>&rarr;</mo>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mn>5</mn>
+					<mo>=</mo>
+					<mn>16</mn>
+				</mrow>
+				</math>
+			<p>Finalmente despejamos x : </p>
+			<math display="block">
+				<mrow>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mn>5</mn>
+					<mo>=</mo>
+					<mn>16</mn>
+					<mo>&rarr;</mo>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>=</mo>
+					<mn>16</mn>
+					<mo>-</mo>
+					<mn>5</mn>
+					<mo>&rarr;</mo>
+					<mn>2</mn>
+					<mi>x</mi>
+					<mo>=</mo>
+					<mn>11</mn>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>x</mi>
+									<mo>=</mo>
+									<mfrac linethickness="1">
+										<mn>11</mn>
+										<mn>2</mn>
+									</mfrac>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+				</math>
+			<p>Y así hemos obtenido la solución del sistema, que es el punto 
+			<math>
+				<mrow>
+					<mtable class="m-boxed" frame="solid">
+						<mtr>
+							<mtd>
+								<mi>P</mi>
+								<mrow>
+									<mo>(</mo>
+									<mfrac>
+										<mn>11</mn>
+										<mn>2</mn>
+									</mfrac>
+									<mo>,</mo>
+									<mo>-</mo>
+									<mn>1</mn>
+									<mo>)</mo>
+								</mrow>
+							</mtd>
+						</mtr>
+					</mtable>
+				</mrow>
+			</math> </p>
+			<p>¿A que no ha sido tan difícil? </p> <br />
+			
+			</li>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>2</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>7</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>-</mo>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>6</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>12</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+				</math>
+			<p>Pues ahora a por éste, se hace igual que el anterior pero es un poco más largo porque es de 3 ecuaciones con 3 incógnitas.
+			Pero muy fácil, venga empecemos:</p>
+			<p>Primero hallamos z de la tercera ecuación:</p>
+			<math>
+				<mrow>
+					<mn>3</mn>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>12</mn>
+					<mo>&rarr;</mo>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mfrac linethickness="1">
+						<mn>12</mn>
+						<mn>3</mn>
+					</mfrac>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>z</mi>
+									<mo>=</mo>
+									<mn>4</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+				</math>
+			<p>Ya tenemos la z, procedemos a sustituirla en la 2&ordf; ecuación y hallamos y:</p>
+			<math>
+				<mrow>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>-</mo>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>6</mn>
+					<mo>&rarr;</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>-</mo>
+					<mn>4</mn>
+					<mo>=</mo>
+					<mn>6</mn>
+					<mo>&rarr;</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mn>6</mn>
+					<mo>+</mo>
+					<mn>4</mn>
+					<mo>&rarr;</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mn>10</mn>
+					<mo>&rarr;</mo>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mfrac linethickness="1">
+						<mn>10</mn>
+						<mn>5</mn>
+					</mfrac>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>y</mi>
+									<mo>=</mo>
+									<mn>2</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+				</math>
+			<p>Y finalmente sustituimos z e y en la 1&ordf; ecuación para hallar x, fíjate bien:</p>
+			<math>
+				<mrow>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mn>2</mn>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>7</mn>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mo>&sdot;</mo>
+					<mn>2</mn>
+					<mo>+</mo>
+					<mn>2</mn>
+					<mo>&sdot;</mo>
+					<mn>4</mn>
+					<mo>=</mo>
+					<mn>7</mn>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>6</mn>
+					<mo>+</mo>
+					<mn>8</mn>
+					<mo>=</mo>
+					<mn>7</mn>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>=</mo>
+					<mn>7</mn>
+					<mo>+</mo>
+					<mn>6</mn>
+					<mo>-</mo>
+					<mn>8</mn>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>x</mi>
+									<mo>=</mo>
+									<mn>5</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+			</math>
+			
+			<p><math>
+				<mrow>
+					<munder accentunder="true">
+						<mrow>
+							<mi>S</mi>
+							<mi>o</mi>
+							<mi>l</mi>
+							<mi>u</mi>
+							<mi>c</mi>
+							<mi>i</mi>
+							<mi>ó</mi>
+							<mi>n</mi>
+						</mrow>
+						<mo stretchy="true">&OverBar;</mo>
+					</munder>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mtable class="m-boxed" frame="solid">
+							<mtr>
+								<mtd>
+									<mi>P</mi>
+									<mrow>
+										<mo>(</mo>
+										<mn>5,2</mn>
+										<mn>,4</mn>
+										<mo>)</mo>
+									</mrow>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mrow>
+				</mrow>
+			</math>
+			</p>
+			
+			
+			<p>Ya está, hemos obtenido la solución del sistema, que es el punto P(5,2,4). Como hemos obtenido una única solución tenemos que
+			el sistema es <span class="subrayado">Compatible Determinado.</span></p>
+			<p>Al ser nuestro sistema de 3 incógnitas tenemos que gráficamente estamos en el espacio tridimensional. Y como las 3 ecuaciones son lineales sabemos que tenemos 3 planos, los cuales se cortan en el punto P(5,2,4)</p>
+			<script src="js/jsFunciones/planos.js"></script>
+          <canvas id="planos" width=600 height=400>
+              <div id="err_msg3">No support for HTML 5 canvas element</div>
+          </canvas>
+          <p>Quizá así sea difícil de ver, pero también podemos interpretarlo como una recta que corta a un plano, ya que las dos primeras ecuaciones del sistema se pueden considerar como una única recta en el espacio tridimensional; mientras que la tercera ecuación: <math><mrow><mn>3</mn><mi>z</mi><mo>=</mo><mn>12</mn></mrow></math>, simplificando queda <math><mrow><mi>z</mi><mo>=</mo><mn>4</mn></mrow></math>, como el plano, el cual es cortado por la recta en el punto <math><mrow><mi>P</mi><mo>(</mo><mn>5</mn><mo>,</mo><mn>2</mn><mi>,</mi><mn>4</mn><mo>)</mo></mrow></math></p>
+          <script src="js/jsFunciones/rectaplano.js"></script>
+          <canvas id="rectaplano" width=600 height=400>
+              <div id="err_msg4">No support for HTML 5 canvas element</div>
+          </canvas>
+          <p><span class="subrayado">Pero no te preocupes mucho si no acabas de entenderlo, en temas posteriores se ve con mayor profundidad la interpretación geométrica tridimensional.</span></p>
+			</li>
+		</ol>
+		<h4>Importancia De Los Sistemas Escalonados.</h4>
+		<p>Bien, ya has visto lo sencillo que es resolver éste tipo de sistemas, pero no por su sencillez son menos importantes. Debes dominarlos
+		muy bien, porque para resolver sistemas no escalonados lo que haremos es convertirlos a sistemas escalonados mediante un método que se llamna
+		<a href="#" class="tooltip">El Método De Gauss.<span>
+		Gauss ha sido y será uno de los mayores matemáticos de toda la historia. De niño fue un niño prodigio, se cuenta que de muy niño fue capaz de
+		sumar los números del 1 al 100. Se llamaba Johann Carl Friedrich Gauss y era alemán. Puedes saber más de su vida en la Wikipedia.
+		</span></a> Esto lo veremos muy pronto.
+	</article>
+	<article>
+		<h3>Cómo Escribir Un Sistema En Forma De Matrices.</h3>
+		<p>Antes de ver el Método De Gauss necesitamos saber escribir un sistema de ecuaciones lineal en forma matricial (o de matrices). Esto
+		no es difícil, lo que pasa es que cuando lo escribimos en forma teórica os cuesta entenderlo, aunque cuando realizáis unos cuantos 
+		ejercicios os resulta tan fácil que lo hacéis de forma natural. Empecemos.</p>
+		<p>Para hacerlo sencillo no voy a poner todo el rollo, sólo os escribo la fórmula general, que es:</p>
+		<math>
+			<mrow>
+				<mtable class="m-boxed" frame="solid">
+					<mtr>
+						<mtd>
+							<mi>A</mi>
+							<mo>&sdot;</mo>
+							<mi>X</mi>
+							<mo>=</mo>
+							<mi>b</mi>
+						</mtd>
+					</mtr>
+				</mtable>
+			</mrow>
+			</math>
+		<p>Donde cada elemento de la expresión de arriba es una matriz:</p>
+		<p>A &rarr; Se le llama <span class="subrayado">Matriz de Coeficientes.</span></p>
+		<p>X &rarr; Se le llama <span class="subrayado">Matriz Columna de las Incógnitas</span> del sistema.</p>
+		<p>b &rarr; Se le llama <span class="subrayado">Matriz Columna de los Términos Independientes.</span></p>
+		<p>Y hasta aquí la teoría, mejor veamos unos cuántos ejemplos para que lo entiendas.</p>
+		
+		<h5>Ejemplos:</h5>
+		<ol>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mn>16</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+			</math>
+			<p>Bien, éste sistema tiene 2 ecuaciones con 2 incógnitas. Su matriz de coeficientes esta formada por los números que
+			acompañan a las incógnitas, que son: 2,-5,1 y 3. Los vamos a introducir en la matriz de coeficientes por filas, así:</p>
+			<math>
+				<mrow>
+					<mi>A</mi>
+					<mo>=</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mn>2</mn>
+								</mtd>
+								<mtd>
+									<mo>-</mo>
+									<mn>5</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>3</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+			</math>
+		   <p>La matriz columna X está formada por las 2 incógnitas del sistema, x e y; y la formaremos por columnas, así:</p>
+		   <math>
+			<mrow>
+				<mi>X</mi>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		   </math>
+		   <p>Finalmente nos queda formar la matriz columna de los términos independientes, estos son los números que no acompañan a las
+		   incógnitas, y que generalmente están en el lado derecho del igual de cada ecuación del sistema. En nuestro ejemplo son los
+		   números 16 y -3. Así pues, si los introducimos por columnas tenemos la matriz:</p>
+		   <math>
+			<mrow>
+				<mi>b</mi>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mn>16</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+		   <p>Ahora lo vamos a juntar todo en una única expresión, recuerda que nuestra "formulita" es AX=b, si sustituimos cada cosa por lo
+		   que hemos obtenido en nuestro ejemplo, obtenemos:</p>
+		   <math display="block">
+			<mrow>
+				<mi>A</mi>
+				<mi>X</mi>
+				<mo>=</mo>
+				<mi>b</mi>
+				<mo>&rarr;</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+							</mtd>
+							<mtd>
+								<mo>-</mo>
+								<mn>5</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>&sdot;</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mn>16</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+		   <p>Y esta es nuestra forma de expresar nuestro sistema de ecuaciones lineal en forma matricial, como nosotros queríamos.</p>
+			</li>
+			<li>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>7</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>2</mn>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>11</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>4</mn>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>-</mo>
+								<mn>4</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+			</math>
+			<p>Ahora tenemos un sistema lineal de 3 ecuaciones con 3 incógnitas, el proceso es el mismo, lo único que cambia es que
+			nuestras matrices van a ser más grandes. Así que ahora lo voy a hacer más rápido y te dejo a ti que lo pienses. Por tanto, 
+			en éste ejemplo su expresión matricial es la siguiente:</p>
+			<math display="block">
+				<mrow>
+					<mi>A</mi>
+					<mi>X</mi>
+					<mo>=</mo>
+					<mi>b</mi>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>5</mn>
+								</mtd>
+								<mtd>
+									<mo>-</mo>
+									<mn>3</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>2</mn>
+								</mtd>
+								<mtd>
+									<mo>-</mo>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>4</mn>
+								</mtd>
+								<mtd>
+									<mn>3</mn>
+								</mtd>
+								<mtd>
+									<mo>-</mo>
+									<mn>4</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+					<mo>&sdot;</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mi>x</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>y</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>z</mi>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+					<mo>=</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mn>7</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>11</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>3</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+			</math>
+			</li>
+			<li>
+			
+			<br/>
+			
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>1</mn>
+								<mo>=</mo>
+								<mn>0</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>3</mn>
+								<mo>-</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mi>z</mi>
+								<mo>-</mo>
+								<mn>1</mn>
+								<mo>=</mo>
+								<mn>0</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+			</math>
+			<p>Por último veamos éste sistema, el cual presenta una peculiaridad, está desordenado. Tenemos que pasar todos los términos que llevan
+			incógnitas a la parte izquierda del igual, y los que no tienen incógnitas a la parte derecha del igual. Vamos a verlo:</p>
+			
+			<p><math>
+				<mrow>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mn>1</mn>
+					<mo>=</mo>
+					<mn>0</mn>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mi>y</mi>
+					<mo>=</mo>
+					<mo>-</mo>
+					<mn>1</mn>
+				</mrow>
+			</math></p>
+			<p><math>
+				<mrow>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mn>3</mn>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>3</mn>
+					<mo>-</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mn>5</mn>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mn>3</mn>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>3</mn>
+				</mrow>
+			</math></p>
+			<p><math>
+				<mrow>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mi>z</mi>
+					<mo>-</mo>
+					<mn>1</mn>
+					<mo>=</mo>
+					<mn>0</mn>
+					<mo>&rarr;</mo>
+					<mi>x</mi>
+					<mo>+</mo>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mi>z</mi>
+					<mo>=</mo>
+					<mn>1</mn>
+				</mrow>
+			</math></p>
+			<p><span class="subrayado">"Date cuenta que para hacerlo sólo hemos pasado lo que esta sumando restando y viceversa.</span> Si lo unimos 
+			todo tenemos que nuestro sistema nos queda así:</p>
+			<math>
+				<mrow>
+					<mo>{</mo>
+					<mtable>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>=</mo>
+								<mo>-</mo>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mi>z</mi>
+								<mo>=</mo>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>}</mo>
+				</mrow>
+			</math>
+			<p>Ahora toca escribirlo en forma matricial, pero antes fíjate en la primera ecuación del sistema x-3y = -1, si te fijas no esta la z,
+			cuando falta alguna de las incógnitas pondremos en nuestra matriz de coeficientes un 0, esto se debe a que 0z=0, por lo que nuestra
+			primera ecuación la podemos reescribir como
+			<math>
+				<mrow>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mn>3</mn>
+					<mi>y</mi>
+					<mo>+</mo>
+					<mn mathcolor="red">0</mn>
+					<mi mathcolor="red">z</mi>
+					<mo>=</mo>
+					<mo>-</mo>
+					<mn>1</mn>
+				</mrow>
+			</math>
+			. Ahora ya podemos escribir nuestro sistema en forma matricial</p>
+			
+		   <math>
+				<mrow>
+					<mi>A</mi>
+					<mi>X</mi>
+					<mo>=</mo>
+					<mi>b</mi>
+					<mo>&rarr;</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mo>-</mo>
+									<mn>3</mn>
+								</mtd>
+								<mtd>
+									<mn mathcolor="red">0</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>5</mn>
+								</mtd>
+								<mtd>
+									<mn>3</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+					<mo>&sdot;</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mi>x</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>y</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>z</mi>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+					<mo>=</mo>
+					<mrow>
+						<mo>(</mo>
+						<mtable class="m-pmatrix">
+							<mtr>
+								<mtd>
+									<mo>-</mo>
+									<mn>1</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>3</mn>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mn>1</mn>
+								</mtd>
+							</mtr>
+						</mtable>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+			</math>
+
+			<a href="#" class="tooltip">
+				¡¡ OBSERVA !!
+				<span>En la matriz de coeficientes el elemento que ocupa la fila 1, columna 3 es un 0 porque en nuestra primera ecuación la
+				incógnita z no aparece, lo cual es lo mismo que escribir 0z, y ése 0 es el que aparece en la matriz.</span></a>
+			</li>
+		</ol>
+		<h4>De Forma Matricial A Forma De Sistema.</h4>
+		<p>Veamos ahora el paso contrario, cómo pasar de un sistema en forma matricial a la forma tradicional que ya conocías. Para que no te
+		resulte muy confuso lo veremos directamente con un ejemplo. Lo único que debes saber es cómo multiplicar matrices.<br/></p>
+		<p>Sobre multiplicar matrices puedes verlo en éste enlace &rarr; <a href="#">Multiplicar Matrices</a></p>
+		<h5>Ejemplo:</h5>
+		<math>
+			<mrow>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+							<mtd>
+								<mn>0</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>5</mn>
+							</mtd>
+							<mtd>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>&sdot;</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mo>-</mo>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+		   <p>Lo hacemos paso a paso, lo primero que hay que hacer es el producto matricial AX, en nuestro ejemplo:</p>
+		  <math>
+			<mrow>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mo>-</mo>
+								<mn>3</mn>
+							</mtd>
+							<mtd>
+								<mn>0</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>5</mn>
+							</mtd>
+							<mtd>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>&sdot;</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>0</mn>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+		<p>Seguidamente igualamos la matriz resultante con la matriz de los términos independientes:</p>
+		<math>
+			<mrow>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>-</mo>
+								<mn>3</mn>
+								<mi>y</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mn>5</mn>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>3</mn>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mi>x</mi>
+								<mo>+</mo>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mi>z</mi>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mtable class="m-pmatrix">
+						<mtr>
+							<mtd>
+								<mo>-</mo>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>3</mn>
+							</mtd>
+						</mtr>
+						<mtr>
+							<mtd>
+								<mn>1</mn>
+							</mtd>
+						</mtr>
+					</mtable>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+		<p>Y ahora es muy fácil lo que queda, en matemáticas lo llamamos igualar filas con filas, y que no es otra cosa como coger una goma de borrar
+		y borraras esos paréntesis grandes, y de esa forma obtenemos lo que queríamos:</p>
+		<math>
+			<mrow>
+				<mo>{</mo>
+				<mtable>
+					<mtr>
+						<mtd>
+							<mi>x</mi>
+							<mo>-</mo>
+							<mn>3</mn>
+							<mi>y</mi>
+							<mo>=</mo>
+							<mo>-</mo>
+							<mn>1</mn>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mn>5</mn>
+							<mi>y</mi>
+							<mo>+</mo>
+							<mn>3</mn>
+							<mi>z</mi>
+							<mo>=</mo>
+							<mn>3</mn>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mi>y</mi>
+							<mo>+</mo>
+							<mi>z</mi>
+							<mo>=</mo>
+							<mn>1</mn>
+						</mtd>
+					</mtr>
+				</mtable>
+				<mo>}</mo>
+			</mrow>
+		</math>
+		<p>Muy bien, hasta aquí todos los conceptos básicos que necesitamos para resolver un sistema lineal por el Método de Gauss, ahora pasaremos
+		a aprender éste nuevo método de resolución. </p>
+	</article>
+	<article>
+		<h2>El Método De Gauss.</h2>
+		<h3>Operaciones Elementales Permitidas.</h3>
+		<p>Te voy a dar la lista de las 3 operaciones elementales necesarias para aplicar el Método De Gauss con matrices:</p>
+		<ol>
+			<li>Multiplicar una fila de una matriz por una constante.</li>
+			<li>Sumar a una fila por otra fila que haya sido multiplicada por una constante.</li>
+			<li>Intercambiar una fila por otra fila.</li>
+		</ol>
+		<p><span class="subrayado">Es muy importante que tengas en cuenta que las operaciones 2&ordf;. y 3&ordf;. sólo se realizan POR FILAS, nunca POR COLUMNAS.</span></p>
+		<h5>Notación</h5>
+		<p>Denotamos por Matriz Ampliada a la matriz que está formada por la matriz de coeficientes y la matriz columna de los términos
+		independientes. La notación es la siguiente:</p>
+		
+		<math>
+			<mrow>
+				<msup>
+					<mi>A</mi>
+					<mo>*</mo>
+				</msup>
+				<mo>=</mo>
+				<mrow>
+					<mo>(</mo>
+					<mi>A</mi>
+					<mo>|</mo>
+					<mi>b</mi>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</math>
+
+		<p>Donde A es la matriz de coeficientes y b es la de los términos independientes.</p>
+		<h4>Resolución Por El Método De Gauss.</h4>
+		<p>El Método de Gauss consiste en dado un sistema de ecuaciones lineales convertirlo en un Sistema Escalonado y resolverlo como hicimos
+		en la sección de Resolver Sistemas Escalonados. Para convertirlo a sistema escalonado utilizaremos las operaciones elementales permitidas.</p>
+		<p>Pero veámoslo con un ejemplo:</p>
+		<h5>Ejemplo:</h5>
+		<math>
+			<mrow>
+				<mo>{</mo>
+				<mtable>
+					<mtr>
+						<mtd>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mn>5</mn>
+							<mi>y</mi>
+							<mo>-</mo>
+							<mn>3</mn>
+							<mi>z</mi>
+							<mo>=</mo>
+							<mn>7</mn>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mn>2</mn>
+							<mi>x</mi>
+							<mo>-</mo>
+							<mi>y</mi>
+							<mo>+</mo>
+							<mi>z</mi>
+							<mo>=</mo>
+							<mn>11</mn>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mn>4</mn>
+							<mi>x</mi>
+							<mo>+</mo>
+							<mn>3</mn>
+							<mi>y</mi>
+							<mo>-</mo>
+							<mn>4</mn>
+							<mi>z</mi>
+							<mo>=</mo>
+							<mn>0</mn>
+						</mtd>
+					</mtr>
+				</mtable>
+				<mo>}</mo>
+				<mo>&rarr;</mo>
+			</mrow>
+		</math>
+
+		<span>Escribimos la matriz ampliada del sistema: </span>
+		
+		
+		<math display="block">
+		<mrow>
+			<msup>
+				<mi>A</mi>
+				<mo>*</mo>
+			</msup>
+			<mo>=</mo>
+		  <mfenced open="(" close=")" separators=" ">
+		    <mrow>
+		      <mtable>
+			<mtr>
+			  <mtd>
+			    <mn  mathcolor="#000099">1</mn>
+			  </mtd>
+			  <mtd>
+			    <mn>5</mn>
+			  </mtd>
+			  <mtd>
+			    <mo>-</mo>
+			    <mn>3</mn>
+			  </mtd>
+			</mtr>
+			<mtr>
+			  <mtd>
+			    <mn  mathcolor="#CC0000">2</mn>
+			  </mtd>
+			  <mtd>
+			    <mn  mathcolor="#000099">1</mn>
+			  </mtd>
+			  <mtd>
+			    <mn>1</mn>
+			  </mtd>
+			</mtr>
+			<mtr>
+			  <mtd>
+			    <mn  mathcolor="#CC0000">4</mn>
+			  </mtd>
+			  <mtd>
+			    <mn mathcolor="#CC0000">3</mn>
+			  </mtd>
+			  <mtd>
+			    <mrow>
+			      <mo  mathcolor="#000099">-</mo>
+			      <mn  mathcolor="#000099">4</mn>
+			    </mrow>
+			  </mtd>
+			</mtr>
+		      </mtable>
+		      <mo>|</mo>
+		      <mtable>
+			<mtr>
+			  <mtd>
+			    <mn>7</mn>
+			  </mtd>
+			</mtr>
+			<mtr>
+			  <mtd>
+			    <mn>1</mn>
+			    <mn>1</mn>
+			  </mtd>
+			</mtr>
+			<mtr>
+			  <mtd>
+			    <mn>0</mn>
+			  </mtd>
+			</mtr>
+		      </mtable>
+		    </mrow>
+		  </mfenced>
+		</mrow>
+		</math>
+
+
+		<p>Para convertir el sistema en escalonado lo vamos a hacer con la matriz ampliada porque es lo mismo, pero tiene la ventaja de ser más
+		fácil de entender ya que es más vistoso. Para ello tenemos que hacer ceros en los números que hay por debajo de la <a href="#" class="tooltip">
+		diagonal principal. <span>Son los números que te he indicado en la matriz de color azul.</span></a>
+		<span class="subrayado">Son los que te he indicado de color rojo.</span></p>
+		<p>Primero haremos que el 2 se convierta en un 0. Aplicamos como operación elemental multiplicar todos los elementos de la fila 1 por 2
+		y restamos la fila 2 a esta nueva fila 1. Denotaremos esta operación por:
+		<math><mrow><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo>
+			<msub><mi>F</mi><mn>2</mn></msub><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo>
+			<msub><mi>F</mi><mn>1</mn></msub></mrow>
+		</math>
+		obteniendo lo siguiente:</p>
+		<math display="block">
+			<mrow>
+			  <msup>
+				  <mi>A</mi>
+				<mo>*</mo>
+			  </msup>
+			  <mo>=</mo>
+			  <mfenced open="(" close=")" separators=" ">
+			    <mrow>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn>5</mn>
+				  </mtd>
+				  <mtd>
+				    <mo>-</mo>
+				    <mn>3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mo  mathcolor="#000099">-</mo>
+				    <mn  mathcolor="#000099">1</mn>
+				    <mn  mathcolor="#000099">1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#000099">7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">4</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">3</mn>
+				  </mtd>
+				  <mtd>
+				    <mo>-</mo>
+				    <mn>4</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			      <mo>|</mo>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mo  mathcolor="#000099">-</mo>
+				    <mn  mathcolor="#000099">3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn>0</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			    </mrow>
+			  </mfenced>
+			</mrow>
+			</math>
+
+		<p>Ahora vamos a hacer lo mismo para convertir el 4 en un cero, siguiendo el paso anterior la operación será
+		<math><mrow><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo>
+			<msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo>
+			<msub><mi>F</mi><mn>1</mn></msub></mrow>
+		</math>
+		Como en éste caso es en la fila 3 lo que hacemos es a la fila 3 le restamos 4 veces la fila 1. Y obtenemos:</p>
+		<math display="block">
+			<mrow>
+			  <msup>
+				  <mi>A</mi>
+				<mo>*</mo>
+			  </msup>
+			  <mo>=</mo>
+			  <mfenced open="(" close=")" separators=" ">
+			    <mrow>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn>5</mn>
+				  </mtd>
+				  <mtd>
+				    <mo>-</mo>
+				    <mn>3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mo  mathcolor="#000000">-</mo>
+				    <mn  mathcolor="#000000">1</mn>
+				    <mn  mathcolor="#000000">1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#000000">7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mo  mathcolor="#CC0000">-</mo>
+				    <mn  mathcolor="#CC0000">1</mn>
+				    <mn  mathcolor="#CC0000">7</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#000099">8</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			      <mo>|</mo>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mo  mathcolor="#000000">-</mo>
+				    <mn  mathcolor="#000000">3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mo  mathcolor="#000099">-</mo>
+				    <mn  mathcolor="#000099">2</mn>
+				    <mn  mathcolor="#000099">5</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			    </mrow>
+			  </mfenced>
+			</mrow>
+			</math>
+
+		<p>Finalmente debemos hacer que el -17 sea 0, aplicaremos la siguiente operación:
+		<math><mrow><msub><mi>F</mi><mn>3</mn></msub><mo>=</mo>
+			<mn>11</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>3</mn></msub><mo>-</mo><mn>17</mn><mo>&CenterDot;</mo>
+			<msub><mi>F</mi><mn>2</mn></msub></mrow>
+		</math>
+		, es decir; multiplicamos
+		la 3&ordf;. fila por 11 y le sumamos la 2&ordf;. fila multiplicada por (-17), quedando lo siguiente:</p>
+		<math>
+			<mrow>
+			  <msup>
+				  <mi>A</mi>
+				<mo>*</mo>
+			  </msup>
+			  <mo>=</mo>
+			  <mfenced open="(" close=")" separators=" ">
+			    <mrow>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn>5</mn>
+				  </mtd>
+				  <mtd>
+				    <mo>-</mo>
+				    <mn>3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mo  mathcolor="#000000">-</mo>
+				    <mn  mathcolor="#000000">1</mn>
+				    <mn  mathcolor="#000000">1</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#000000">7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mn  mathcolor="#CC0000">0</mn>
+				  </mtd>
+				  <mtd>
+				    <mo  mathcolor="#000099">-</mo>
+				    <mn  mathcolor="#000099">3</mn>
+				    <mn  mathcolor="#000099">1</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			      <mo>|</mo>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mn>7</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mo  mathcolor="#000000">-</mo>
+				    <mn  mathcolor="#000000">3</mn>
+				  </mtd>
+				</mtr>
+				<mtr>
+				  <mtd>
+				    <mo  mathcolor="#000099">-</mo>
+				    <mn  mathcolor="#000099">2</mn>
+				    <mn  mathcolor="#000099">2</mn>
+				    <mn  mathcolor="#000099">4</mn>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			    </mrow>
+			  </mfenced>
+			  <mo>&rarr;</mo>
+			</mrow>
+			</math>
+
+		<a href="#" class="tooltip">Importante<span>Estas matrices que tienen todos sus elementos que están por debajo de la diagonal
+		principal iguales a 0 se les llama Matrices Triangulares Superiores. Lo de triangular viene porque los ceros forman la figura de
+		un triángulo rectángulo.</span></a>
+		<p>Como ves hemos obtenido lo que queríamos, hacer ceros todos los elementos de la matriz que están de color rojo. Tan sólo queda
+		ahora averiguar quiénes son x,y,z. Para ello empezamos igualando los elementos de la 3&ordf;. fila:</p>
+		<math display="block">
+		<mrow>
+		  <mn>-31</mn><mi>z</mi><mo>=</mo><mn>-224</mn>
+		  <mo>&srarr;</mo>
+		  <mtable class="m-boxed" frame="solid">
+		    <mtr>
+		      <mtd>
+			<mi>z</mi>
+			<mo>=</mo>
+			<mfrac>
+			  <mrow>
+			    <mn>2</mn>
+			    <mn>2</mn>
+			    <mn>4</mn>
+			  </mrow>
+			  <mrow>
+			    <mn>3</mn>
+			    <mn>1</mn>
+			  </mrow>
+			</mfrac>
+		      </mtd>
+		    </mtr>
+		  </mtable>
+		</mrow>
+		</math>
+		<p>Igualamos los de la 2&ordf;. fila y sustituimos z, así hallaremos y.</p>
+		<math display="block">
+			<mrow>
+			  <mo>-</mo>
+			  <mn>11</mn>
+			  <mi>y</mi>
+			  <mo>+</mo>
+			  <mn>7</mn>
+			  <mi>z</mi>
+			  <mo>=</mo>
+			  <mo>-</mo>
+			  <mn>3</mn>
+			  <mo>&srarr;</mo>
+			  <mo>-</mo>
+			  <mn>11</mn>
+			  <mi>y</mi>
+			  <mo>+</mo>
+			  <mn>7</mn>
+			  <mo>&CenterDot;</mo>
+			  <mfenced open="(" close=")" separators=" ">
+			    <mrow>
+			      <mfrac>
+				<mrow>
+				  <mn>224</mn>
+				</mrow>
+				<mrow>
+				  <mn>31</mn>
+				</mrow>
+			      </mfrac>
+			    </mrow>
+			  </mfenced>
+			  <mo>=</mo>
+			  <mo>-</mo>
+			  <mn>3</mn>
+			  <mo>&srarr;</mo>
+			  <mo>-</mo>
+			  <mn>11</mn>
+			  <mi>y</mi>
+			  <mo>+</mo>
+			  <mfrac>
+			    <mrow>
+			      <mn>1568</mn>
+			    </mrow>
+			    <mrow>
+			      <mn>31</mn>
+			    </mrow>
+			  </mfrac>
+			  <mo>=</mo>
+			  <mo>-</mo>
+			  <mn>3</mn>
+			  <mo>&srarr;</mo>
+			  <mo>-</mo>
+			  <mn>11</mn>
+			  <mi>y</mi>
+			  <mo>=</mo>
+			  <mo>-</mo>
+			  <mn>3</mn>
+			  <mo>-</mo>
+			  <mfrac>
+			    <mrow>
+			      <mn>1568</mn>
+			    </mrow>
+			    <mrow>
+			      <mn>31</mn>
+			    </mrow>
+			  </mfrac>
+			</mrow>
+		</math>
+		<math display="block">
+			<mrow>
+			  <mo>&srarr;</mo>
+			  <mo>-</mo>
+			  <mn>11</mn>
+			  <mi>y</mi>
+			  <mo>=</mo>
+			  <mfrac>
+			    <mrow>
+			      <mo>-</mo>
+			      <mn>1661</mn>
+			    </mrow>
+			    <mrow>
+			      <mn>31</mn>
+			    </mrow>
+			  </mfrac>
+			  <mo>&srarr;</mo>
+			  <mtable class="m-boxed" frame="solid">
+			    <mtr>
+			      <mtd>
+				<mi>y</mi>
+				<mo>=</mo>
+				<mfrac>
+				  <mrow>
+				    <mn>151</mn>
+				  </mrow>
+				  <mrow>
+				    <mn>31</mn>
+				  </mrow>
+				</mfrac>
+			      </mtd>
+			    </mtr>
+			  </mtable>
+			</mrow>
+		</math>
+		<p>Finalmente igualamos los de la 1&ordf;. fila, sustituimos en ella los valores obtenidos de z e y; a partir de aquí obtendremos x:</p>
+		<math display="block">
+			<mrow>
+			  <mtext>x+5y-3z=7</mtext>
+			  <mo>&srarr;</mo>
+			  <mi>x</mi>
+			  <mo>+</mo>
+			  <mn>5</mn>
+			  <mo>&CenterDot;</mo>
+			  <mfrac>
+			    <mrow>
+			      <mtext>151</mtext>
+			    </mrow>
+			    <mrow>
+			      <mtext>31</mtext>
+			    </mrow>
+			  </mfrac>
+			  <mtext>-3</mtext>
+			  <mo>&CenterDot;</mo>
+			  <mfrac>
+			    <mrow>
+			      <mtext>224</mtext>
+			    </mrow>
+			    <mrow>
+			      <mtext>31</mtext>
+			    </mrow>
+			  </mfrac>
+			  <mo>=</mo>
+			  <mn>7</mn>
+			  <mo>&srarr;</mo>
+			  <mtext>x=7-</mtext>
+			  <mfrac>
+			    <mrow>
+			      <mtext>755</mtext>
+			    </mrow>
+			    <mrow>
+			      <mtext>31</mtext>
+			    </mrow>
+			  </mfrac>
+			  <mo>+</mo>
+			  <mfrac>
+			    <mrow>
+			      <mtext>672</mtext>
+			    </mrow>
+			    <mrow>
+			      <mtext>31</mtext>
+			    </mrow>
+			  </mfrac>
+			  <mo>&srarr;</mo>
+			  <mtext>x=7-</mtext>
+			  <mfrac>
+			    <mrow>
+			      <mtext>83</mtext>
+			    </mrow>
+			    <mrow>
+			      <mtext>31</mtext>
+			    </mrow>
+			  </mfrac>
+			  <mo>&srarr;</mo>
+			  <mtable class="m-boxed" frame="solid">
+			    <mtr>
+			      <mtd>
+				<mtext>x=</mtext>
+				<mfrac>
+				  <mrow>
+				    <mtext>134</mtext>
+				  </mrow>
+				  <mrow>
+				    <mtext>31</mtext>
+				  </mrow>
+				</mfrac>
+			      </mtd>
+			    </mtr>
+			  </mtable>
+			</mrow>
+		</math>
+		<p>Por tanto, nuestra solución es:</p>
+		<math display="block">
+			<mrow>
+			  <mtext>Solución</mtext>
+			  <mo>&srarr;</mo>
+			  <mtable>
+			    <mtr>
+			      <mtd>
+				<mfenced open="(" close=")" separators=" ">
+				  <mrow>
+				    <mtable>
+				      <mtr>
+					<mtd>
+					  <mi>x</mi>
+					  <mn>,</mn>
+					</mtd>
+					<mtd>
+					  <mi>y</mi>
+					  <mn>,</mn>
+					</mtd>
+					<mtd>
+					  <mi>z</mi>
+					</mtd>
+				      </mtr>
+				    </mtable>
+				  </mrow>
+				</mfenced>
+				<mo>=</mo>
+			      </mtd>
+			    </mtr>
+			  </mtable>
+			  <mfenced open="(" close=")" separators=" ">
+			    <mrow>
+			      <mtable>
+				<mtr>
+				  <mtd>
+				    <mfrac>
+				      <mrow>
+					<mn>134</mn>
+				      </mrow>
+				      <mrow>
+					<mn>31</mn>
+				      </mrow>
+				    </mfrac>
+				    <mn>,</mn>
+				  </mtd>
+				  <mtd>
+				    <mfrac>
+				      <mrow>
+					<mn>151</mn>
+				      </mrow>
+				      <mrow>
+					<mn>31</mn>
+				      </mrow>
+				    </mfrac>
+				    <mn>,</mn>
+				  </mtd>
+				  <mtd>
+				    <mfrac>
+				      <mrow>
+					<mn>224</mn>
+				      </mrow>
+				      <mrow>
+					<mn>31</mn>
+				      </mrow>
+				    </mfrac>
+				  </mtd>
+				</mtr>
+			      </mtable>
+			    </mrow>
+			  </mfenced>
+			</mrow>
+			</math>
+		</article>	
+	
+	
+	
+	</section>
+	</section>
+
+		<footer>
+			<?
+						include("footerclass.php");
+						hacer_footer();
+			?>
+		</footer>
+</section>
+</body>
+</html>

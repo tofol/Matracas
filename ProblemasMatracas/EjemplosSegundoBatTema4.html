@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <?php
+      include('xua.php');
+    ?>
+    <title>Ejemplos Segundo Bachiller Tema 3</title>
+
+    <meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+    <meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+    <meta name="author" content="Cristobal Lopez Silla" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+
+    <link href="css/normalize.css" rel="stylesheet" media="all" />
+  	<link href="css/style.css" rel="stylesheet" media="all" />
+  	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+  	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+  <script src="js/modernizr.js"></script>
+      <!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+      <!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+	<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <script type="text/javascript" src="js/accordion.js"></script>
+
+</head>
+
+<body xmlns="http://www.w3.org/1998/Math/MathML">
+  <!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  <![endif]-->
+
+    <section class="contenedor">
+        <header>
+            <h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?php
+            include("navclass.php");
+            hacer_nav();
+          ?>
+        </nav>
+        </header>
+    <section class="contenido-ppal">
+		<aside>
+			<?php
+            include("asideclass.php");
+            hacer_aside();
+      ?>
+		</aside>
+
+
+
+        <section class="contenido-texto">
+                <p class="titulos_ejemplos">Ejemplos Resueltos De Determinantes.</p>
+				    <h4 class="acordeon"><a href="#">Ejemplo 1:</a></h4>
+		    		<section class="contacordeon"><div class="block">
+              <section class="enunciados">
+                <p>Lewis Carroll, autor de Alicia en el país de las maravillas, propone un problema que puede enunciarse así: El consumo en una cafetería de un vaso de limonada, tres sandwiches y siete bizcochos ha costado 1 chelín y 2 peniques, mientras que un vaso de limonada, cuatro sandwiches y diez bizcochos vale 1 chelín y 5 peniques. Hallar cuál es el precio:</p>
+                <ol type='i'>
+                <li>De un vaso de limonada, un sandwich y un bizcocho.</li>
+                <li>De dos vasos de limonada, tres sandwiches y cinco bizcochos</li>
+              </ol>
+              <p>Resolver el problema, recordando que 1 chelín vale 12 peniques.</p>
+              </section>
+              <p>Lo primero es definir las incógnitas y el sistema de ecuaciones:</p>
+              <p><span class="negrita">x = "El precio en peniques de 1 vaso de limonada."</span><br />
+                <span class="negrita">y = "El precio en peniques de 1 sandwich."</span><br />
+                <span class="negrita">z = "El precio en peniques de 1 bizcocho".</span></p>
+              <p>Sabemos que 1 chelín y 2 peniques son 14 peniques; mientras que 1 chelín y 5 peniques son 17 peniques. <br />Ahora que lo tenemos todo planteamos el sistema de ecuaciones, que es:</p>
+              <math><mrow><mfenced open="{" close="}" separators=" "><mrow><mtable groupalign="{left left}"><mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>7</mn><mi>z</mi><mo>=</mo><mn>14</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>+</mo><mn>10</mn><mi>z</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+              <p>Como tenemos menos ecuaciones que incógnitas podemos concluir que si el problema tiene solución, entonces tendrá infinitas soluciones, es decir, será <span class="negrita">Compatible Indeterminado.</span> Como: <math><mrow><mfenced open="|" close="|" separators=" "><mrow><mtable groupalign="{left left}"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mn>1</mn><mo>&ne;</mo><mn>0</mn><mo>&rarr;</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><mi>A</mi></mrow></mfenced><mo>=</mo><mi>rang</mi><mo>&ApplyFunction;</mo><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mo>*</mo></msup></mrow></mfenced><mo>=</mo><mn>2</mn><mo>&lt;</mo><mn>3</mn><mo>&rarr;</mo></mrow></math> <span class="negrita subrayada">Sistema Compatible Indeterminado</span></p>
+              <p>Para resolverlo consideraremos <math><mrow><mi>z</mi><mo>=</mo><mi>&lambda;</mi></mrow></math> como parámetro, y resolvemos el siguiente sistema lineal equivalente:</p>
+              <math><mrow><mfenced open="{" close="}" separators=" "><mrow><mtable groupalign="{left left}"><mtr><mtd><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>14</mn><mo>-</mo><mn>7</mn><mi>&lambda;</mi></mtd></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>=</mo><mn>17</mn><mo>-</mo><mn>10</mn><mi>&lambda;</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+              <p>Para no hacerlo muy largo lo vamos a resolver por el <span class="negrita">Método De Reducción.</span> Restando la primera ecuación menos la segunda ecuación obtenemos:</p>
+              <math><mrow><mo>-</mo><mi>y</mi><mo>=</mo><mn>-3</mn><mo>+</mo><mn>3</mn><mi>&lambda;</mi><mo>&rarr;</mo><mrow mathcolor='blue'><mi>y</mi><mo>=</mo><mn>3</mn><mo>-</mo><mn>3</mn><mi>&lambda;</mi></mrow></mrow></math>
+              <p>Despejando y en la primera ecuación:</p>
+              <math><mrow><mi>x</mi><mo>=</mo><mn>14</mn><mo>-</mo><mn>7</mn><mi>&lambda;</mi><mo>-</mo><mn>9</mn><mo>+</mo><mn>9</mn><mi>&lambda;</mi><mo>&rarr;</mo><mrow mathcolor='blue'><mi>x</mi><mo>=</mo><mn>5</mn><mo>+</mo><mn>2</mn><mi>&lambda;</mi></mrow></mrow></math>
+              <p><span class="negrita subrayada">Solución</span><math><mrow><mo>&rarr;</mo><mrow mathcolor='blue'><mfenced open="{" close="}" separators=" "><mrow>
+                <mfenced open="(" close=")" separators=" "><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></mfenced><mo>&isin;</mo><msup><mi>&reals;</mi><mn>3</mn></msup><mo>/</mo>
+                <mfenced open="(" close=")" separators=" "><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></mfenced><mo>=</mo>
+                <mfenced open="(" close=")" separators=" "><mrow><mn>5</mn><mo>+</mo><mn>2</mn><mi>&lambda;</mi><mo>,</mo><mn>3</mn><mo>-</mo><mn>3</mn><mi>&lambda;</mi><mo>,</mo><mi>&lambda;</mi></mrow></mfenced><mi>;</mi><mo>&forall;</mo><mi>&lambda;</mi><mo>&isin;</mo><mi>&reals;</mi></mrow></mfenced></mrow></mrow></math></p>
+                <p>Finalmente pasamos a resolver lo que nos pide. Tienes que tener en cuenta que al ser Indeterminado NO podemos resolver x,y,z. Lo que nos piden es cuanto cuesta en total 1 vaso de limonada, más 1 sandwich más 1 bizcocho. Es decir, debemos calcular cuánto vale <math><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow></math>. Como sabemos los valores de x,y,z, sustituimos y obtenemos lo que buscamos, observa:</p>
+                <math><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>5</mn><mo>+</mo><mn>2</mn><mi>&lambda;</mi><mo>+</mo><mn>3</mn><mo>-</mo><mn>3</mn><mi>&lambda;</mi><mo>+</mo><mi>&lambda;</mi><mo>=</mo><mn>8</mn><mspace width='.5em' /><mtext>peniques</mtext></mrow></math>
+                <p>De la misma forma, en el segundo apartado nos piden que calculemos cuánto cuesta 2 vasos de limonada, más 3 sandwiches más 5 bizcochos, es decir; calcular el valor de <math><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>5</mn><mi>z</mi></mrow></math>. Luego:</p>
+                <math><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>+</mo><mn>5</mn><mi>z</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>4</mn><mi>&lambda;</mi><mo>+</mo><mn>9</mn><mo>-</mo><mn>9</mn><mi>&lambda;</mi><mo>+</mo><mn>5</mn><mi>&lambda;</mi><mo>=</mo><mn>19</mn><mspace width='.5em' /><mtext>peniques</mtext></mrow></math>
+              </div></section>
+            </section>
+          </section>
+        <footer>
+           <?php
+            include("footerclass.php");
+            hacer_footer();
+        ?>
+       </footer>
+
+    </section>
+</body>
+</html>

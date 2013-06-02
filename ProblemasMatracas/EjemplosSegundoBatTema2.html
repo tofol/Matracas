@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <?php
+      include('xua.php');
+    ?>
+    <title>Ejemplos Segundo Bachiller Tema 2</title>
+
+    <meta name="description" content="P&aacute;gina Web Ejercicios de Matem&aacute;ticas." />
+    <meta name="keywords" content="Matem&aacute;ticas, ESO, Bachillerato, UNED, PAU, Selectividad, cursos, apuntes, ejercicios y problemas resueltos,  ejercicios interactivos, f&oacute;rmulas, cursos online." />
+    <meta name="author" content="Cristobal Lopez Silla" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon" />
+
+    <link href="css/normalize.css" rel="stylesheet" media="all" />
+  	<link href="css/style.css" rel="stylesheet" media="all" />
+  	<link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+  	<link href="css/tooltips.css" rel="stylesheet" media="all" />
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+  <script src="js/modernizr.js"></script>
+      <!--[if lt IE 10]><script src="js/flexie.js"></script><![endif]-->
+      <!--[if lt IE 9]><script src="//js/flexboxIE9.js"></script><![endif]-->
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+	<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <script type="text/javascript" src="js/accordion.js"></script>
+
+
+</head>
+
+<body xmlns="http://www.w3.org/1998/Math/MathML">
+  <!--[if lt IE 7]>
+            <p class="chromeframe">Est&aacute;s utilizando un navegador <strong>desactualizado</strong>. Por favor,  <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+  <![endif]-->
+    <section class="contenedor">
+        <header>
+            <h1 class="cabecera">Problemas De Matracas</h1>
+				<nav>
+					<?
+            include("navclass.php");
+            hacer_nav();
+          ?>
+        </nav>
+        </header>
+    <section class="contenido-ppal">
+		<aside>
+			<?
+            include("asideclass.php");
+            hacer_aside();
+      ?>
+		</aside>
+
+
+
+        <section class="contenido-texto">
+                <p class="titulos_ejemplos">Ejemplos Resueltos De Matrices.</p>
+				    <h4 class="acordeon"><a href="#">Ejemplo 1:</a></h4>
+		    		<section class="contacordeon"><div class="block">
+              <section class="enunciados">
+                    <p>Determina la matriz X que verifica: AXA-B = <math><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+                    <p>siendo: A = <math><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-2</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> y B = <math><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+              </section>
+                    <p>Para realizar el ejercicio primero trataremos la ecuaci&oacute;n matricial como una ecuaci&oacute;n normal de las que ya conoces de toda la vida, siendo X la inc&oacute;gnita a despejar, y denotando por 0 a la matriz nula. Despejamos X, para ello premultiplicamos y postmultiplicamos por la matriz inversa de A, f&iacute;jate:</p>
+                    <math display="block"><mrow><mi>A</mi><mo>&CenterDot;</mo><mi>X</mi><mo>&CenterDot;</mo><mi>A</mi>
+  					<mo>-</mo><mi>B</mi><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>A</mi><mo>&CenterDot;</mo><mi>X</mi>
+  					<mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><mi>B</mi><mo>&rarr;</mo><msup><mi>A</mi><mn>-1</mn></msup>
+  					<mo>&CenterDot;</mo><mi>A</mi><mo>&CenterDot;</mo><mi>X</mi><mo>&CenterDot;</mo><mi>A</mi><mo>&CenterDot;</mo>
+  					<msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><msup><mi>A</mi><mn>-1</mn></msup>
+  					<mo>&CenterDot;</mo><mi>B</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup></mrow></math>
+
+  					<math display="block">
+					<mrow><mtable><mtr mathcolor="red"><mtd><msup><mi>A</mi><mn>-1</mn></msup><mo>&CenterDot;</mo>
+        			<mi>A</mi><mo>=</mo><mi>A</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo>
+        			<msub><mi>I</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo  mathsize="45px">&xrarr;</mo></mtd></mtr>
+					</mtable><msub><mi>I</mi><mn>2</mn></msub><mo>&CenterDot;</mo><mi>X</mi><mo>&CenterDot;</mo><msub><mi>I</mi><mn>2</mn></msub>
+  					<mo>=</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>&CenterDot;</mo><mi>B</mi><mo>&CenterDot;</mo>
+  					<msup><mi>A</mi><mn>-1</mn></msup><mo>&rarr;</mo><mi>X</mi><mo>=</mo><msup><mi>A</mi><mn>-1</mn></msup>
+  					<mo>&CenterDot;</mo><mi>B</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup></mrow></math>
+  					<p>Como puedes ver para conocer X hemos de calcular la matriz inversa de A.Para hallar su inversa utilizaremos el M&eacute;todo de Gauss. Creamos una matriz ampliada formada a su derecha por la matriz A y a su izquierda formada por la matriz identidad. Nuestro objetivo es convertir la A de la izquierda en la matriz identidad mediante las operaciones elementales del M&eacute;todo de Gauss. Te pongo todos los pasos:</p>
+  					<math display="block">
+					<mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd>
+          			<mtd><mn>1</mn></mtd></mtr><mtr><mtd><mi>-2</mi></mtd><mtd><mi>-1</mi></mtd></mtr></mtable>
+      				<mo>|</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+        			<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+  					<mtable><mtr><mtd><msub><mi>F</mi><mn>1</mn></msub><mo>=</mo>
+        			<msub><mi>F</mi><mn>1</mn></msub><mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
+   					</mtd></mtr><mtr><mtd><mo  mathsize="40px">&xrarr;</mo></mtd></mtr></mtable>
+  					<mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn>
+          			</mtd></mtr><mtr><mtd><mi>-2</mi></mtd><mtd><mi>-1</mi></mtd></mtr></mtable>
+      				<mo>|</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>
+          			<mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+          			<math display="block">
+          			<mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo>
+        			<msub><mi>F</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><mo>&CenterDot;</mo><msub><mi>F</mi><mn>1</mn></msub>
+   					</mtd></mtr><mtr><mtd><mo  mathsize="40px">&xrarr;</mo></mtd></mtr></mtable>
+   					<mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd>
+          			<mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable>
+      				<mo>|</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+        			<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced>
+        			<mtable><mtr><mtd><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo>
+        			<msub><mi>-F</mi><mn>2</mn></msub>
+   					</mtd></mtr><mtr><mtd><mo  mathsize="40px">&xrarr;</mo></mtd></mtr></mtable>
+
+   					<mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd>
+          			<mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable>
+      				<mo>|</mo><mtable mathcolor="red"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+        			<mtr><mtd><mn>-2</mn></mtd><mtd><mn>-3</mn></mtd></mtr></mtable></mrow></mfenced>
+          			</math>
+          			<p>Luego la matriz inversa de A es:
+          			<math>
+          			<mrow><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=",">
+    				<mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>
+          			<mtd><mn>-2</mn></mtd><mtd><mn>-3</mn></mtd></mtr></mtable></mrow></mfenced></mrow>
+          			</math>
+          			 Tan s&oacute;lo queda multiplicar la inversa de A por B, y lo que nos de multiplicarlo otra vez por la inversa de A, para obtener X.
+          			</p>
+      				<math display="block"><mrow><mi>X</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>
+              <mtd><mn>-2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+              <mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr>
+              <mtd><mn>-2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>6</mn></mtd>
+              <mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-13</mn></mtd><mtd><mn>-5</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+              <mtr><mtd><mn>-2</mn></mtd><mtd><mn>-3</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo><mi>X</mi><mo>=</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr>
+              <mtr><mtd><mn>-3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+          </div></section>
+
+          <h4 class="acordeon"><a href="#">Ejemplo 2:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+                <p>Si A es una matriz de orden n tal que <math><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>A</mi></mrow></math> y <math><mrow><mi>B</mi><mo>=</mo><mn>2</mn><mo>&CenterDot;</mo><mi>A</mi><mo>-</mo><mi>I</mi></mrow></math>, siendo I la matriz identidad de orden n, calcula <math><mrow><msup><mi>B</mi><mn>2</mn></msup></mrow></math>. </p>
+            </section>
+            <math display="block"><mrow><msup><mi>B</mi><mn>2</mn></msup><mo>=</mo><msup><mrow><mfenced open="(" close=")" separators=","><mrow><mn>2</mn><mo>&CenterDot;</mo><mi>A</mi><mo>-</mo><mi>I</mi></mrow></mfenced></mrow><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>&CenterDot;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><mi>A</mi><mo>&CenterDot;</mo><mi>I</mi><mo>+</mo><msup><mi>I</mi><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>&CenterDot;</mo><mi>A</mi><mo>-</mo><mn>4</mn><mo>&CenterDot;</mo><mi>A</mi><mo>+</mo><mi>I</mi><mo>=</mo><mi>I</mi></mrow></math>
+            <p>Ten en cuenta que para resolver el problema se ha utilizado en el segundo paso la identidad notable:</p>
+            <math display="block"><mrow><msup><mrow><mfenced open="(" close=")" separators=","><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow></mfenced></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>-</mo><mn>2</mn><mo>&CenterDot;</mo><mi>a</mi><mo>&CenterDot;</mo><mi>b</mi><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></math>
+
+            <math display="block" mathcolor="blue"><mrow><mtext>Soluci&oacute;n</mtext><mo>&xrarr;</mo><msup><mi>B</mi><mn>2</mn></msup><mo>=</mo><mi>I</mi></mrow></math>
+            </div></section>
+
+            <h4 class="acordeon"><a href="#">Ejemplo 3:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+                <p>Dada la matriz  <math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>, calcula <math><mrow><msup><mi>A</mi><mi>n</mi></msup></mrow></math>.</p>
+                <p><span class="subrayado">La matriz que queremos calcular se denomina Matriz n-&eacute;sima.</span> </p>
+            </section>
+            <p>Para realizar el ejemplo haremos uso del m&eacute;todo denominado <span class="resaltado">HIP&Oacute;TESIS DE INDUCCI&Oacute;N.</span> </p>
+            <p>Primero calcularemos a modo de "tanteo" las matrices: <math><mrow><msup><mi>A</mi><mn>2</mn></msup><mtext>,</mtext><msup><mi>A</mi><mn>3</mn></msup><mtext>,</mtext><msup><mi>A</mi><mn>4</mn></msup></mrow></math>, para ver si siguen un patr&oacute;n y as&iacute; poder realizar una hip&oacute;tesis de cu&aacute;l puede ser nuestra matriz n-&eacute;sima.</p>
+            <math display="block"><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mn>1</mn></msup>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            </mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mn>2</mn><mn>0</mn></msup></mtd><mtd><msup><mn>2</mn><mn>0</mn></msup></mtd></mtr><mtr>
+            <mtd><msup><mn>2</mn><mn>0</mn></msup></mtd><mtd><msup><mn>2</mn><mn>0</mn></msup></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+
+
+            <math display="block"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>A</mi><mo>&CenterDot;</mo><mi>A</mi>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            </mtable></mrow></mfenced><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mn>2</mn><mn>1</mn></msup></mtd><mtd><msup><mn>2</mn><mn>1</mn></msup></mtd></mtr><mtr>
+            <mtd><msup><mn>2</mn><mn>1</mn></msup></mtd><mtd><msup><mn>2</mn><mn>1</mn></msup></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+
+
+            <math display="block"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup><mo>&CenterDot;</mo><mi>A</mi>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+            </mtable></mrow></mfenced><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+            <mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mn>2</mn><mn>2</mn></msup></mtd><mtd><msup><mn>2</mn><mn>2</mn></msup></mtd></mtr><mtr>
+            <mtd><msup><mn>2</mn><mn>2</mn></msup></mtd><mtd><msup><mn>2</mn><mn>2</mn></msup></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+
+
+            <math display="block"><mrow><msup><mi>A</mi><mn>4</mn></msup><mo>=</mo><msup><mi>A</mi><mn>3</mn></msup><mo>&CenterDot;</mo><mi>A</mi>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+            <mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd></mtr>
+            </mtable></mrow></mfenced><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><mn>8</mn></mtd><mtd><mn>8</mn></mtd></mtr>
+            <mtr><mtd><mn>8</mn></mtd><mtd><mn>8</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mn>2</mn><mn>3</mn></msup></mtd><mtd><msup><mn>2</mn><mn>3</mn></msup></mtd></mtr><mtr>
+            <mtd><msup><mn>2</mn><mn>3</mn></msup></mtd><mtd><msup><mn>2</mn><mn>3</mn></msup></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+            <p>Ahora hemos de decir cu&aacute;l creemos que es nuestra matriz n-&eacute;sima, es decir; debemos hacer una suposici&oacute;n. Si te fijas en los exponentes de las expresiones de arriba y en que en todas ellas tenemos como soluci&oacute;n el 2 en todos los elementos de las matrices; podemos suponer que nuestra matriz n-&eacute;sima es:</p>
+            <math display="block"><mrow><msup><mi>A</mi><mn>n</mn></msup><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr><mtr>
+            <mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mtext>;</mtext><mo>&forall;</mo><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></mrow></math>
+            <p>Tan s&oacute;lo queda un paso, demostrar que la expresi&oacute;n que hemos supuesto arriba es cierta, para ello entra en juego la palabra <span class="negrita">Inducci&oacute;n</span>, y consiste en ver si la hip&oacute;tesis para <math><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></math> se cumple tambi&eacute;n para <math><mi>n</mi><mo>+</mo><mn>1</mn><mo>&isin;</mo><mi>&naturals;</mi></math>. En definitiva, debemos comprobar que:  <math><mrow><msup><mrow><mi>A</mi></mrow><mrow><mn>n</mn><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi></mrow></msup></mtd></mtr><mtr>
+            <mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mtext>;</mtext><mo>&forall;</mo><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></mrow></math>. Ve&aacute;moslo:</p>
+            <math display="block"><mrow><msup><mi>A</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>A</mi><mi>n</mi></msup><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr>
+            <mtr><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd>
+            <mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr>
+            <mtr><mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd>
+            <mtd><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mo>=</mo></mrow></math>
+            <math display="block"><mrow><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>2</mn><mo>&CenterDot;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><mn>2</mn><mo>&CenterDot;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr><mtr><mtd><mn>2</mn><mo>&CenterDot;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><mn>2</mn><mo>&CenterDot;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mn>2</mn><mrow><mn>1</mn><mo>+</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mn>2</mn><mrow><mn>1</mn><mo>+</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr><mtr><mtd><msup><mn>2</mn><mrow><mn>1</mn><mo>+</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mn>2</mn><mrow><mn>1</mn><mo>+</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mn>2</mn><mi>n</mi></msup></mtd><mtd><msup><mn>2</mn><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup><mn>2</mn><mi>n</mi></msup></mtd><mtd><msup><mn>2</mn><mi>n</mi></msup></mtd></mtr></mtable></mrow></mfenced><mi>;</mi><mo>&forall;</mo><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></mrow></math>
+            <p>Como puedes ver acabamos de demostrar que se cumple para <math><mi>n</mi><mo>+</mo><mn>1</mn><mo>&isin;</mo><mi>&naturals;</mi></math>. Luego, por Hip&oacute;tesis de Inducci&oacute;n concluimos que tambi&eacute;n se cumple para <math><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></math>.</p>
+            <math display="block" mathcolor="blue"><munder accentunder="true"><mtext>Soluci&oacute;n</mtext><mo stretchy="true">&OverBar;</mo></munder><mo>&xrarr;</mo><mrow><msup><mi>A</mi><mn>n</mn></msup><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable>
+            <mtr><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr><mtr>
+            <mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd><mtd><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mtd></mtr></mtable></mrow></mfenced><mtext>;</mtext><mo>&forall;</mo><mi>n</mi><mo>&isin;</mo><mi>&naturals;</mi></mrow></math>
+          </div></section>
+          <h4 class="acordeon"><a href="#">Ejemplo 4:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+                <p>Calcula las matrices A y B que verifican:</p>
+                <math display="block"><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+                <math display="block"><mrow><mn>2</mn><mi>A</mi><mo>-</mo><mn>2</mn><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-6</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+            </section>
+            <p>Consideremos:
+            <math><mrow><mi>C</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> y
+            <math><mrow><mi>D</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-6</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> </p>
+            <p>De &eacute;sta forma tenemos un sistema lineal matricial de 2 ecuaciones con 2 inc&oacute;gnitas. Las inc&oacute;gnitas son las matrices A y B. Para resolverlo lo haremos igual que cuando el sistema es de s&oacute;lo n&uacute;meros, aplicaremos por comodidad el <span class="negirta">M&eacute;todo De Reducci&oacute;n.</span>. El sistema es:
+            <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable><mtr><mtd><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mi>C</mi></mtd></mtr><mtr><mtd><mn>2</mn><mi>A</mi><mo>-</mo><mn>2</mn><mi>B</mi><mo>=</mo><mi>D</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math><br />F&iacute;jate que la segunda ecuaci&oacute;n la podemos dividir por 2, ya que todos los elementos de D son divisibles por 2, obteniendo el sistema:
+            <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable><mtr><mtd><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mi>C</mi></mtd></mtr><mtr><mtd><mi>A</mi><mo>-</mo><mi>B</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>D</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math>. Ahora es cuando aplicamos Reducci&oacute;n, sumamos las dos ecuaciones para eliminar la inc&oacute;gnita B y poder hallar A.</p>
+            <math display="block"><mrow><mtable><mtr><mtd><mspace width="0.5em" /><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mi>C</mi></mtd></mtr><mtr><mtd><mo mathvariant="bold">+</mo>
+            <mspace width="0.5em" /><mspace width="0.5em" /><mi>A</mi><mo>-</mo><mi>B</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow>
+            <mrow><mn>2</mn></mrow></mfrac><mi>D</mi></mtd><mo>&#xaf;</mo></mtr><mtr><mtd><mn>2</mn><mi>A</mi><mspace width="0.5em" /><mspace width="0.5em" />
+            <mo>=</mo><mi>C</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>D</mi></mtd></mtr></mtable></mrow></math>
+
+
+            <math display="block" mathcolor="blue"><mo>&rarr;</mo><mi>A</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>C</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mi>D</mi></math><math display="block"><mo>&rarr;</mo><mi>B</mi><mo>=</mo><mi>C</mi><mo>-</mo><mi>A</mi><mo>&rarr;</mo><mi>B</mi><mo>=</mo><mi>C</mi><mo>-</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>C</mi><mo>-</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mi>D</mi><mo>&rarr;</mo><mrow mathcolor="blue"><mi>B</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>C</mi><mo>-</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mi>D</mi></mrow></math>
+            <p>Muy bien, ya sabemos qu&eacute; valen A y B despu&eacute;s de resolver el sistema; tenemos las soluciones en funci&oacute;n de C y D, las cuales las conocemos por el enunciado del ejemplo. Sustituimos y calculamos:</p>
+            <math display="block"><mi>A</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>C</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mi>D</mi><mo>&rarr;</mo><mi>A</mi><mo>=</mo><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-6</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>&rarr;</mo><mrow mathcolor="blue"><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn>
+            </mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced></mrow></mrow></math>
+            <math display="block">
+             <mi>B</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>C</mi><mo>-</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac><mi>D</mi>
+            <mo>&rarr;</mo><mi>B</mi><mo>=</mo><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+            <mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>4</mn></mrow></mfrac>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-6</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+            <mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mo>&rarr;</mo><mrow mathcolor="blue"><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn>
+            </mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></mrow>
+            </math>
+            <math display="block" mathcolor="red"><mrow><munder accentunder="true"><mtext>Soluci&oacute;n</mtext><mo stretchy="true">&OverBar;</mo></munder><mo>&rarr;</mo><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn>
+            </mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mtext>;</mtext><mspace width="1.0em" />
+            <mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn>
+            </mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+          </div></section>
+          <h4 class="acordeon"><a href="#">Ejemplo 5:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+            <p>Determina los valores de <span class="negrita">m</span> para los cuales <math><mi>X</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>m</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced></math> verifique <math><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>X</mi><mo>+</mo><mi>I</mi><mo>=</mo><mi>O</mi></math>. </p>
+            </section>
+            <p>Lo primero es en la ecuaci&oacute;n matricial a cumplir deshacernos del 2 del denominador para simplificar las operaciones, para ello multiplicamos todos los t&eacute;rminos de la ecuaci&oacute;n matricial por 2, obteniendo:</p>
+            <math display="block"><mn>2</mn><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mn>5</mn><mi>X</mi><mo>+</mo><mn>2</mn><mi>I</mi><mo>=</mo><mi>O</mi></math>
+            <p>Como la matriz X es una <span class="negrita">Matriz Diagonal</span>, sabemos que <math><msup><mi>X</mi><mn>2</mn></msup></math> sigue siendo una matriz diagonal cuyos elementos de su <span class="negrita">Diagonal Principal</span> son el cuadrado de los elementos de la <span class="negrita">Diagonal Principal</span> de la matriz X, luego: <math><msup><mi>X</mi><mn>2</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mi>m</mi><mn>2</mn></msup></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced></math>. Por tanto: </p>
+            <math display="block"><mn>2</mn><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mn>5</mn><mi>X</mi><mo>+</mo><mn>2</mn><mi>I</mi><mo>=</mo><mi>O</mi><mo>&xrarr;</mo><mn>2</mn><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><msup><mi>m</mi><mn>2</mn></msup></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo><mn>5</mn><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>m</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow></mfenced><mo>+</mo><mn>2</mn><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>&xrarr;</mo></math>
+            <math display="block"><mo>&xrarr;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>2</mn><msup><mi>m</mi><mn>2</mn></msup><mo>-</mo><mn>5</mn><mi>m</mi><mo>+</mo><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></math>
+            <p>Como el primer elemento de la matriz de la izquierda es el &uacute;nico que depende de <span class="negrita">m</span>, lo igualamos al primer elemento de la matriz de la derecha, que es 0; y obtenemos la ecuaci&oacute;n de segundo grado: </p>
+            <math display="block"><mn>2</mn><msup><mi>m</mi><mn>2</mn></msup><mo>-</mo><mn>5</mn><mi>m</mi><mo>+</mo><mn>2</mn><mo>=</mo><mn>0</mn></math>
+            <p>La resolvemos y obtenemos como soluci&oacute;n del ejemplo:</p>
+            <math display="block" mathcolor="red"><mrow><munder accentunder="true"><mtext>Soluci&oacute;n</mtext><mo stretchy="true">&OverBar;</mo></munder><mo>&rarr;</mo><msub><mi>m</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mtext>;</mtext><mspace width="1.0em" /><msub><mi>m</mi><mn>2</mn></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>
+          </div></section>
+
+          <h4 class="acordeon"><a href="#">Ejemplo 6:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+            <p>Dada la matriz <math><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></math>, calcula: <math><msup><mi>A</mi><mn>2</mn></msup><mtext>,</mtext><msup><mi>A</mi><mn>3</mn></msup><mtext>,</mtext><mtext>...</mtext><mtext>,</mtext><msup><mi>A</mi><mn>128</mn></msup><mtext>.</mtext></math></p>
+            </section>
+            <p>Este ejemplo puede parecer un ejercicio de la matriz n-&eacute;sima con el razonamiento de <span class="negrita">Hip&oacute;tesis de Inducci&oacute;n</span>, pero no lo es; es mucho m&aacute;s corto, aunque no es sencillo. Calculemos primero <math><msup><mi>A</mi><mn>2</mn></msup><mtext>,</mtext><msup><mi>A</mi><mn>3</mn></msup><mtext>,</mtext><msup><mi>A</mi><mn>4</mn></msup></math> y ver&aacute;s qu&eacute; ocurre:</p>
+            <math display="block"><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>A</mi><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></math>
+
+            <math display="block"><msup><mi>A</mi><mn>3</mn></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><msub><mi>I</mi><mn>3</mn></msub></math>
+
+            <math display="block"><msup><mi>A</mi><mn>4</mn></msup><mo>=</mo><msup><mi>A</mi><mn>3</mn></msup><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><msub><mi>I</mi><mn>3</mn></msub><mo>&CenterDot;</mo><mi>A</mi><mo>=</mo><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></math>
+
+            <math display="block"><msup><mi>A</mi><mn>128</mn></msup><mo>=</mo><msup><mrow><mi>A</mi></mrow><mrow><mn>42</mn><mo>&CenterDot;</mo><mn>3</mn><mo>+</mo><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mo>(</mo><msup><mi>A</mi><mn>3</mn></msup><mo>)</mo></mrow><mrow><mn>42</mn></mrow></msup><mo>&CenterDot;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><msup><mrow><mo>(</mo><msub><mi>I</mi><mn>3</mn></msub><mo>)</mo></mrow><mrow><mn>42</mn></mrow></msup><mo>&CenterDot;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></math>
+
+          </div></section>
+          <h4 class="acordeon"><a href="#">Ejemplo 7:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+            <p>Comprueba que <math><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn><mo>&CenterDot;</mo><mi>A</mi><mo>-</mo><mi>I</mi></math>, siendo:<math><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></math>, e I la matriz identidad de orden 3. Utiliza dicha igualdad para calcular <math><msup><mi>A</mi><mn>4</mn></msup></math></p>
+            </section>
+            <math display="block"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mi>-1</mi></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>9</mn></mtd><mtd><mi>-8</mi></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>-8</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>-3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+            <math display="block"><mrow><mn>2</mn><mi>A</mi><mo>-</mo><mi>I</mi><mo>=</mo><mn>2</mn>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo><mi>I</mi><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>10</mn></mtd><mtd><mn>-8</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>-2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>-8</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>-2</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>9</mn></mtd><mtd><mn>-8</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>-3</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>-8</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>-3</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+            <p>Con esto demostramos que se cumple la primera igualdad. Calculemos ahora <math><msup><mi>A</mi><mn>4</mn></msup></math> utilizando la igualdad:</p>
+            <math display="block"><msup><mi>A</mi><mn>4</mn></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup><mo>&CenterDot;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mrow><msup><mrow>
+            <mfenced open="(" close=")" separators=","><mrow><mn>2</mn><mi>A</mi><mo>-</mo><mi>I</mi></mrow></mfenced></mrow><mn>2</mn></msup><mo>=</mo><mn>4</mn><msup><mi>A</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>A</mi><mo>+</mo><mi>I</mi><mo>=</mo><mn>4</mn>
+            <mfenced open="(" close=")" separators=","><mrow><mn>2</mn><mi>A</mi><mo>-</mo><mi>I</mi></mrow></mfenced><mo>-</mo><mn>4</mn><mi>A</mi><mo>+</mo><mi>I</mi><mo>=</mo><mn>4</mn><mi>A</mi><mo>-</mo><mn>3</mn><mi>I</mi></mrow></math>
+            <math display="block"><mrow><msup><mi>A</mi><mn>4</mn></msup><mo>=</mo><mn>4</mn>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo><mn>3</mn><mi>I</mi><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>20</mn></mtd><mtd><mn>-16</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>-4</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>-16</mn></mtd><mtd><mn>16</mn></mtd><mtd><mn>-4</mn></mtd></mtr></mtable></mrow></mfenced><mo>-</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+            <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>17</mn></mtd><mtd><mi>-16</mi></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>-7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>-16</mn></mtd><mtd><mn>16</mn></mtd><mtd><mn>-7</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+          </div></section>
+          <h4 class="acordeon"><a href="#">Ejemplo 8:</a></h4>
+            <section class="contacordeon"><div class="block">
+            <section class="enunciados">
+            <p>Una compa&ntilde;&iacute;a de muebles fabrica butacas, mecedoras y sillas, y cada una de ellas de tres modelos: E (econ&oacute;mico), M (medio) y L (lujo). Cada mes produce 20 modelos E, 15 M y 10 L de butacas; 12 modelos E, 8 M y 5 L de mecedoras, y 18 modelos E, 20 M y 12 L de sillas. Representa esta informaci&oacute;n en una matriz y calcula la producci&oacute;n de un año.</p>
+            </section>
+            <p>Primero lo vamos a representar en una tabla para que veas que toda tabla la podemos representar en una matriz. B = Butacas, M = Mecedoras y S = Sillas.</p>
+            <table class="tabla1"><thead><tr><th></th><th scope="col">B</th><th scope="col">M</th><th scope="col">S</th></tr></thead><tbody><tr><th scope="row">E</th><td>20</td><td>12</td><td>18</td></tr><tr><th scope="row">M</th><td>15</td><td>8</td><td>20</td></tr><tr><th scope="row">L</th><td>10</td><td>5</td><td>12</td></tr></tbody></table>
+            <p>En forma de matriz es: <math><mrow><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>20</mn></mtd><mtd><mn>12</mn></mtd><mtd><mn>18</mn></mtd></mtr><mtr><mtd><mn>15</mn></mtd><mtd><mn>8</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>10</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>12</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+            <p>Ahora nos piden que representemos en una matriz la producci&oacute;n en un a&ntilde;o, como A es la de 1 mes, la de 1 a&ntilde;o es multiplicar A por 12, luego: <math><mrow><mn>12</mn><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>240</mn></mtd><mtd><mn>144</mn></mtd><mtd><mn>216</mn></mtd></mtr><mtr><mtd><mn>180</mn></mtd><mtd><mn>96</mn></mtd><mtd><mn>240</mn></mtd></mtr><mtr><mtd><mn>120</mn></mtd><mtd><mn>60</mn></mtd><mtd><mn>144</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> <a href="#" class="tooltip">Importante !!! <span>Es conveniente que lo hagas con la matriz traspuesta de A para que veas que en este caso los resultados son los mismos.</span></a></p>
+          </div></section>
+            <h4 class="acordeon"><a href="#">Ejemplo 9:</a></h4>
+            <section class="contacordeon">
+              <div class="block">
+                <section class="enunciados">
+                  <p>Un industrial fabrica dos tipos de bombillas: transparentes (T) y opacas (O). De cada tipo se hacen cuatro modelos: <math><msub><mi>M</mi><mn>1</mn></msub><mtext>,</mtext><mspace width="0.5em" /><msub><mi>M</mi><mn>2</mn></msub><mtext>,</mtext><mspace width="0.5em" /><msub><mi>M</mi><mn>3</mn></msub><mspace width="0.5em" /><mtext>y</mtext><mspace width="0.5em" /><msub><mi>M</mi><mn>4</mn></msub><mtext>,</mtext></math></p>
+                  <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><mi>T</mi></mtd><mtd><mi>O</mi></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>1</mn></msub></mtd><mtd><mn>300</mn></mtd><mtd><mn>200</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>2</mn></msub></mtd><mtd><mn>400</mn></mtd><mtd><mn>250</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>3</mn></msub></mtd><mtd><mn>250</mn></mtd><mtd><mn>180</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>4</mn></msub></mtd><mtd><mn>500</mn></mtd><mtd><mn>300</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+                  <p>Esta tabla muestra la producci&oacute;n semanal de bombillas de cada tipo y modelo.<br />El porcentaje de bombillas defectuosas es el 2% en el modelo <math><msub><mi>M</mi><mn>1</mn></msub></math>, el 5% en el <math><msub><mi>M</mi><mn>2</mn></msub></math>, el 8% en el <math><msub><mi>M</mi><mn>3</mn></msub></math> y el 10% en el <math><msub><mi>M</mi><mn>4</mn></msub></math>.<br />Calcula la matriz que esxpresa el n&uacute;mero de bombillas transparentes y opacas, buenas y defectuosas que se producen.</p>
+                </section>
+                  <p>Denotemos por <span class="negrita">D = Defectuosas y B = Buenas</span>, y por H a la matriz que nos dan en el enunciado. Con los porcentajes de defectuosas podemos crear una matriz de defectuosas y buenas con transparentes y opacas.</p>
+                  <math display="block"><mrow><mi>J</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><mi>D</mi></mtd><mtd><mi>B</mi></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>1</mn></msub></mtd><mtd><mn>0'02</mn></mtd><mtd><mn>0'98</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>2</mn></msub></mtd><mtd><mn>0'05</mn></mtd><mtd><mn>0'95</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>3</mn></msub></mtd><mtd><mn>0'08</mn></mtd><mtd><mn>0'92</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>4</mn></msub></mtd><mtd><mn>0'1</mn></mtd><mtd><mn>0'9</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+                  <p>En la matriz J hemos pasado los % a tantos por 1, y la segunda columna se obtiene de restar 1 a su correspondiente tanto por 1, por ejemplo: <math><mn>0'98</mn><mo>=</mo><mn>1</mn><mo>-</mo><mn>0'02</mn></math>, y as&iacute; sucesivamente con los restantes.</p>
+                  <p>Para obtener lo que nos piden no podemos hacer el producto de matrices <math><mi>H</mi><mo>&CenterDot;</mo><mi>J</mi></math>, ni al rev&eacute;s, porque el n&uacute;mero de columnas de la primera matriz no coincide con el de filas de la segunda matriz. As&iacute; que vamos a hallar la matriz traspuesta de H, y luego la multiplicaremos por J para obtener la soluci&oacute;n pedida.</p>
+                  <math display="block"><mrow><msup><mi>H</mi><mi>t</mi></msup><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><msub><mi>M</mi><mn>1</mn></msub></mtd><mtd><msub><mi>M</mi><mn>2</mn></msub></mtd><mtd><msub><mi>M</mi><mn>3</mn></msub></mtd><mtd><msub><mi>M</mi><mn>4</mn></msub></mtd></mtr><mtr><mtd><mi>T</mi></mtd><mtd><mn>300</mn></mtd><mtd><mn>400</mn></mtd><mtd><mn>250</mn></mtd><mtd><mn>500</mn></mtd></mtr><mtr><mtd><mi>O</mi></mtd><mtd><mn>200</mn></mtd><mtd><mn>250</mn></mtd><mtd><mn>180</mn></mtd><mtd><mn>300</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+
+                  <math display="block"><mrow><msup><mi>H</mi><mi>t</mi></msup><mo>&CenterDot;</mo><mi>J</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><msub><mi>M</mi><mn>1</mn></msub></mtd><mtd><msub><mi>M</mi><mn>2</mn></msub></mtd><mtd><msub><mi>M</mi><mn>3</mn></msub></mtd><mtd><msub><mi>M</mi><mn>4</mn></msub></mtd></mtr><mtr><mtd><mi>T</mi></mtd><mtd><mn>300</mn></mtd><mtd><mn>400</mn></mtd><mtd><mn>250</mn></mtd><mtd><mn>500</mn></mtd></mtr><mtr><mtd><mi>O</mi></mtd><mtd><mn>200</mn></mtd><mtd><mn>250</mn></mtd><mtd><mn>180</mn></mtd><mtd><mn>300</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><mi>D</mi></mtd><mtd><mi>B</mi></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>1</mn></msub></mtd><mtd><mn>0'02</mn></mtd><mtd><mn>0'98</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>2</mn></msub></mtd><mtd><mn>0'05</mn></mtd><mtd><mn>0'95</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>3</mn></msub></mtd><mtd><mn>0'08</mn></mtd><mtd><mn>0'92</mn></mtd></mtr><mtr><mtd><msub><mi>M</mi><mn>4</mn></msub></mtd><mtd><mn>0'1</mn></mtd><mtd><mn>0'9</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><mi>D</mi></mtd><mtd><mi>B</mi></mtd></mtr><mtr><mtd><mi>T</mi></mtd><mtd><mn>96</mn></mtd><mtd><mn>1354</mn></mtd></mtr><mtr><mtd><mi>O</mi></mtd><mtd><mn>60'9</mn></mtd><mtd><mn>869'1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+                  <p>Mmmm... los elementos de la segunda fila nos dan decimales, eso no puede ser, es imposible tener 60'9 bombillas defectuosas, o 869'1 bombillas no defectuosas. Redondeamos y obtenemos la soluci&oacute;n</p>
+                  <math display="block" mathcolor="blue"><mtext>Soluci&oacute;n</mtext><mo>&xrarr;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd></mtd><mtd><mi>D</mi></mtd><mtd><mi>B</mi></mtd></mtr><mtr><mtd><mi>T</mi></mtd><mtd><mn>96</mn></mtd><mtd><mn>1354</mn></mtd></mtr><mtr><mtd><mi>O</mi></mtd><mtd><mn>61</mn></mtd><mtd><mn>869</mn></mtd></mtr></mtable></mrow></mfenced></math>
+              </div>
+            </section>
+            <h4 class="acordeon">
+              <a href="#">Ejemplo 10:</a></h4>
+              <section class="contacordeon">
+                <div class="block">
+                  <section class="enunciados">
+                    <p>Sean A y B las matrices dadas por:
+                    <math display="block"><mrow><mi>A</mi><mo>=</mo>
+                    <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced>
+                    <mspace width="0.5em" /><mi>B</mi><mo>=</mo>
+                    <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>c</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+                    Encuentra las condiciones que deben cumplir los coeficientes a, b y c para que se verifique A&CenterDot;B = B&CenterDot;A</p>
+                  </section>
+                  <p>En teor&iacute;a deber&iacute;amos multiplicar las 2 matrices, pero estas son especiales, las 2 tienen que su &uacute;ltima fila y &uacute;ltima columna es la <span class="negrita">(0 0 1)</span> que no depende de a,b,c; por lo que para lo que queremos saber es suficiente hacer el producto de sus 2 submatrices: </p>
+                  <math display="block">
+                  <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mspace width="0.5em" /><mtext>y</mtext><mspace width="0.5em" /><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow></mfenced></math>
+
+                  <math display="block"><mo>&rarr;</mo><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>=</mo><mi>B</mi><mo>&CenterDot;</mo><mi>A</mi><mo>&rarr;</mo>
+                  <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow></mfenced><mo>&rarr;</mo></math>
+                  <math display="block"><mo>&rarr;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn><mi>a</mi><mo>+</mo><mn>2</mn><mi>c</mi></mtd><mtd><mn>5</mn><mi>b</mi><mo>+</mo><mn>2</mn><mi>c</mi></mtd></mtr><mtr><mtd><mn>2</mn><mi>a</mi><mo>+</mo><mn>5</mn><mi>c</mi></mtd><mtd><mn>2</mn><mi>b</mi><mo>+</mo><mn>5</mn><mi>c</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn><mi>a</mi><mo>+</mo><mn>2</mn><mi>b</mi></mtd><mtd><mn>2</mn><mi>a</mi><mo>+</mo><mn>5</mn><mi>b</mi></mtd></mtr><mtr><mtd><mn>7</mn><mi>c</mi></mtd><mtd><mn>7</mn><mi>c</mi></mtd></mtr></mtable></mrow></mfenced></math>
+                  <p>Igualando elemento a elemento en cada matriz tenemos:</p>
+                  <math display="block"><mrow><mfenced open="{" close="}" separators=","><mrow>
+                  <mtable><mtr><mtd><mn>5</mn><mi>a</mi><mo>+</mo><mn>2</mn><mi>c</mi><mo>=</mo><mn>5</mn><mi>a</mi><mo>+</mo><mn>2</mn><mi>b</mi></mtd></mtr>
+                  <mtr><mtd><mn>5</mn><mi>b</mi><mo>+</mo><mn>2</mn><mi>c</mi><mo>=</mo><mn>2</mn><mi>a</mi><mo>+</mo><mn>5</mn><mi>b</mi></mtd></mtr>
+                  <mtr><mtd><mn>2</mn><mi>a</mi><mo>+</mo><mn>5</mn><mi>c</mi><mo>=</mo><mn>7</mn><mi>c</mi></mtd></mtr>
+                  <mtr><mtd><mn>2</mn><mi>b</mi><mo>+</mo><mn>5</mn><mi>c</mi><mo>=</mo><mn>7</mn><mi>c</mi></mtd></mtr></mtable></mrow></mfenced>
+                  <mtable><mtr><mtd><mo>&rarr;</mo><mi>b</mi><mo>=</mo><mi>c</mi></mtd></mtr><mtr><mtd><mo>&rarr;</mo><mi>a</mi><mo>=</mo><mi>c</mi></mtd></mtr><mtr><mtd><mo>&rarr;</mo><mi>a</mi><mo>=</mo><mi>c</mi></mtd></mtr><mtr><mtd><mo>&rarr;</mo><mi>b</mi><mo>=</mo><mi>c</mi></mtd></mtr>
+                  </mtable><mo>&rarr;</mo><mrow mathcolor="blue"><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow></mrow></math>
+                  <p>Luego la condici&oacute;n que buscamos es la siguiente:</p>
+                  <math display="block" mathcolor="blue"><mtext>Soluci&oacute;n</mtext><mo>&rarr;</mo><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi><mspace width="0.5em" /><mtext>;</mtext><mspace width="0.5em" /><mo>&forall;</mo><mi>a</mi><mtext>,</mtext><mi>b</mi><mtext>,</mtext><mi>c</mi><mspace width="0.25em" /><mo>&isin;</mo><mi>&reals;</mi></math>
+                </div>
+              </section>
+              <p class="titulos_ejemplos">Ejemplos Resueltos De Cuestiones Te&oacute;ricas.</p>
+              <h4 class="acordeon"><a href="#">Cuesti&oacute;n 1:</a></h4>
+              <section class="contacordeon"><div class="block">
+              <section class="enunciados">
+              <p>Sean A y B dos matrices cuadradas de igual tama&ntilde;o. Si A y B son sim&eacute;tricas, &iquest;lo es tambi&eacute;n su producto A&CenterDot;B? Si la respuesta es afirmativa, justif&iacute;cala, y si es negativa, pon un contraejemplo.</p>
+              </section>
+              <p>La propiedad del enunciado no se cumple. Sabemos que una matriz es sim&eacute;trica cuando coincide con su traspuesta. Luego hemos de comprobar que <math><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>=</mo><msup><mrow><mo>(</mo><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>)</mo></mrow><mrow><mi>t</mi></mrow></msup></math>.</p>
+              <p>Pero, <math><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>=</mo><msup><mi>A</mi><mi>t</mi></msup><mo>&CenterDot;</mo><msup><mi>B</mi><mi>t</mi></msup><mo>=</mo><msup><mrow><mo>(</mo><mi>B</mi><mo>&CenterDot;</mo><mi>A</mi><mo>)</mo></mrow><mrow><mi>t</mi></mrow></msup></math>. Y esto no es lo que se debe cumplir.</p>
+              <p>En el enunciado nos piden que si no se cumple lo demostremos con un <span class="negrita">Contraejemplo</span>, que no es otra cosa que elegir 2 matrices A y B particulares y demostrar que la propiedad del enunciado no se cumple. No valen 2 matrices A y B cualesquiera, hemos de elegir 2 que sean sim&eacute;tricas, porque es nuestra hip&oacute;tesis. Tomemos por ejemplo:</p>
+              <p><math><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow></mfenced></math> y <math><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced></math>. Puedes comprobar que ambas matrices son sim&eacute;tricas.Entonces:</p>
+              <p><p><math><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>-1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>&ne;</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>-1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>-1</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo><msup><mrow><mo>(</mo><mi>A</mi><mo>&CenterDot;</mo><mi>B</mi><mo>)</mo></mrow><mrow><mi>t</mi></mrow></msup></math></p>
+              <p>Hemos encontrado un contraejemplo que demuestra que la afirmaci&oacute;n del ejemplo es falsa.<a href="#" class="tooltip">Qu&eacute; es un Contraejemplo <span>Un Contraejemplo no es otra cosa que un ejemplo concreto que encontramos cuando queremos demostrar algo y con el cual demostramos que lo que queremos demostrar es falso. Es suficiente encontrar un s&oacute;lo contraejemplo para demostrar que algo es falso. En la cuesti&oacute;n que hemos hecho se ha encontrado un contraejemplo que demuestra que el producto de 2 matrices sim&eacute;tricas no tiene porque ser sim&eacute;trico.</span></a></p>
+            </div>
+          </section>
+            <h4 class="acordeon"><a href="#">Cuesti&oacute;n 2:</a></h4>
+              <section class="contacordeon"><div class="block">
+              <section class="enunciados">
+              <p>Demuestra que el producto de dos matrices diagonales de orden 3 es otra matriz diagonal.</p>
+              </section>
+              <math display="block"><mrow><mfenced open="(" close=")" separators=","><mrow><mtable>
+              <mtr><mtd><mi>a</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mi>b</mi></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow></mfenced><mo>&CenterDot;</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable>
+              <mtr><mtd><mi>x</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>z</mi></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable>
+              <mtr><mtd><mi>a</mi><mo>&CenterDot;</mo><mi>x</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mi>b</mi><mo>&CenterDot;</mo><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>c</mi><mo>&CenterDot;</mo><mi>z</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+              <p>Ya est&aacute; demostrado, pero quiero que te fijes en los elementos de la diagonal principal de la matriz producto. Todos sus elementos salen de multiplicar sus respectivos elementos de las diagonales principales de cada matriz. </p>
+            </div>
+          </section>
+          <h4 class="acordeon"><a href="#">Cuesti&oacute;n 3:</a></h4>
+              <section class="contacordeon"><div class="block">
+              <section class="enunciados">
+              <p><span class="negrita">a) </span>Si A es una matriz regular de orden n y existe una matriz B tal que AB + BA = O, probar que <math><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>+</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>B</mi><mo>=</mo><mi>O</mi></math></p>
+              <p><span class="negrita">b) </span>Si <math><mi>A</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced></math>, halla una matriz <math><mi>B</mi><mo>&ne;</mo><mi>O</mi></math> tal que AB + BA = O.</p>
+              </section>
+              <p><span class="negrita">a) </span>Que A sea una matriz regular significa que existe la matriz inversa de A, <math><msup><mi>A</mi><mn>-1</mn></msup></math>. Denotemos <math><mi>I</mi></math> a la matriz identidad. Para demostrarlo partimos de que:
+              <math display="block"><mi>A</mi><mi>B</mi><mo>+</mo><mi>B</mi><mi>A</mi><mo>=</mo><mi>O</mi><mo>&xrarr;</mo><mi>A</mi><mi>B</mi><mo>=</mo><mo>-</mo><mi>B</mi><mi>A</mi>
+              <mo>&xrarr;</mo><mi>A</mi><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><mi>B</mi><mi>A</mi><msup><mi>A</mi><mn>-1</mn></msup>
+              <mo>&xrarr;</mo><mi>A</mi><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><mi>B</mi><mi>I</mi>
+              <mo>&xrarr;</mo><mi>A</mi><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><mi>B</mi></math>
+              <math display="block"><mo>&xrarr;</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>A</mi><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>B</mi>
+              <mo>&xrarr;</mo><mi>I</mi><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>B</mi>
+              <mo>&xrarr;</mo><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mo>-</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>B</mi>
+              <mo>&xrarr;</mo><mi>B</mi><msup><mi>A</mi><mn>-1</mn></msup><mo>+</mo><msup><mi>A</mi><mn>-1</mn></msup><mi>B</mi><mo>=</mo><mi>O</mi>
+              </math></p>
+
+              <p><span class="negrita">b) </span>Calculamos AB + BA :</p>
+              <math display="block"><mrow><mi>A</mi><mi>B</mi><mo>+</mo><mi>B</mi><mi>A</mi><mo>=</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+              <mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>w</mi></mtd><mtd><mi>x</mi></mtd></mtr>
+              <mtr><mtd><mi>y</mi></mtd><mtd><mi>z</mi></mtd></mtr></mtable></mrow></mfenced><mo>+</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mi>w</mi></mtd><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mi>z</mi></mtd></mtr></mtable></mrow></mfenced>
+              <mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mn>-3</mn></mtd><mtd><mn>-2</mn></mtd></mtr>
+              <mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow></mfenced><mo>=</mo>
+              <mfenced open="(" close=")" separators=","><mrow><mtable>
+              <mtr><mtd><mn>-3</mn><mi>w</mi><mo>+</mo><mn>4</mn><mi>x</mi></mtd><mtd><mn>-2</mn><mi>w</mi><mo>+</mo><mn>3</mn><mi>x</mi></mtd></mtr>
+              <mtr><mtd><mn>-3</mn><mi>y</mi><mo>+</mo><mn>4</mn><mi>z</mi></mtd><mtd><mn>-2</mn><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math>
+              <p>Igualamos a la matriz nula y obtenemos el siguiente sistema lineal:
+              <math><mrow><mfenced open="{" close="}" separators=","><mrow><mtable>
+              <mtr><mtd><mn>-6</mn><mi>w</mi><mo>+</mo><mn>4</mn><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>-2</mn><mi>w</mi><mo>-</mo><mn>2</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>4</mn><mi>w</mi><mo>+</mo><mn>4</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr>
+              <mtr><mtd><mn>4</mn><mi>x</mi><mo>-</mo><mn>2</mn><mi>y</mi><mo>+</mo><mn>6</mn><mi>z</mi><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mrow></mfenced></mrow></math> La segunda y la tercera ecuaci&oacute;n son proporcionales, podemos eliminar una de las 2 ecuaciones, y obtenemos<br /> <math><mi>w</mi><mo>=</mo><mo>-</mo><mi>z</mi></math>. Sustituyendo en la primera ecuaci&oacute;n <span class="negrita">w</span> por <span class="negrita">-z</span> obtenemos que la primera y la cuarta son proporcionales, tachamos una de las 2 y obtenemos:  <math><mn>2</mn><mi>x</mi><mo>-</mo><mi>y</mi><mo>+</mo><mn>3</mn><mi>z</mi><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>z</mi></math>. Por lo que: <math><mrow><mi>B</mi><mo>=</mo><mfenced open="(" close=")" separators=","><mrow><mtable><mtr><mtd><mo>-</mo><mi>z</mi></mtd><mtd><mi>x</mi></mtd></mtr>
+              <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>z</mi></mtd><mtd><mi>z</mi></mtd></mtr></mtable></mrow></mfenced></mrow></math></p>
+            </div>
+          </section>
+          <h4 class="acordeon"><a href="#">Cuesti&oacute;n 4:</a></h4>
+              <section class="contacordeon"><div class="block">
+              <section class="enunciados">
+                <p>Demuestra que si una matriz verifica <math><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>O</mi></math>, entonces A no puede tener inversa.</p>
+              </section>
+              <p>Lo vamos a demostrar por el m&eacute;todo de <span class="negrita">Reducci&oacute;n Al Absurdo.</span> Vamos a suponer que <math><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>O</mi></math>, y vamos a ver si llegamos a una <span class="negrita">Contradicci&oacute;n.</span></p>
+              <math display="block"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn>
+              <mo>&rarr;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>&CenterDot;</mo><msup><mrow><mfenced open="(" close=")" separators=","><mrow><msup><mi>A</mi><mn>2</mn></msup></mrow></mfenced></mrow><mn>-1</mn></msup><mo>=</mo><mn>0</mn>
+              <mo>&rarr;</mo><mi>A</mi><mo>&CenterDot;</mo><mi>A</mi><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>&CenterDot;</mo><msup><mi>A</mi><mn>-1</mn></msup><mo>=</mo><mn>0</mn>
+              <mo>&rarr;</mo><msup><mi>I</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn><mo>&rarr;</mo><mi>I</mi><mo>=</mo><mn>0</mn></mrow></math>
+              <p>Luego hemos llegado a que la matriz identidad es igual a la matriz nula, lo cual es, claramente, falso. Es decir; hemos llegado a una contradicci&oacute;n, por lo que nuestra suposici&oacute;n es falsa y, por tanto; hemos demostrado que si el cuadrado de una matriz es la matriz nula, se tiene que dicha matriz no tiene matriz inversa, que es lo que quer&iacute;amos demostrar.</p>
+            </div>
+          </section>
+
+        </section>
+      </section>
+        <footer>
+			     <?
+            include("footerclass.php");
+            hacer_footer();
+        ?>
+	     </footer>
+
+    </section>
+</body>
+</html>

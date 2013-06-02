@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Probando canvas</title>
+   
+   <link href="css/canvas_funciones.css" rel="stylesheet" media="all" />
+   <script src="js/dibujar.js"></script>
+
+</head>
+
+<body>
+	<section>
+	<div id="funcion">
+	<canvas id="micanvas">
+			<p>Tu navegador no soporta Canvas para ver los dibujos. Por favor, actualízalo.</p>
+   	</canvas>
+   </div>
+   	<script language="javascript">
+			window.jsPlot(
+				"funcion", 
+				{
+					Xmin : -5,
+					Xmax : 5,
+					Ymin : -5,
+					Ymax : 5,
+					canvasHeight : 250,
+					canvasWidth : 400
+				},
+			[function x(x){return x+3}, 
+			function x2(x){return x*x}]);
+		</script>
+		<div id="funcion2">
+		<canvas id="micanvas2">
+			<p>Tu navegador no soporta Canvas para ver los dibujos. Por favor, actualízalo.</p>
+		</canvas>
+		</div>
+		<script language="javascript">
+			var f1 = function x3(x){ return x*x*x }, 
+    		 	f2 = function q(x){ return x * Math.cos(x) }
+			f1.color="blue"
+			f2.color="red"
+			window.unload = jsPlot(
+				"funcion2", 
+				{
+					Xmin : -10,
+					Xmax : 10,
+					Ymin : -10,
+					Ymax : 10,
+					canvasHeight : 500,
+					canvasWidth : 500,
+					gridVisible : true
+				},
+			[f1, f2]
+		);
+		</script>
+    </section>
+
+</body>
+</html> 
