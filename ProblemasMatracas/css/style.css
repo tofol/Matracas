@@ -202,11 +202,17 @@ nav li ul li a {
    	-ms-box-direction: reverse;
    	box-direction: reverse;
 
+    /*-moz-box-orient: inline-axis;
+    -webkit-box-orient: inline-axis;
+    -o-box-orient: inline-axis;
+    -ms-box-orient: inline-axis;
+    box-orient: inline-axis;*/
+
+   
 	width: 99.99%;
 	}
 /** CONTENIDO TEXTO **/
 .contenido-texto {
-
    -moz-box-flex: 1;
    -o-box-flex: 1;
    -webkit-box-flex: 1;
@@ -270,13 +276,13 @@ nav li ul li a {
 			#fcf59b 2.375em,
 			#81cbbc 2.5em
 		);
-	 background:
+	 /*background:
 		-ms-repeating-linear-gradient(
 			top,
 			#fcf59b,
 			#fcf59b 2.375em,
 			#81cbbc 2.5em
-		);
+		);*/
 	background:
 		repeating-linear-gradient(
 			top,
@@ -296,11 +302,11 @@ nav li ul li a {
 	box-shadow: 0 0.125em 0.625em 0.0625em rgba(0,0,0,.2);
 
 
-     -moz-background-clip: padding;
+     /*-moz-background-clip: padding;
      -webkit-background-clip: padding-box;
      -o-background-clip: padding-box;
 	 -ms-background-clip: padding-box;
-     background-clip: padding-box;
+     background-clip: padding-box;*/
 
 }
 
