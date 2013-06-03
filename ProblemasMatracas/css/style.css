@@ -83,15 +83,14 @@ header {
 	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
 	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfdde7', endColorstr='#5a6a72',GradientType=0 );
-
+ 	background-image: url("../images/logo.png");
+ 	background-repeat:no-repeat;
+	background-position:25px 5px;
+	background-size: 150px 150px;
 	 
 }
 .cabecera {
     color: rgba(15,25,26,0.85);
-    background:none;
-    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8f0f191a,endColorstr=#8f0f191a);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8f0f191a,endColorstr=#8f0f191a);
-    zoom:1;
     text-align: center;
     font-family: 'LemonChickenRegular';
     font-size: 2.5em;
