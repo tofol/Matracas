@@ -1,0 +1,124 @@
+/*** INICIO FORMULARIO DE CONTACTO ***/
+.contact_form fieldset {
+	border: 0.1em solid #f60;
+	border-top: none;
+	border-radius: 0.5em;
+	padding: 1em;
+
+	background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	
+}
+.contact_form legend {
+	font-size: 1.25em;
+	font-weight: bolder;
+}
+/*--- estilos para los ul y li del formulario ---*/
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.contact_form li{
+    padding:0.75em;
+    position:relative;
+}
+.contact_form label {
+    color: #555555;
+    display: inline-block;
+    vertical-align: top;
+    font-family: sans-serif;
+    font-size: 0.8125em;
+    font-weight: bold;
+    margin-top: 0.1875em;
+    padding: 0.1875em;
+    width: 90px;
+
+}
+.contact_form input {
+    height: 20px;
+    width: 220px;
+    padding: 0.1375em 0.5em;
+}
+.contact_form textarea {
+    padding: 0.5em;
+    width: 300px;
+}
+.contact_form button {
+    margin-left:90px;
+}
+/*----- estilos visuales de los elementos --------*/
+.contact_form input, .contact_form textarea{
+    border: 0.0625em solid #aaa;
+    box-shadow: 0 0 0.1875em #ccc, 0 0.625em 0.9375em #eee inset;
+    border-radius: 0.125em;
+    color: #888;
+    font-size: 0.75em;
+    padding-right: 1.875em;
+}
+.contact_form input, .contact_form textarea, contact_form label {
+	/*-moz-transition: all .25s ease-in;
+    -webkit-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+	-ms-transition: all .25s ease-in;*/
+    transition: all .25s ease-in;
+}
+.contact_form textarea {
+	resize: none;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+    background: #fff;
+    border: 0.0625em solid #555;
+    box-shadow: 0 0 0.1875em #aaa;
+    padding-right: 5em;
+}
+/* === Estilos de Validacion === */
+
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+    box-shadow: 0 0 0.312em #5cd053;
+    border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+    box-shadow: 0 0 0.3125em #d45252;
+    border-color: #b03535
+}
+/* === Estilos del boton de Envio === */
+button.submit {
+   padding: 0.5625em 1.0625em;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: bold;
+   color: white;
+   border: none;
+
+    background: #cedce7;
+	background-image: -moz-linear-gradient(top, hsla(206,34%,86%,1) 0, hsla(199,12%,40%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(206,34%,86%,1)), color-stop(100%,hsla(199,12%,40%,1)));
+	background-image: -webkit-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
+
+	border-radius: 0.5em;
+}
+button.submit:hover {
+    cursor: pointer;
+    color: white;
+    background: #1e5799;
+	background-image: -moz-linear-gradient(top,  hsla(212,67%,36%,1) 0, hsla(207,69%,51%,1) 23%, hsla(208,73%,46%,1) 55%, hsla(206,70%,70%,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,hsla(212,67%,36%,1)), color-stop(23%,hsla(207,69%,51%,1)), color-stop(55%,hsla(208,73%,46%,1)), color-stop(100%,hsla(206,70%,70%,1)));
+	background-image: -webkit-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -o-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: -ms-linear-gradient(top,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	background-image: linear-gradient(to bottom,  hsla(212,67%,36%,1) 0,hsla(207,69%,51%,1) 23%,hsla(208,73%,46%,1) 55%,hsla(206,70%,70%,1) 100%);
+	
+}
+button.submit:active {
+    box-shadow: 0 0 0.625em 0.3125em #444 inset;
+}
+/*** FIN FORMULARIO DE CONTACTO ***/
