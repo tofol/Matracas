@@ -26,7 +26,7 @@ $sliders='<div class="container-slider">
 
 	            <li id="third" class="thirdanimation">
 	            <a href="#">
-	            <img src="images/nudo.png" alt="Nudo 3D"/>
+	            <img src="images/nudo.png" alt="Nudo 3D"  height="320" width="680" />
 	            </a>
 	            <div class="tooltip">
 	            <h1>Nudo 3D</h1>
@@ -58,4 +58,4 @@ $sliders='<div class="container-slider">
 </div>';
 echo $sliders;
 }
-?> 
+?>

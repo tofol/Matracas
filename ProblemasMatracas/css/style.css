@@ -16,9 +16,9 @@ html {
 body{
        margin: 0.063em;
        text-align: center;
-       
+
        font: 1.1em 'AftasansRegular';
-       
+
    }
 
 .contenedor {
@@ -66,12 +66,12 @@ header {
 	background-image: -o-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
 	background-image: -ms-linear-gradient(top, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
 	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
- 	
+
  	background-image: url(../images/logo.png);
  	background-repeat: no-repeat;
 	background-position: 25px 5px;
 	background-size: 150px 150px;
-	 
+
 }
 .cabecera {
     color: #0f191a;
@@ -83,7 +83,7 @@ header {
 
     margin: 0.625em 0.625em 0.625em 0.313em;
     padding-bottom: 0.3125em;
-   
+
     -moz-box-flex: 1;
     -o-box-flex: 1;
     -webkit-box-flex: 1;
@@ -126,7 +126,7 @@ nav a {
 	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0%,hsla(199,12%,40%,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfdde7', endColorstr='#5a6a72',GradientType=0 );
 	zoom: 1;
-	
+
   	border-radius: 0.5em;
 
 	}
@@ -201,16 +201,16 @@ nav li ul li a {
    box-flex: 2;*/
 
     width: 875px;
-    
+
    	margin: 0.938em;
 
     letter-spacing: -0.015em;
-	
+
 	padding-left: 0.938em;
 	padding-right: 1.250em;
 	padding-top: 0.938em;
 	padding-bottom: 0.938em;
-    
+
      border-radius: 0.625em;
     border-style: solid;
 	border-width: 0 0 0 1.875em;
@@ -306,7 +306,7 @@ aside li a:hover {
     -moz-border-radius: 0.25em;
 	-ms-border-radius: 0.25em;
 	border-radius: 0.25em;
-	
+
 	padding: 0.1875em;
     }
 
@@ -318,7 +318,7 @@ aside li a:hover {
 	margin-bottom: 5px;
 	margin-top: 5px;
 	position: relative;
-	
+
 	-moz-box-shadow: 0.0625em 0.0625em 0.3125em #000;
 	-o-box-shadow: 0.0625em 0.0625em 0.3125em #000;
 	-webkit-box-shadow: 0.0625em 0.0625em 0.3125em #000;
@@ -330,7 +330,7 @@ aside li a:hover {
 	-webkit-border-radius: 0 0.625em 0.625em 0;
 	-ms-border-radius: 0 0.625em 0.625em 0;
 	border-radius: 0 0.625em 0.625em 0;
-	
+
 	text-decoration: none;
 	font-family: 'ComfortaaThin';
 	font-size: 1em;
@@ -353,7 +353,6 @@ aside li a:hover {
 /*** EL PIE-FOOTER ***/
 
 .pieppal {
-	margin-bottom: 0.0625em;
 	width: 99.99%;
 	font-family: 'ComfortaaThin';
 	color: black;
@@ -372,10 +371,6 @@ aside li a:hover {
 	background-image: linear-gradient(to bottom, hsla(206,34%,86%,1) 0,hsla(199,12%,40%,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a6a72', endColorstr='#cfdde7',GradientType=0);
 
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
     display: -moz-box;
     display: -webkit-box;
     display: -o-box;
@@ -392,13 +387,13 @@ aside li a:hover {
     box-align:start;
 	}
 .pie1 {
-	margin: 1.5em 0 2.5em 1.5em;
+	margin: 1.5em 0 0.25em 1.5em;
 	}
 .pie2 {
-	margin: 1.5em 0 2.5em 1.5em;
+	margin: 1.5em 0 0.25em 1.5em;
 	}
 .pie3 {
-	margin: 1.5em 2.5em 2.5em 1.5em;
+	margin: 1.5em 0.25em 0.25em 1.5em;
 	}
 /*** FIN DEL PIE ***/
 
@@ -487,12 +482,14 @@ h4.acordeon {
            font-size: 1.5em;
            background: rgb(158, 156, 156);
            width: 90%;
+           margin-bottom: 3px;
            -webkit-border-radius: 0.625em;
            -moz-border-radius: 0.625em;
 		   -ms-border-radius: 0.625em;
            border-radius: 0.625em;
            padding: 0.3125em;
            text-decoration: none;
+           cursor: pointer;
 }
 h4.acordeon:after{ content: '\25BE'; margin-left: 10px; cursor: pointer;}
 h4.acordeon a {
@@ -506,6 +503,7 @@ h4.acordeon a:hover {
 
 .contacordeon {
            border: 0.0625em solid #666;
+           margin-bottom: 3px;
            height: auto;
 }
 

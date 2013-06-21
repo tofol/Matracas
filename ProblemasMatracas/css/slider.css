@@ -4,12 +4,12 @@
 /* LAYOUT */
 .container-slider {
 	margin: auto;
-	width:1100px;
+	width:680px;
 }
 
 /* CONTENT SLIDER */
 #content-slider {
-	width:100%;
+	width:680px;
 	height:360px;
 	margin:10px auto 0;
 }
@@ -43,34 +43,34 @@
 }
 
 #slider li.firstanimation {
-	-moz-animation:cycle 25s linear infinite;	
-	-webkit-animation:cycle 25s linear infinite;		
-	-ms-animation:cycle 25s linear infinite;		
-	animation:cycle 25s linear infinite;		
+	-moz-animation:cycle 25s linear infinite;
+	-webkit-animation:cycle 25s linear infinite;
+	-ms-animation:cycle 25s linear infinite;
+	animation:cycle 25s linear infinite;
 }
 #slider li.secondanimation {
 	-moz-animation:cycletwo 25s linear infinite;
-	-webkit-animation:cycletwo 25s linear infinite;		
+	-webkit-animation:cycletwo 25s linear infinite;
 	-ms-animation:cycletwo 25s linear infinite;
 	animation:cycletwo 25s linear infinite;
 }
 #slider li.thirdanimation {
 	-moz-animation:cyclethree 25s linear infinite;
-	-webkit-animation:cyclethree 25s linear infinite;		
-	-ms-animation:cyclethree 25s linear infinite;		
-	animation:cyclethree 25s linear infinite;		
+	-webkit-animation:cyclethree 25s linear infinite;
+	-ms-animation:cyclethree 25s linear infinite;
+	animation:cyclethree 25s linear infinite;
 }
 #slider li.fourthanimation {
 	-moz-animation:cyclefour 25s linear infinite;
-	-webkit-animation:cyclefour 25s linear infinite;		
-	-ms-animation:cyclefour 25s linear infinite;		
-	animation:cyclefour 25s linear infinite;		
+	-webkit-animation:cyclefour 25s linear infinite;
+	-ms-animation:cyclefour 25s linear infinite;
+	animation:cyclefour 25s linear infinite;
 }
 #slider li.fifthanimation {
 	-moz-animation:cyclefive 25s linear infinite;
-	-webkit-animation:cyclefive 25s linear infinite;		
-	-ms-animation:cyclefive 25s linear infinite;		
-	animation:cyclefive 25s linear infinite;		
+	-webkit-animation:cyclefive 25s linear infinite;
+	-ms-animation:cyclefive 25s linear infinite;
+	animation:cyclefive 25s linear infinite;
 }
 
 #slider .tooltip {
@@ -81,9 +81,9 @@
 	bottom:75px;
 	left:-320px;
 	-moz-transition:all 0.3s ease-in-out;
-	-webkit-transition:all 0.3s ease-in-out;  
-	-ms-transition:all 0.3s ease-in-out;  
-	transition:all 0.3s ease-in-out;  
+	-webkit-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
 }
 #slider .tooltip h1 {
 	color:#fff;
@@ -92,14 +92,14 @@
 	line-height:60px;
 	padding:0 0 0 20px;
 }
-#slider li#first:hover .tooltip, 
-#slider li#second:hover .tooltip, 
-#slider li#third:hover .tooltip, 
-#slider li#fourth:hover .tooltip, 
+#slider li#first:hover .tooltip,
+#slider li#second:hover .tooltip,
+#slider li#third:hover .tooltip,
+#slider li#fourth:hover .tooltip,
 #slider li#fifth:hover .tooltip {
 	left:0px;
 }
-#slider:hover li, 
+#slider:hover li,
 #slider:hover .progress-bar {
 	-moz-animation-play-state:paused;
 	-webkit-animation-play-state:paused;
@@ -108,10 +108,10 @@
 }
 
 /* PROGRESS BAR */
-.progress-bar { 
+.progress-bar {
 	position:relative;
 	top:-5px;
-	width:680px; 
+	width:680px;
 	height:5px;
 	background:#000;
 	-moz-animation:fullexpand 25s ease-out infinite;
